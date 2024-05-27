@@ -16,13 +16,29 @@ Det første skridt i designprocessen er at lave et Domain Model Diagram (DMD). D
 Kontrast skal primært ses i forhold til et Domain Class Diagram, hvor hver klasse har attributter, metoder og er forbundet andre klasser gennem specificerede relationer (fx agrregation) og mulitplicitet. 
 Ligeledes ville man i et DCD se klasserne Basket, BasketItem og BasketSerice, muligvis med et IBasketService interface som implementeringen af konceptet "Kurv".
 Det er vigtigt at definere ovenstående, da DMD er et godt værktøj men der er for mange holdninger til hvad det egentlig er.
-
-\section{Database Design}
-This is a reference to the book in the bibliography~\cite{connolly2023database}.
+\beign{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/diagrams/dmd-start.png.png}
+    \caption{Domain Model Diagram ved projektets start}
+    \label{fig:domain-model-diagram}
+\end{figure}
 
 \section{Software Arkitektur}
+Visse dele af denne section, er gennemgået i \Cref{sec:metode-teknologi}. 
+Min forståelse af software arkitektur er en højniveau beskrivelse af systemet, der beskriver dets komponenter, deres relationer og hvordan de interagerer. Derfor er den overordnede hensigt og struktur, som følger:
+\begin{itemize}
+    \item Abstraktioner af systemet, der fokuserer på dets struktur og adfærd
+    \item En statisk model, der ikke tager højde for ændringer i systemet over tid
+    \item Ligeledes en teknisk model, der kan bruges som blueprint til implementation
+    \item Skabe en fælles forståelse af projektet og identificere de vigtigste komponenter og relationer
+    \item Software arkitektur som koncept, kan bruges til at skabe en bedre forståelse og forudsigelse af problemeer for udviklerne og dermed en bedre løsning til tiden
+\end{itemize}
 
 \subsection{Klasse Diagram}
+Alle modeller er vedlagt i 
+
+\section{Database Design}
+Viden fra \cite{connolly2023database} vil anvendes hele vejen igennem, men ikke blive citeret yderligere, da det anses for at være grundlæggende viden.
 
 \subsection{Sekvens Diagrammer}
 
