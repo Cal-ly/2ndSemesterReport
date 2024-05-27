@@ -1,0 +1,43 @@
+Card Name,Card Description,Labels,Checklist,Checklist item
+"US 1 - Kunde, Produktgennemsyn","*Som* kunde, *Ønsker jeg* at kunne se butikkens portfølje i kategorier, *Med det formål* bedst at kunne vælge det produkt, der opfylder mit behov.",3 (yellow),,
+,,,Tasks,"Implementer Razor Page, der kan fremvise alle produkter i en udvalgt kategori."
+,,,Acceptance Criteria,"*Givet* at en kunde vil se en bestemt produktkategori, *når* de leder efter et produkt der opfylder deres behov, *så* får de en tilsvarende afgrænset visning af produktkataloget."
+"US 2 - Bedemand, Speciel Ordre Funktion","*Som* bedemand, *Ønsker jeg* at kunne bestille specialdesignet blomsterarrangement direkte via en dedikeret side, *Med det formål* at effektivisere bestillingsprocessen for begravelsesarrangementer.",3 (yellow),,
+,,,Tasks,"Opret en dedikeret side for bedemænd med tilpassede bestillingsmuligheder."
+,,,Acceptance Criteria,"*Givet* at en bedemand er logget ind, *når* de tilgår den dedikerede side, *så* skal de kunne vælge og tilpasse blomsterarrangementer specielt designet til begravelser."
+"US 3 - Medarbejder, Ordrehåndtering","*Som* medarbejder, *Ønsker jeg* at kunne se og administrere indkommende ordrer, *Med det formål* at effektivisere processen for ordreklargøring og levering.",3 (yellow),,
+,,,Tasks,"Implementer en administrationsside for medarbejdere til håndtering af ordrer."
+,,,Acceptance Criteria,"*Givet* at en medarbejder er logget ind, *når* de tilgår administrationspanelet, *så* skal de kunne se en liste over aktive ordrer og opdatere deres status."
+
+
+
+"US ","",3 (yellow),,
+,,,Tasks,""
+,,,Acceptance Criteria,""
+
+"US ","",3 (yellow),,
+,,,Tasks,""
+,,,Acceptance Criteria,""
+
+"US ","",3 (yellow),,
+,,,Tasks,""
+,,,Acceptance Criteria,""
+
+"US ","",1 (subtle green) 2 (green)  3 (yellow) 5 (orange) 8 (red),,
+,,,Tasks,""
+,,,Acceptance Criteria,""
+
+
+"US X - Kunde, Bestilling af Blomster","Som kunde ønsker jeg at kunne bestille blomster online, med det formål at kunne sende en hilsen til en ven eller bekendt.",3 (yellow),,
+,,,Tasks,"Implementer en bestillingsfunktion, der giver kunden mulighed for at vælge og tilpasse et blomsterarrangement."
+,,,Acceptance Criteria,"Givet at en kunde vil sende en hilsen til en ven eller bekendt, når de besøger hjemmesiden, så skal de kunne vælge og tilpasse et blomsterarrangement."
+
+US 1 - Kunde - Produktgennemsyn,"*Som* kunde, *Ønsker jeg* at kunne se butikkens portfølje i kategorier, *Med det formål* bedst at kunne vælge det produkt, der opfylder mit behov.",3 (3 (yellow)),,
+,,,Tasks,"Implementer Razor Page, der kan fremvise alle produkter i en udvalgt kategori."
+,,,Acceptance Criteria,"*Givet* at en kunde vil se en bestemt produktkategori, *når* de leder efter et produkt der opfylder deres behov, *så* får de en tilsvarende afgrænset visning af produktkataloget."
+US 2 - Bedemand - Speciel Ordre Funktion,"*Som* bedemand, *Ønsker jeg* at kunne bestille specialdesignet blomsterarrangement direkte via en dedikeret side, *Med det formål* at effektivisere bestillingsprocessen for begravelsesarrangementer.",3 (3 (yellow)),,
+,,,Tasks,Opret en dedikeret side for bedemænd med tilpassede bestillingsmuligheder.
+,,,Acceptance Criteria,"*Givet* at en bedemand er logget ind, *når* de tilgår den dedikerede side, *så* skal de kunne vælge og tilpasse blomsterarrangementer specielt designet til begravelser."
+US 3 - Medarbejder - Ordrehåndtering,"*Som* medarbejder, *Ønsker jeg* at kunne se og administrere indkommende ordrer, *Med det formål* at effektivisere processen for ordreklargøring og levering.",3 (3 (yellow)),,
+,,,Tasks,Implementer en administrationsside for medarbejdere til håndtering af ordrer.
+,,,Acceptance Criteria,"*Givet* at en medarbejder er logget ind, *når* de tilgår administrationspanelet, *så* skal de kunne se en liste over aktive ordrer og opdatere deres status."

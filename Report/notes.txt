@@ -1,0 +1,89 @@
+Noter:
+1. Website med modeller for produkter, ordre, kunder m.m.
+2. Database til at gemme modellerne
+3. Authentication funktionalitet
+4. CRUD på udvalgte modeller
+5. Filtrering og sortering af udvalgte modeller
+6. Ordre funktion
+7. Kurv funktion
+8. Analyse af data fra website
+9. Søgning i produkter gennem Keywords
+10. Restrictions and requirements
+11. Design and layout
+12. Test (Unit test etc.)
+13. Webhosting
+14. Content Management System
+15. Email notifications
+16. Website performance optimization
+17. Advanced security features
+18. Website statistik, fx Google API
+
+1. **Website med modeller for produkter, ordre, kunder m.m.**
+   - Oprettelse af datastrukturer for produkter, ordre, kunder og lignende elementer.
+
+2. **Database til at gemme modellerne**
+   - Design og implementering af en database for at opbevare information om produkter, ordre og kunder.
+
+3. **Authentication funktionalitet**
+   - Sikring af systemet således, at kun autoriserede brugere har adgang til kritiske funktioner.
+
+4. **CRUD på udvalgte modeller**
+   - Implementering af grundlæggende funktionaliteter til oprettelse, læsning, opdatering og sletning af data.
+
+5. **Filtrering og sortering af udvalgte modeller**
+   - Muliggør for brugerne at finde produkter baseret på specifikke kriterier og at sortere resultaterne.
+
+6. **Ordre funktion**
+   - Håndtering af ordreprocessen fra oprettelse til afslutning.
+
+7. **Kurv funktion**
+   - Funktionalitet for at lade kunder samle varer før køb.
+
+8. **Analyse af data fra website**
+   - Indsamling og analyse af data for at få indsigt og forbedre forretningen.
+
+9. **Søgning i produkter gennem Keywords**
+   - Søgefunktionalitet der gør det muligt for brugere at finde produkter ved hjælp af nøgleord.
+
+10. **Restrictions and requirements**
+    - Håndtering af forretningsregler og systemkrav.
+
+11. **Design and layout**
+    - Design af brugergrænsefladen for at sikre en god brugeroplevelse.
+
+12. **Test (Unit test etc.)**
+    - Implementering af tests for at sikre softwarens kvalitet og stabilitet.
+
+13. **Webhosting**
+    - Valg og opsætning af hosting løsning for webapplikationen.
+
+14. **Content Management System**
+    - System der gør det muligt for ikke-tekniske brugere at opdatere indhold på webstedet.
+
+15. **Email notifications**
+    - System til at sende notifikationer til brugere via e-mail.
+
+16. **Website performance optimization**
+    - Forbedring af websitets præstation for hurtigere indlæsning og respons.
+
+17. **Advanced security features**
+    - Implementering af avancerede sikkerhedsfunktioner til beskyttelse af data og transaktioner.
+
+18. **Website statistik, fx Google API**
+    - Integration med analytiske værktøjer som Google Analytics for at spore brugeradfærd og sitepræstationer.
+
+
+1. **Mængde af kode**: Mere kode betyder ofte højere estimat.
+   - Lille mængde kode: 1 (subtle green) eller 2 (green)
+   - Moderat mængde kode: 3 (yellow)
+   - Stor mængde kode: 5 (orange)
+
+2. **Kompleksiteten af koden**:
+   - Lav kompleksitet: 1 (subtle green) eller 2 (green)
+   - Moderat kompleksitet: 3 (yellow)
+   - Høj kompleksitet (meget afhængig af anden kode): 5 (orange) eller 8 (red)
+
+3. **Forventet tid på programmering, testing, debugging og refaktorering**:
+   - Kort tid: 1 (subtle green) eller 2 (green)
+   - Moderat tid: 3 (yellow)
+   - Lang tid: 5 (orange) eller 8 (red)

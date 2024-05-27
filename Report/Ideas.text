@@ -1,0 +1,346 @@
+Analytics:
+ - Chart.js
+ - Statistics
+
+Functionality:
+ - Inventory Manager (be wary of the contents in basket)
+
+
+---
+
+Auditable
+Auditing is a crucial aspect of application design, especially for systems that manage sensitive data or require traceability for changes to user data. Implementing auditing can help you track who made changes and when those changes were made. Here’s how you can integrate auditing into your user entities using Entity Framework Core.
+
+### 1. Define Auditing Properties
+
+First, you need to define common auditing properties that should be included in each entity that requires auditing. You can achieve this by creating a base class that includes these properties.
+
+#### Auditing Base Class
+
+```csharp
+public abstract class AuditableEntity
+{
+    public string CreatedBy { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public string ModifiedBy { get; set; }
+    public DateTime ModifiedAt { get; set; }
+}
+```
+
+### 2. Inherit from the Auditing Base Class
+
+Next, ensure that your user-related entities inherit from this `AuditableEntity` class. This approach centralizes the auditing logic, making it easier to maintain and apply consistently across all entities that require auditing.
+
+#### Updated ApplicationUser Class with Auditing
+
+```csharp
+public class ApplicationUser : IdentityUser, AuditableEntity
+{
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public DateTime? EnrollmentDate { get; set; }
+    public DateTime? LastLogin { get; set; }
+    public virtual Address? Address { get; set; }
+    public string? AddressId { get; set; }
+    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+
+    // Auditing properties
+    public string CreatedBy { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public string ModifiedBy { get; set; }
+    public DateTime ModifiedAt { get; set; }
+}
+```
+
+### 3. Configure Auditing Properties in EF Core
+
+You'll also need to configure these new properties using Fluent API to ensure they are mapped correctly in the database.
+
+#### Configuration for AuditableEntity
+
+```csharp
+public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
+{
+    public void Configure(EntityTypeBuilder<ApplicationUser> builder)
+    {
+        builder.HasKey(u => u.Id);
+        builder.ToTable("ApplicationUsers");
+
+        // Base property configurations
+        builder.Property(u => u.Email).IsRequired();
+        builder.Property(u => u.FirstName).IsRequired();
+        builder.Property(u => u.LastName).IsRequired();
+        builder.Property(u => u.PhoneNumber).IsRequired();
+        builder.Property(u => u.EnrollmentDate).HasColumnType("datetime").HasDefaultValueSql("GETUTCDATE()");
+        builder.Property(u => u.LastLogin).HasColumnType("datetime");
+
+        // Auditing property configurations
+        builder.Property(u => u.CreatedBy).IsRequired().HasMaxLength(256);
+        builder.Property(u => u.CreatedAt).HasColumnType("datetime");
+        builder.Property(u => u.ModifiedBy).IsRequired().HasMaxLength(256);
+        builder.Property(u => u.ModifiedAt).HasColumnType("datetime");
+
+        builder.HasOne(u => u.Address)
+            .WithOne()
+            .HasForeignKey<ApplicationUser>(u => u.AddressId)
+            .OnDelete(DeleteBehavior.ClientCascade);
+
+        builder.HasIndex(u => u.Email).IsUnique();
+    }
+}
+```
+
+### 4. Automating Auditing Data
+
+Lastly, you might want to automate the process of setting these fields, typically in your data context or in the business logic layer where you handle saving entities. You can do this by overriding the `SaveChanges()` or `SaveChangesAsync()` methods in your DbContext to set these values based on the current user and the current date/time.
+
+#### Example of Overriding SaveChanges
+
+```csharp
+public override int SaveChanges()
+{
+    foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
+    {
+        if (entry.State == EntityState.Added)
+        {
+            entry.Entity.CreatedAt = DateTime.UtcNow;
+            entry.Entity.CreatedBy = "currentUserId"; // Replace with actual user retrieval logic
+        }
+        if (entry.State == EntityState.Modified)
+        {
+            entry.Entity.ModifiedAt = DateTime.UtcNow;
+            entry.Entity.ModifiedBy = "currentUserId"; // Replace with actual user retrieval logic
+        }
+    }
+
+    return base.SaveChanges();
+}
+```
+
+By implementing these steps, you ensure that every change to your user entities is tracked, providing valuable data for audits and potentially helping with debugging and data integrity checks.
+
+---
+
+
+Certainly! After discussing the implementation of auditing features, the next consideration for enhancing your application's data handling and user experience is implementing a soft delete mechanism. Soft deleting is a method where records are not physically removed from the database but are instead marked as inactive or deleted, allowing them to be excluded from regular queries but still available for record-keeping or recovery purposes.
+
+Why Implement Soft Delete?
+Data Recovery: Accidentally deleted data can be easily restored.
+Audit Trails and Historical Data: Maintains historical data for audits or other reporting needs without cluttering active data queries.
+Regulatory Compliance: Often, regulations require that data be retained for a certain period, even if it is no longer actively used.
+Implementing Soft Delete
+Here’s how you can implement soft deleting in your Entity Framework Core models, using a IsDeleted flag and modifying the global query filters to automatically exclude deleted records from standard queries.
+
+1. Add IsDeleted Property
+First, add an IsDeleted property to your base entity class or directly to any entities you wish to soft delete.
+
+csharp
+Copy code
+public abstract class AuditableEntity
+{
+    public string CreatedBy { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public string ModifiedBy { get; set; }
+    public DateTime ModifiedAt { get; set; }
+    public bool IsDeleted { get; set; } = false; // Soft delete property
+}
+2. Configure Global Query Filters
+Modify your DbContext to include a global query filter that automatically filters out entities marked as deleted.
+
+csharp
+Copy code
+public class ApplicationDbContext : DbContext
+{
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+    public DbSet<Customer> Customers { get; set; }
+    public DbSet<Employee> Employees { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
+        // Global query filter to exclude logically deleted entities
+        modelBuilder.Entity<ApplicationUser>().HasQueryFilter(u => !u.IsDeleted);
+        modelBuilder.Entity<Customer>().HasQueryFilter(c => !c.IsDeleted);
+        modelBuilder.Entity<Employee>().HasQueryFilter(e => !e.IsDeleted);
+    }
+}
+3. Modify SaveChanges for Soft Delete
+Override the SaveChanges() method in your DbContext to handle the soft delete operation. This ensures that when an entity is requested to be deleted, it is instead flagged as deleted.
+
+csharp
+Copy code
+public override int SaveChanges()
+{
+    foreach (var entry in ChangeTracker.Entries<AuditableEntity>().Where(e => e.State == EntityState.Deleted))
+    {
+        entry.State = EntityState.Modified;
+        entry.Entity.IsDeleted = true;
+    }
+
+    return base.SaveChanges();
+}
+4. Adjustments in Business Logic
+Ensure that your application's business logic respects the soft delete mechanism:
+
+Recovery Endpoint: Implement functionality to restore soft-deleted entities if needed.
+Adjust Reports and Exports: Make sure reports and data exports include or exclude soft-deleted records as appropriate.
+Benefits and Considerations
+Implementing soft delete offers robust data protection and improved data management capabilities, particularly in environments where data integrity and recoverability are crucial. However, it's important to consider the following:
+
+Performance: The IsDeleted filter applies to all queries, which could impact query performance. Monitor and optimize as necessary.
+Data Integrity: Be mindful of relationships and constraints that might be affected by soft-deleted records.
+By following these steps, you can implement a comprehensive soft delete mechanism that enhances your application's data handling practices while providing additional layers of data protection and compliance.
+
+---
+
+Absolutely, moving on to the next point: Implementing Validation. Effective validation is crucial for maintaining the integrity of your application's data. In Entity Framework Core, you can implement validation in several ways, including using data annotations and Fluent API configurations. Here, we'll focus on extending your current Fluent API configurations to include more complex validation rules that aren't covered by simple data annotations.
+
+Why Implement Validation in Fluent API?
+Centralized Control: Configuring validation in one place (like in your model configuration files) helps maintain a clean and organized approach.
+Complex Validations: Fluent API allows for complex validation logic that might be cumbersome or impossible to implement using data annotations.
+Database Consistency: Ensures that all data conforms to expected formats and rules before hitting the database, reducing errors and exceptions from the database engine.
+Example Scenarios and Implementations
+Let’s add more advanced validations to your user models using Fluent API configurations:
+
+1. Ensuring Consistent Data Formats
+For fields like email or phone numbers where specific formats are necessary, you can enforce these in the database level if needed.
+
+csharp
+Copy code
+public class ApplicationUserConfiguration : UserConfiguration<ApplicationUser>
+{
+    public override void Configure(EntityTypeBuilder<ApplicationUser> builder)
+    {
+        base.Configure(builder);
+        builder.ToTable("ApplicationUsers");
+
+        // Example of adding validation for email format at the database level (if supported by DBMS)
+        builder.Property(u => u.Email)
+            .HasComment("Must be a valid email format") // Optionally add comments for database documentation
+            .IsRequired()
+            .HasMaxLength(256);
+
+        // More complex validations can be added here
+    }
+}
+2. Conditional Validations Based on Other Properties
+Sometimes, the validation of one property may depend on the value of another property, which Fluent API can help handle by configuring the model creation process or actions in the DbContext.SaveChanges() override.
+
+csharp
+Copy code
+public override int SaveChanges()
+{
+    foreach (var entry in ChangeTracker.Entries<ApplicationUser>())
+    {
+        if (entry.State == EntityState.Added || entry.State == EntityState.Modified)
+        {
+            var user = entry.Entity;
+            if (user.EnrollmentDate.HasValue && user.LastLogin.HasValue && user.EnrollmentDate > user.LastLogin)
+            {
+                throw new InvalidOperationException("Enrollment date cannot be after last login date.");
+            }
+            // Add other complex cross-property validations here
+        }
+    }
+
+    return base.SaveChanges();
+}
+3. Validation for Business Rules
+You might have business-specific rules, for example, ensuring that an employee's salary falls within an expected range based on their job title or department.
+
+csharp
+Copy code
+public class EmployeeConfiguration : UserConfiguration<Employee>
+{
+    public override void Configure(EntityTypeBuilder<Employee> builder)
+    {
+        base.Configure(builder);
+        builder.ToTable("Employees");
+
+        builder.Property(e => e.Salary)
+            .HasColumnType("decimal(18,2)")
+            .IsRequired()
+            .HasPrecision(18, 2) // Ensure precision for financial calculations
+            .HasAnnotation("SalaryRange", "The salary must be within the allowed range for the specified job title.");
+
+        // Here you might add code to validate the salary range dynamically based on job title
+    }
+}
+Additional Points
+Testing: Thoroughly test all validations to ensure they behave as expected without causing unintended side effects or blocking legitimate operations.
+Performance: Keep in mind that complex validations might impact the performance of your application, especially if they require additional database hits or complex calculations.
+By carefully planning and implementing validation in your Fluent API configurations, you ensure that your application's data remains consistent and valid according to the specified business rules and constraints, ultimately improving the robustness and reliability of your application.
+
+---
+
+Great! Moving on to the next point, let's focus on Performance Monitoring and Optimization. This is crucial because, as your application grows, ensuring it performs efficiently under increased load is essential to maintaining a good user experience and operational stability.
+
+Importance of Performance Monitoring and Optimization
+User Experience: Poor performance can lead to slow response times, negatively affecting user satisfaction and engagement.
+Scalability: Effective performance tuning helps your application handle more users and more data without a proportional increase in resources.
+Cost Efficiency: Optimizing resource usage can reduce the costs associated with running your application, especially in cloud-based environments.
+Key Areas to Focus for Performance Optimization
+1. Database Performance
+Given your application's reliance on Entity Framework Core and SQL operations, focusing on database performance is essential.
+
+Query Optimization: Use tools like SQL Server Management Studio (SSMS), PostgreSQL’s EXPLAIN, or MySQL’s EXPLAIN to analyze query plans and identify slow or inefficient queries.
+Indexing: As previously discussed, ensure that your indexes are properly configured and maintained. Regularly review and adjust them based on actual usage patterns.
+Connection Management: Optimize connection handling in your application to avoid opening and closing connections excessively, which can be costly.
+2. Application-Level Optimization
+Optimization isn’t only about the database; your application code also needs attention.
+
+Caching: Implement caching strategies for frequently accessed data that doesn't change often, reducing database load and speeding up response times.
+Asynchronous Programming: Utilize C#'s async and await features to enhance the responsiveness of your application, particularly in operations involving I/O tasks like database access or API calls.
+Resource Management: Ensure that resources (e.g., file handles, network connections) are managed and released properly to avoid leaks that could degrade performance over time.
+3. Monitoring Tools and Techniques
+To effectively optimize, you need to know where the bottlenecks are.
+
+Application Performance Monitoring (APM) Tools: Tools like New Relic, AppDynamics, or open-source alternatives like Prometheus and Grafana can provide deep insights into your application’s performance and help identify bottlenecks.
+Logging: Implement comprehensive logging throughout your application. Logs can help you understand the application's behavior in production and are invaluable when diagnosing issues.
+4. Load Testing
+Before deploying major changes, conduct load testing to understand how the changes affect your application’s performance.
+
+Tools: Use tools like JMeter, LoadRunner, or Artillery to simulate various levels of load on your application and see how it behaves.
+Scalability Testing: Specifically test how well your application scales with increased load. This might involve testing both vertical and horizontal scaling strategies.
+Implementation Example: Adding Basic Caching
+Here's a simple example of how you might add caching to a commonly accessed query in your application using MemoryCache.
+
+csharp
+Copy code
+public class ProductService
+{
+    private readonly ApplicationDbContext _context;
+    private readonly IMemoryCache _cache;
+
+    public ProductService(ApplicationDbContext context, IMemoryCache cache)
+    {
+        _context = context;
+        _cache = cache;
+    }
+
+    public async Task<Product> GetProductByIdAsync(int productId)
+    {
+        var cacheKey = $"Product_{productId}";
+        if (!_cache.TryGetValue(cacheKey, out Product product))
+        {
+            product = await _context.Products.FindAsync(productId);
+            if (product != null)
+            {
+                // Set the cache options.
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(5)); // Expire after inactive for 5 minutes
+
+                _cache.Set(cacheKey, product, cacheEntryOptions);
+            }
+        }
+
+        return product;
+    }
+}
+Conclusion
+By focusing on these areas, you can significantly improve the performance and scalability of your application. Remember, performance tuning is an ongoing process that should continue throughout the life of your application. Regularly reviewing and adjusting based on new insights and changing usage patterns is key to maintaining optimal performance.
+
+---

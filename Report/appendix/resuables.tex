@@ -1,0 +1,100 @@
+\subsection{ASP.NET Core}
+ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-based, Internet-connected applications.
+ASP.NET Core includes the following features:
+•	Modular: ASP.NET Core is a modular framework that allows you to include only the components you need in your application. This makes your application smaller and more efficient.
+•	Cross-platform: ASP.NET Core runs on Windows, macOS, and Linux. You can develop and deploy ASP.NET Core applications on any platform.
+•	High-performance: ASP.NET Core is designed to be fast and efficient. It includes features like native support for asynchronous programming, dependency injection, and middleware to improve performance.
+•	Open-source: ASP.NET Core is an open-source framework that is developed and maintained by Microsoft. You can contribute to the development of ASP.NET Core on GitHub.
+•	Cloud-ready: ASP.NET Core is designed to work well in cloud environments. It includes features like configuration providers, logging providers, and health checks to make it easy to deploy and manage ASP.NET Core applications in the cloud.
+•	Internet-connected: ASP.NET Core is designed to work well with modern web technologies like WebSockets, SignalR, and gRPC. You can build real-time, interactive web applications with ASP.NET Core.
+ASP.NET Core includes several sub-frameworks that provide additional functionality, such as:
+•	ASP.NET Core MVC: A framework for building web applications using the Model-View-Controller pattern.
+•	ASP.NET Core Razor Pages: A framework for building page-focused web applications.
+•	ASP.NET Core SignalR: A framework for building real-time, interactive web applications.
+•	ASP.NET Core Web API: A framework for building RESTful web services.
+
+\subsection{Razor pages}
+Razor Pages are a new feature of ASP.NET Core that makes coding page-focused scenarios easier and more productive.
+The Razor Pages framework allows you to build page-focused web applications using a page-based programming model.
+Razor Pages are similar to ASP.NET Web Forms, in that each page has a .cshtml file that contains both the HTML markup and the C\# code that drives the page.
+Razor Pages are also similar to ASP.NET MVC, in that they use the Razor view engine to render the HTML markup.
+Razor Pages are designed to be lightweight and easy to use, with a focus on simplicity and productivity.
+Razor Pages are ideal for building small to medium-sized web applications that are primarily focused on displaying and collecting data.
+Razor Pages are a good choice for scenarios where you want to build a web application quickly and easily, without the overhead of a full MVC framework.
+Razor Pages are also a good choice for scenarios where you want to build a web application that is primarily focused on displaying and collecting data, rather than on complex business logic or workflow.
+
+\subsection{Entity Framework Core}
+Entity Framework Core is a lightweight, extensible, open-source, and cross-platform version of the popular Entity Framework data access technology. 
+It can serve as an object-relational mapper (ORM) that enables .NET developers to work with a database using .NET objects. 
+It eliminates the need for most of the data-access code that developers usually need to write. Entity Framework Core supports many database engines, including SQL Server, MySQL, SQLite, PostgreSQL, and others. 
+It can generate database tables from your code, and it can generate code from your database tables. 
+Entity Framework Core is designed to work with .NET Core applications, but it can also work with .NET Framework applications. 
+It is a powerful tool that can help you build data-driven applications more efficiently. Entity Framework Core includes the following features:
+•	Database Providers: Entity Framework Core supports many database engines, including SQL Server, MySQL, SQLite, PostgreSQL, and others. You can use the same code to work with different database engines.
+•	Modeling: Entity Framework Core allows you to define your database schema using C\# classes. You can define entities, relationships, and constraints using attributes or the Fluent API.
+•	Querying: Entity Framework Core allows you to query your database using LINQ (Language Integrated Query). You can write LINQ queries in C\# code and Entity Framework Core will translate them into SQL queries.
+•	Saving Data: Entity Framework Core allows you to save data to your database using the DbContext class. You can add, update, and delete entities, and Entity Framework Core will generate the necessary SQL commands.
+•	Change Tracking: Entity Framework Core tracks changes to your entities and generates the necessary SQL commands to persist those changes to the database.
+•	Migrations: Entity Framework Core allows you to create and apply database migrations. Migrations are used to update your database schema as your application evolves.
+•	Transactions: Entity Framework Core supports transactions, which allow you to group multiple database operations into a single unit of work.
+•	Concurrency: Entity Framework Core supports optimistic concurrency, which allows multiple users to work with the same data without conflicts.
+•	Performance: Entity Framework Core is designed to be fast and efficient. It includes features like query caching, compiled queries, and batch updates to improve performance.
+
+\subsection{ASP.NET Core Identity}
+ASP.Net Core Identity is a membership system that adds login functionality to ASP.NET Core apps. Users can create an account, log in, and log out. ASP.NET Core Identity includes the following features:
+•	Stores user information in a SQL Server database using Entity Framework Core.
+•	Provides a default UI for login, register, and manage user profile.
+•	Provides functionality for account confirmation and password reset.
+•	Enables account lockout to protect against brute force attacks.
+•	Enables two-factor authentication using SMS or email.
+•	Provides cookie authentication as the default mode of authentication.
+•	Allows customization of the token provider and the email sender.
+•	Allows customization of the user profile by adding custom properties.
+•	Allows customization of the UI by modifying the Razor views.
+•	Provides a UserManager class for working
+ASP.NET Core IdentityUser is the user class for ASP.NET Core Identity. It contains properties like Id, UserName, Email, etc. that are common to most user classes. You can extend IdentityUser to add custom properties specific to your application.
+This has been done the following way:
+1.	ApplicationUser.cs: This class extends the IdentityUser class provided by ASP.NET Core Identity. This means that ApplicationUser inherits all the properties of IdentityUser (like Id, UserName, Email, etc.) and can also add additional properties. In this case, FirstName, LastName, and Address are added.
+2.	Customer.cs and Employee.cs: These classes extend ApplicationUser, meaning they inherit all properties of ApplicationUser and, by extension, IdentityUser. They also add their own specific properties. This is a common way to extend the user model in ASP.NET Core Identity to include additional data specific to your application.
+3.	ApplicationDbContext.cs: This class extends IdentityDbContext, which is a DbContext specifically designed to work with ASP.NET Core Identity. It includes DbSet properties for Customer and Employee, which means these types of users will be included in the database context.
+4.	Program.cs: The selected code in this file configures the ASP.NET Core Identity system. It adds the default identity system with ApplicationUser as the user type and ApplicationDbContext as the context. It also adds the identity core for Customer and Employee types, which means these types of users will be included in the identity system.
+5.	Startup.cs: The selected code in this file configures the ASP.NET Core Identity system. It adds the default identity system with ApplicationUser as the user type and ApplicationDbContext as the context. It also adds the identity core for Customer and Employee types, which means these types of users will be included in the identity system.
+ASP.NET Core Identity is a powerful tool that can help you add user authentication and authorization to your ASP.NET Core applications. It is easy to use and configure, and it includes many features that can save you time and effort when building secure web applications.
+
+
+\subsection{Bootstrap}
+Bootstrap is a popular front-end framework for building responsive web applications. It includes a set of CSS and JavaScript files that provide a consistent look and feel across different browsers and devices. 
+Bootstrap includes a grid system for laying out content, as well as a collection of components like buttons, forms, and navigation bars. Bootstrap also includes a set of utility classes for styling text, images, and other elements. 
+Bootstrap is easy to use and customize, making it a popular choice for web developers. It is well-documented and has a large community of users who contribute to its development. 
+Bootstrap is a powerful tool that can help you build modern, responsive web applications quickly and easily.
+
+\subsection{Fluent API}
+The Fluent API is a powerful tool that allows you to configure Entity Framework Core to work with your database in a more flexible and expressive way.
+The Fluent API allows you to define your database schema using C\# code, rather than relying on conventions or data annotations. This gives you more control over how your database is structured, and allows you to define complex relationships and constraints that are not possible with conventions or data annotations.
+The Fluent API is also more flexible than conventions or data annotations, and allows you to define your database schema in a more expressive way. You can use the Fluent API to define indexes, unique constraints, foreign key constraints, and other database features that are not possible with conventions or data annotations.
+The Fluent API is a powerful tool that can help you build more complex and flexible database schemas with Entity Framework Core. It can save you time and effort, and make your code more maintainable and readable.
+
+\subsection{Automapper}
+AutoMapper is a library that simplifies the process of mapping between objects in .NET. It allows you to define mappings between objects in a clear and concise way, without having to write a lot of boilerplate code.
+AutoMapper uses a fluent interface to define mappings between objects. You can define mappings between objects with similar properties, or between objects with different properties. 
+AutoMapper can also handle complex mappings, such as mapping between objects with nested properties or collections.
+AutoMapper is easy to use and configure. You can define mappings in a single line of code, or you can use profiles to define mappings between multiple objects.
+AutoMapper is a powerful tool that can help you reduce the amount of code you need to write when working with objects in .NET. It can save you time and effort, and make your code more maintainable and readable.
+
+\subsection{Newtonsoft.Json}
+Newtonsoft.Json is a popular high-performance JSON framework for .NET. It is widely used in .NET applications to serialize and deserialize JSON data.
+Newtonsoft.Json includes the following features:
+•	Serialization: Newtonsoft.Json can serialize .NET objects to JSON strings. This allows you to convert .NET objects to JSON format for storage or transmission.
+•	Deserialization: Newtonsoft.Json can deserialize JSON strings to .NET objects. This allows you to convert JSON data to .NET objects for processing in your application.
+•	Performance: Newtonsoft.Json is designed to be fast and efficient. It includes features like JSON.NET, which is a high-performance JSON parser that can parse JSON data quickly.
+•	Flexibility: Newtonsoft.Json is highly configurable and extensible. You can customize the serialization and deserialization process using attributes, settings, and converters.
+•	Error Handling: Newtonsoft.Json includes features for handling errors during serialization and deserialization. You can configure how errors are handled and customize error messages.
+•	Compatibility: Newtonsoft.Json is compatible with many .NET platforms, including .NET Framework, .NET Core, and Xamarin. You can use Newtonsoft.Json in a wide range of .NET applications.
+Newtonsoft.Json is a powerful tool that can help you work with JSON data in .NET applications. It is easy to use and configure, and it is well-documented with a large community of users who contribute to its development.
+
+\subsection{Razor Class Library}
+Razor Class Library (RCL) is a new feature in ASP.NET Core 2.1 that allows you to build Razor views and pages into a reusable class library. This means you can create a library of Razor views and pages that can be shared across multiple projects. 
+RCLs are useful for creating reusable UI components, such as navigation bars, headers, footers, and other common elements. 
+They can also be used to create reusable page templates, layouts, and partial views. RCLs can be published as NuGet packages and distributed to other developers. 
+They can also be used to create a common look and feel for multiple projects. RCLs are a powerful tool that can help you build modular, maintainable, and scalable web applications. 
+They can save you time and effort by allowing you to reuse code and avoid duplication. RCLs are easy to create and use, and they can be a valuable addition to your ASP.NET Core projects.

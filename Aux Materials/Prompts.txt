@@ -1,0 +1,13 @@
+Jeg har 37 User stories og jeg ønsker, at de skal importeres til Trello.
+På nuværende tidspunkt er de 37 User Stories delt op i fire markdown filer. med cirka 10 stk i hver. 
+Før de kan importeres til Trello, så skal de konverteres til en CSV fil, med det rigtige format.
+
+Card Name: Titlen på User Story, f.eks. "US 1 - Kunde, Produktgennemsyn".
+Card Description: Beskrivelsen af User Story, som omfatter roller, mål og funktioner.
+Labels: Etiketter associeret med kortet, anvendt i Trello, kommer fra "estimate" ("1 (subtle green)", "2 (green)",  "3 (yellow)", "5 (orange)", "8 (red)").
+Checklist: Navnet på en checkliste tilknyttet kortet.
+Checklist Item: Specifikke opgaver eller acceptkriterier listet under checklister.
+
+Jeg giver dig nu, to User Stories i en CSV fil, så du selv se det rigtige format fra CSV filen. 
+Dernæst får du én .md fil af gangen, så du kan konvertere, formatere dem og sende dem tilbage til mig. 
+Spørgsmål?

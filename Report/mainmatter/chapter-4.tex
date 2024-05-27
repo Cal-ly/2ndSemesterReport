@@ -1,0 +1,157 @@
+\chapter{SCRUM Proces}
+\label{chapter:scrum}
+
+Dette kapitel vil beskrive SCRUM processen, hvilke modifikationer der blev foretaget samt analysen bag og hvordan det blev anvendt til at strukturere projektet. 
+I \ref{chapter:conclusion} forefindes afsnittet \ref{sec:conclusion_summary}, der opsummerer SCRUM processen og dens anvendelse i projektet.
+
+\section{Workflows}
+Workflows er normalt ikke en del af SCRUM processen men en metode, hvorpå jeg kunne tage noget der var i størrelsen af epic user story og dele den op i mindre User Stories. 
+Jeg har valgt at bruge denne metode, da den låner elementer fra \emph{Persona} tilgangen men i et format, der gør det mere håndgribeligt at omsætte til User Stories.
+Samtidig giver det et fokus på funktionalitet for slutbrugeren og det design, der er skal støtte op om det.
+
+\subsection{Workflow eksempel}
+Situation: Medarbejder (blomsterdekoratør) ekspedere en ordre.
+Formål: At håndtere indkommende ordrer og forberede blomsterarrangementer.
+\begin{enumerate}
+    \item Medarbejder logger ind på ordreportalen.
+    \item Medarbejder gennemser listen over dagens ordrer og vælger en ordre til ekspedition.
+    \item Medarbejder forbereder blomsterarrangementet i henhold til kundens specifikationer.
+    \item Medarbejder markerer ordren som 'klar til levering' eller 'klar til afhentning'.
+    \item Medarbejder opdaterer ordrestatus i systemet.
+    \label{item:workflow-eksempel}
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/scrum/workflow-board1.jpg}
+        \caption{Workflow Board 1}
+        \label{fig:workflow-board1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/scrum/workflow-board2.jpg}
+        \caption{Workflow Board 2}
+        \label{fig:workflow-board2}
+    \end{minipage}
+\end{figure}
+
+Rent fysisk blev de opskrevne Workflows sat op på en whiteboard. Herefter blev der sat ringe om områder, der kunne omsættes til User Stories.
+Workflow Points, der gik igen eller ville afføde den samme funktionalitet blev overstreget og samlet i en User Story.
+I eksemplet fra \ref{item:workflow-eksempel} kunne det være følgende User Stories:
+\begin{enumerate}
+    \item "Som medarbejder vil jeg kunne logge ind på ordreportalen, så jeg kan ekspedere ordrer."
+    \item "Som medarbejder vil jeg kunne se ordredetaljer om blomsterarrangementet, så jeg kan ekspedere ordrer."
+    \item "Som medarbejder vil jeg kunne opdatere ordrestatus, så jeg kan tydeliggøre for alle brugere, hvor langt ordren er."
+    \label{item:workflow-us-eksempel}
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/scrum/workflow-board-red-rings1.jpg}
+        \caption{Workflow Board 1}
+        \label{fig:workflow-board-red-ring1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/scrum/workflow-board-red-rings2.jpg}
+        \caption{Workflow Board 2}
+        \label{fig:workflow-board-red-ring2}
+    \end{minipage}
+\end{figure}
+
+Dette er stadig relativt store User Stories. Ved at tilknytte \emph{Tasks} til hver User Story, bliver de mere overskuelige og 
+nemmere at tildele \emph{Acceptance Criteria}. Dermed får man et godt overblik over, hvad der skal til for at implementere funktionaliteten.
+
+\section{User Stories}
+Der blev skrevet User Stories for kunder (underforstået private), bedemænd, medarbejdere og bestyrer, da de har forskellige behov og derfor også forskellige User Stories.
+Da hensigten med User Stories er at beskrive funktionalitet fra slutbrugerens perspektiv vil nogle elementer overlappende. Det kan fx være, at både en medarbejder og en kunde kunne logge in på webshoppen.
+I sådanne tilfælde blev der skrevet en User Story for hver, hvis de da har forskellige behov og derfor også forskellige Acceptance Criteria.
+Ved for stort overlap blev de slået sammen til en User Story, der dækkede begge brugere.
+
+\subsection{Opbygning af User Stories}
+User Stories blev skrevet i formatet "Som [rolle] ønsker jeg [handling], med det formål [resultat]".
+Dette format sikrer, at User Stories er fokuseret på funktionalitet og ikke teknologi.
+Derudover blev der tilføjet \emph{Tasks} for at give klarhed til udvikler, hvad der konkret skulle gøres samt \emph{Acceptance Criteria} for at sikre, at User Stories var klare og præcise.
+
+\subsection{Prioritering af User Stories}
+User Stories blev indledende prioriteret efter MoSCoW metoden, hvor de blev inddelt i fire kategorier: Must have, Should have, Could have og Won't have.
+Det var dog ikke givende, da scope allerede var blevet afgrænset. Derfor blev User Stories prioriteret efter, hvad der var vigtigst for slutbrugeren og med henblik på, at der hurtigt skulle kunne leveres en funktionel kerne af produktet.
+User Stories uden for scope forblev som "gode ideer" i product backloggen.
+
+\subsection{Estimering af User Stories}
+User Stories indledende estimeret i \emph{T-shirt sizes} efter XS, S, M, L, XL. Dette blev gjort for at fjerne fokus fra en numerisk værdi og i stedet fokusere på, hvor kompleks en User Story var.
+Estimeringen endte med at anvende \emph{Story Points} efter Fibonacci sekvensen 1, 2, 3, 5 og 8. Dette skift skete, da det var nemmere at anvende tal, når bl.a. velocity skulle beregnes.
+Estimeringen tog udgangspunkt i tre faktorer:
+\begin{itemize}
+    \item Kodemængde, da overskuelighed forsvinder i takt med at koden vokser, så risiko for fejl stiger og hvor lang tid debugging vil tage øges.
+    \item Kodekompleksitet, baseret bl.a. på hvorvidt der skulle anvendes (mange) komplekse datatyper, eksotiske libraries som fx httpContext eller der var mange afhængigheder.
+    \item Funktionalitetskompleksitet, forstået som et holistisk skøn på hvor mange delelementer denne feature ville gribe ind i men bl.a. også hvor mange guardrails, der skulle tilføjes for at sikre at funktionaliteten virkede som forventet.
+\end{itemize}
+Planning Poker blev anvendt i det gamle team til at estimere User Stories. Hensigten var, at det skulle sikre at alle i teamet havde en stemme, og at der blev taget højde for alle synspunkter.
+Dette virkede redundant i det nye team, da der kun var én udvikler, der skulle estimere.
+
+\subsection{User Story Mapping}
+User Story Mapping er en metode til at prioritere User Stories og få et overblik over, hvad der skal implementeres først.
+Det er en metode, der tager udgangspunkt i slutbrugerens behov og dermed sikrer, at de vigtigste funktionaliteter bliver implementeret først.
+Her hjalp Workflows også med at identificere User Stories, der kunne grupperes og prioriteres, fordi de netop beskrev en holistisk proces.
+I eksemplet fra \ref{item:user-story-mapping-eksempel} kunne det være, at User Stories 1, 2, 3, 4 og 9 skulle implementeres først, da de dækker overordnede funktionaliteter, der er vigtige for kunden.
+
+\subsubsection{User Story Mapping eksempel}
+Kunden ønsker at kunne logge ind og se sine ordrer og betalinger. Dette kræver, at kunden kan logge ind, se en oversigt over sine ordrer, se en oversigt over sine betalinger og se detaljer om en ordre.
+\begin{enumerate}
+    \item "Som kunde vil jeg kunne logge ind, så jeg kan se mine ordrer og betalinger."
+    \item "Som kunde vil jeg kunne se en oversigt over mine ordrer, så jeg kan følge med i, hvor langt de er."
+    \item "Som kunde vil jeg kunne se en oversigt over mine ordre, så jeg kan se, hvad jeg har betalt."
+    \item "Som kunde vil jeg kunne se detaljer om en ordre, så jeg kan se, hvad jeg har betalt for."
+    \item "Som kunde vil jeg kunne se en oversigt over mine personlige oplysninger, så jeg kan se, hvad I har registreret om mig."
+    \item "Som kunde vil jeg kunne se detaljer om mine personlige oplysninger, så jeg kan se, hvad I har registreret om mig."
+    \item "Som kunde vil jeg kunne ændre mine personlige oplysninger, så jeg kan sikre, at de er korrekte."
+    \item "Som kunde vil jeg kunne slette mine personlige oplysninger, så jeg kan sikre, at de ikke længere er tilgængelige."
+    \item "Som kunde vil jeg kunne logge ud, så jeg kan sikre, at mine oplysninger ikke er tilgængelige for andre."
+    \label{item:user-story-mapping-eksempel}
+\end{enumerate}
+
+\subsection{Product backlog}
+Da tidsrammen for projektet var begrænset, blev der oprettet en Product Backlog, der indeholdt alle User Stories. Derfra blev der dog lavet en iterativ Sprint Planning for hele projektet for at sikre, at scope for projektet var realistisk.
+Alle User Stories blev prioriteret og estimeret samt fordelt i de fem Sprints i en prioriteret rækkefølge med vigtigste på toppen, se figur \ref{fig:trello-sprint-backlogs}. 
+Dette skabte overblik over, hvad der skulle implementeres først, samt sat en indsats/belastning, både på Sprint basis men også for hele projektet.
+Dermed kunne det bruges som et styringsredskab til at sikre, at projektet blev færdigt til tiden.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/scrum/trello-sprint-backlogs.png}
+    \caption{Product Backlog}
+    \label{fig:trello-sprint-backlogs}
+\end{figure}
+
+\section{Sprints}
+Sprints blev planlagt til at vare én uge, da det var en passende længde til at kunne implementere en vis mængde User Stories (med tilhørende debugging, dokumentation etc.), men kort nok til at få en fornemmelse af velocity.
+
+\subsection{Sprint Planning}
+Sprint Planning blev en mere organisk, iterativ proces, med udgangspunkt i den første estimering og fordeling på Sprints. 
+Pointer fra Sprint Reviews blev brugt til efterfølgende Sprint Planning, så der blev taget højde for eventuelle forsinkelser eller overestimeringer.
+
+\subsection{Daily Standup}
+Daily Standup blev mere til en daglig refleksion, da der kun var én udvikler. Da softwareudvikling ind imellem kræver den \emph{gode idé} eller samtaler med ens gummiand, så blev der også taget højde for om der skulle bruges kræfter andetsteds.
+Der kunne stadig dokumenteres m.m. som ikke nødvendigvis var en del af den daglige udvikling.
+
+\subsection{Sprint Review}
+Sprint Review blev brugt til at reflektere og evaluere, hvad der var blevet implementeret og hvad der manglede. Det blev også brugt til at justere på "Product Backloggen", hvis der var User Stories, der ikke længere var relevante eller User Stories, der skulle tilføjes.
+Burndown Chart blev brugt til at visualisere og bestemme velocity for Sprintet og projekte som helhed.
+
+\subsection{Sprint Retrospective}
+Sprint Retrospective var mere en selvransagelse end en gruppediskussion, da der kun var én udvikler. Der var dog stadig fokus på, hvad der var gået godt og hvad der kunne forbedres. 
+Bl.a. blev der reflekteret over, om der var User Stories, der var over- eller underestimeret, og hvad der kunne gøres for at forbedre det. 
+Et andet eksempel var, om der var blevet lagt en for stor indsats i en bestemt implmentation og hvornår det gik fra, at ville finde en løsning til at ville "besejre" et problem.
+
+\section{Burndown Chart}
+Burndown Chart blev brugt til at visualisere, hvor mange Story Points der var tilbage i Sprintet og projektet som helhed.
+
+\section{Velocity}
+Velocity blev brugt til at estimere, hvor mange User Stories der kunne implementeres i et Sprint, og dermed hvor mange User Stories der kunne implementeres i projektet som helhed.
+Velocity blev beregnet som gennemsnittet af de seneste Sprints, da det gav et mere retvisende billede af, hvor mange Story Points der kunne implementeres i et Sprint.

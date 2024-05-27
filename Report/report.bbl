@@ -1,0 +1,117 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{connolly2023database}{book}{}
+      \name{author}{2}{}{%
+        {{hash=414fffa388c22e42fe8526b136065da8}{%
+           family={Connolly},
+           familyi={C\bibinitperiod},
+           given={Thomas\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=775f239517c2bc9b422c927b968e4658}{%
+           family={Begg},
+           familyi={B\bibinitperiod},
+           given={Carolyn\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison Wesley}%
+      }
+      \strng{namehash}{df64212829497b3e7b33ddf1fcbc6670}
+      \strng{fullhash}{df64212829497b3e7b33ddf1fcbc6670}
+      \strng{bibnamehash}{df64212829497b3e7b33ddf1fcbc6670}
+      \strng{authorbibnamehash}{df64212829497b3e7b33ddf1fcbc6670}
+      \strng{authornamehash}{df64212829497b3e7b33ddf1fcbc6670}
+      \strng{authorfullhash}{df64212829497b3e7b33ddf1fcbc6670}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd ed.}
+      \field{title}{Database Solutions: A Step by Step Guide to Building Databases}
+      \field{year}{2004}
+    \endentry
+    \entry{1000logos}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9f00fc433acc39834f657b6f268415c1}{%
+           family={Logos},
+           familyi={L\bibinitperiod},
+           given={1000},
+           giveni={1\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f00fc433acc39834f657b6f268415c1}
+      \strng{fullhash}{9f00fc433acc39834f657b6f268415c1}
+      \strng{bibnamehash}{9f00fc433acc39834f657b6f268415c1}
+      \strng{authorbibnamehash}{9f00fc433acc39834f657b6f268415c1}
+      \strng{authornamehash}{9f00fc433acc39834f657b6f268415c1}
+      \strng{authorfullhash}{9f00fc433acc39834f657b6f268415c1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{1000 Logos - The Famous Brands and Company Logos in the World}
+      \field{urlday}{14}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://1000logos.net/
+      \endverb
+      \verb{url}
+      \verb https://1000logos.net/
+      \endverb
+    \endentry
+    \entry{mit-newteams}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c3354d8db5c29b7c86f2effee1366613}{%
+           family={Ressources},
+           familyi={R\bibinitperiod},
+           given={MIT\bibnamedelima Human},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3354d8db5c29b7c86f2effee1366613}
+      \strng{fullhash}{c3354d8db5c29b7c86f2effee1366613}
+      \strng{bibnamehash}{c3354d8db5c29b7c86f2effee1366613}
+      \strng{authorbibnamehash}{c3354d8db5c29b7c86f2effee1366613}
+      \strng{authornamehash}{c3354d8db5c29b7c86f2effee1366613}
+      \strng{authorfullhash}{c3354d8db5c29b7c86f2effee1366613}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Important Steps when Building a new Team}
+      \field{urlday}{14}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://hr.mit.edu/learning-topics/teams/articles/new-team
+      \endverb
+      \verb{url}
+      \verb https://hr.mit.edu/learning-topics/teams/articles/new-team
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,48 @@
+Formalia:
+ - Wordcount
+ - Opdater Nomenklatur
+ - Mock Ups
+
+Afsnit:
+- Teknologier/Værktøjer
+- Fileformater
+   * Markdown (.md)
+   * CSV
+   * JSON
+- Trello
+   * Import using Blue Cat
+   * Export to JSON
+   * Overskuelighed
+- TrelloConverter
+   * Small application
+   * How it works
+- Latex
+   * Template
+   * Fordele/Ulemper (Git)
+      - Write to .tex file 
+      - Smaller files
+      - Hard setup, easier use
+- GitHub
+   * Branches
+   * Actions ?
+- Test
+   * Unit Test
+   * Omfang og hvorfor
+- Packages (e.g. NuGet)
+   * AutoMapper
+   * Chart.js
+   * Razor Pages SSD
+   * Fluent API
+   * ASP.NET Core Identity
+- Design manual
+   * Valg af design stil
+   * Hvordan vil vi have det
+- Dokumentation af Sprints
+   * Burndown Chart
+- Software Design
+   * 
+- Database Design
+   * Not using bi-directional relationships
+
+- Seed Mock data
+   

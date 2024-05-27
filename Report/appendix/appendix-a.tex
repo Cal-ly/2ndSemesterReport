@@ -1,0 +1,470 @@
+\chapter{Anvendte Teknologier}
+Dette appendix beskriver de frameworks og libraries, der er blevet brugt i projektet. Hver sektion beskriver kort, hvad hvert framework eller library er, og hvordan det er blevet brugt i projektet.
+
+\section{Koncepter}
+
+\subsection{ViewModels}
+ViewModels er en designmønster, der bruges til at adskille præsentationslogik fra forretningslogik i en applikation. ViewModels er en slags model, der er designet til at repræsentere data, der skal vises i brugergrænsefladen. ViewModels indeholder kun de data, der er nødvendige for at vise brugergrænsefladen, og de indeholder ikke forretningslogik eller dataadgangskode.
+ViewModels inkluderer følgende funktioner:
+•	Enkelhed: ViewModels gør det nemt at adskille præsentationslogik fra forretningslogik ved at inkludere kun de data, der er nødvendige for at vise brugergrænsefladen.
+•	Klarhed: ViewModels gør det nemt at se, hvordan data er struktureret, da de indeholder kun de data, der er nødvendige for at vise brugergrænsefladen.
+•	Sikkerhed: ViewModels gør det nemt at validere data, da de indeholder kun de data, der er nødvendige for at vise brugergrænsefladen.
+•	Ydelse: ViewModels er designet til at være hurtige og effektive, da de eliminerer behovet for at hente unødvendige data fra databasen.
+ViewModels er et kraftfuldt værktøj, der kan hjælpe dig med at adskille præsentationslogik fra forretningslogik i en applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+Purpose: A ViewModel is designed specifically for the view layer of an application, often in MVC (Model-View-Controller) or MVVM (Model-View-ViewModel) architectures. It is tailored to the needs of a specific UI component or page.
+Functionality: ViewModels are constructed to facilitate operations like data binding and aggregation that are specific to the presentation layer. They can include elements that are directly related to how data is displayed on the page, such as display formats, UI state information (like visibility or enabled state), and commands (particularly in MVVM).
+Scope: Generally used only within the view layer and often includes data from multiple sources or tables combined in ways that are most useful for rendering by views.
+
+\subsection{Models}
+Models er en designmønster, der bruges til at repræsentere data i en applikation. Models er en slags klasse, der er designet til at repræsentere data, der skal gemmes i en database eller vises i brugergrænsefladen. Models indeholder kun data og indeholder ikke forretningslogik eller præsentationslogik.
+Models inkluderer følgende funktioner:
+•	Enkelhed: Models gør det nemt at repræsentere data i en applikation ved at inkludere kun de data, der er nødvendige for at gemme eller vise data.
+•	Klarhed: Models gør det nemt at se, hvordan data er struktureret, da de indeholder kun de data, der er nødvendige for at gemme eller vise data.
+•	Sikkerhed: Models gør det nemt at validere data, da de indeholder kun de data, der er nødvendige for at gemme eller vise data.
+•	Ydelse: Models er designet til at være hurtige og effektive, da de eliminerer behovet for at hente unødvendige data fra databasen.
+Models er et kraftfuldt værktøj, der kan hjælpe dig med at repræsentere data i en applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+Purpose: A model is a class that represents data in an application. It is designed to encapsulate data and provide a way to interact with it. Models are typically used to represent data that is stored in a database or displayed in the user interface.
+Functionality: Models are constructed to facilitate operations like data access, data manipulation, and data validation. They can include elements like data access methods, business rules, and data validation logic.
+Scope: Generally used within the business logic layer of an application and often includes data access code, business rules, and other logic that is not directly related to the presentation layer.
+
+\subsection{Data Transfer Objects}
+Data Transfer Objects (DTOs) er en designmønster, der bruges til at overføre data mellem forskellige lag i en applikation. DTOs er en slags klasse, der er designet til at indeholde data, der skal overføres mellem forskellige lag i en applikation. DTOs indeholder kun data og indeholder ikke forretningslogik eller præsentationslogik.
+DTOs inkluderer følgende funktioner:
+•	Enkelhed: DTOs gør det nemt at overføre data mellem forskellige lag i en applikation ved at inkludere kun de data, der er nødvendige for at overføre data.
+•	Klarhed: DTOs gør det nemt at se, hvordan data er struktureret, da de indeholder kun de data, der er nødvendige for at overføre data.
+•	Sikkerhed: DTOs gør det nemt at validere data, da de indeholder kun de data, der er nødvendige for at overføre data.
+•	Ydelse: DTOs er designet til at være hurtige og effektive, da de eliminerer behovet for at overføre unødvendige data.
+DTOs er et kraftfuldt værktøj, der kan hjælpe dig med at overføre data mellem forskellige lag i en applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+Purpose: A Data Transfer Object (DTO) is a class that is used to transfer data between different layers of an application. It is designed to encapsulate data and provide a way to transfer it between layers. DTOs are typically used to transfer data between the business logic layer and the presentation layer.
+Functionality: DTOs are constructed to facilitate operations like data transfer, data transformation, and data validation. They can include elements like data access methods, business rules, and data validation logic.
+Scope: Generally used to transfer data between different layers of an application and often includes data access code, business rules, and other logic that is not directly related to the presentation layer.
+
+
+\subsection{Data Access Objects}
+Data Access Objects (DAOs) er en designmønster, der bruges til at adskille dataadgangskode fra forretningslogik i en applikation. DAOs er en slags klasse, der er designet til at udføre dataadgangsoperationer i en applikation. DAOs indeholder kun dataadgangskode og indeholder ikke forretningslogik eller præsentationslogik.
+DAOs inkluderer følgende funktioner:
+•	Enkelhed: DAOs gør det nemt at adskille dataadgangskode fra forretningslogik ved at inkludere kun den logik, der er nødvendig for at udføre dataadgangsoperationer.
+•	Klarhed: DAOs gør det nemt at se, hvordan dataadgangskode er struktureret, da de indeholder kun den logik, der er nødvendig for at udføre dataadgangsoperationer.
+•	Sikkerhed: DAOs gør det nemt at validere data, da de indeholder kun den logik, der er nødvendig for at udføre dataadgangsoperationer.
+•	Ydelse: DAOs er designet til at være hurtige og effektive, da de eliminerer behovet for at udføre unødvendige dataadgangsoperationer.
+DAOs er et kraftfuldt værktøj, der kan hjælpe dig med at adskille dataadgangskode fra forretningslogik i en applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+Purpose: A Data Access Object (DAO) is a class that performs data access operations in an application. It is designed to encapsulate data access code and separate it from business logic and presentation logic.
+Functionality: DAOs are constructed to facilitate operations like data retrieval, data storage, and data manipulation. They can include elements like data access methods, data validation logic, and data transformation logic.
+Scope: Generally used within the data access layer of an application and often includes data access code, data validation logic, and other logic that is not directly related to the business logic or presentation layer.
+
+\subsection{Difference between DTOs, DAOs and ViewModels}
+
+\subsubsection{ViewModels}
+\begin{itemize}
+    \item \textbf{Purpose:} Tailored for the view layer in MVC or MVVM frameworks, ViewModels support the user interface.
+    \item \textbf{Functionality:} Facilitates data binding and UI-related functions like display formats and UI state management.
+    \item \textbf{Scope:} Limited to the view layer, often aggregates data from various sources for UI presentation.
+\end{itemize}
+
+\subsubsection{Data Transfer Object (DTO)}
+\begin{itemize}
+    \item \textbf{Purpose:} Facilitates data transfer across network boundaries or between processes, mainly in service-oriented architectures.
+    \item \textbf{Functionality:} DTOs are simple containers carrying data without business logic, optimizing data transfer by simplifying structures.
+    \item \textbf{Scope:} Used across different layers and services, focusing on data encapsulation rather than display.
+\end{itemize}
+
+\subsubsection{Data Access Object (DAO)}
+\begin{itemize}
+    \item \textbf{Purpose:} Manages data interaction within the data access layer, abstracting database or storage access.
+    \item \textbf{Functionality:} Encapsulates CRUD operations, interfacing directly with the database through SQL or specific database calls.
+    \item \textbf{Scope:} Operates within the data access layer, managing transactions and data storage details.
+\end{itemize}
+
+\subsubsection{Differences in Context and Usage}
+\begin{itemize}
+    \item \textbf{DTOs:} Primarily used for efficient data transfer, especially in networked applications. They simplify data payload to minimize transfer size and complexity.
+    \item \textbf{ViewModels:} Focus on user interaction, often involving UI state and behavior specifics, making data usable and interactive within client applications.
+    \item \textbf{DAOs:} Central to data storage and retrieval, directly managing database interactions and supporting data integrity and transaction management.
+\end{itemize}
+
+\subsubsection{Example Usage}
+\begin{itemize}
+    \item \textbf{DTO:} A DTO might package data from several database tables to transmit it efficiently to a client application in one go.
+    \item \textbf{ViewModel:} A ViewModel could be used to manage the display and functionality of a user profile page, handling the data needed for that specific view.
+    \item \textbf{DAO:} A DAO could be responsible for all database operations for a "Users" table, managing SQL for adding, updating, deleting, and retrieving user data.
+\end{itemize}
+
+\subsection{Entities}
+Entities er en designmønster, der bruges til at repræsentere data i en applikation. Entities er en slags klasse, der er designet til at repræsentere data, der skal gemmes i en database eller vises i brugergrænsefladen. Entities indeholder kun data og indeholder ikke forretningslogik eller præsentationslogik.
+Entities inkluderer følgende funktioner:
+•	Enkelhed: Entities gør det nemt at repræsentere data i en applikation ved at inkludere kun de data, der er nødvendige for at gemme eller vise data.
+•	Klarhed: Entities gør det nemt at se, hvordan data er struktureret, da de indeholder kun de data, der er nødvendige for at gemme eller vise data.
+•	Sikkerhed: Entities gør det nemt at validere data, da de indeholder kun de data, der er nødvendige for at gemme eller vise data.
+•	Ydelse: Entities er designet til at være hurtige og effektive, da de eliminerer behovet for at hente unødvendige data fra databasen.
+Entities er et kraftfuldt værktøj, der kan hjælpe dig med at repræsentere data i en applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+Purpose: An entity is a class that represents data in an application. It is designed to encapsulate data and provide a way to interact with it. Entities are typically used to represent data that is stored in a database or displayed in the user interface.
+Functionality: Entities are constructed to facilitate operations like data access, data manipulation, and data validation. They can include elements like data access methods, business rules, and data validation logic.
+Scope: Generally used within the business logic layer of an application and often includes data access code, business rules, and other logic that is not directly related to the presentation layer.
+
+
+
+\subsection{Services}
+Services er en designmønster, der bruges til at adskille forretningslogik fra præsentationslogik i en applikation. Services er en slags klasse, der er designet til at udføre en bestemt opgave eller funktion i en applikation. Services indeholder kun forretningslogik og dataadgangskode og indeholder ikke præsentationslogik.
+Services inkluderer følgende funktioner:
+•	Enkelhed: Services gør det nemt at adskille forretningslogik fra præsentationslogik ved at inkludere kun den logik, der er nødvendig for at udføre en bestemt opgave eller funktion.
+•	Klarhed: Services gør det nemt at se, hvordan logik er struktureret, da de indeholder kun den logik, der er nødvendig for at udføre en bestemt opgave eller funktion.
+•	Sikkerhed: Services gør det nemt at validere data, da de indeholder kun den logik, der er nødvendig for at udføre en bestemt opgave eller funktion.
+•	Ydelse: Services er designet til at være hurtige og effektive, da de eliminerer behovet for at udføre unødvendige opgaver eller funktioner.
+Services er et kraftfuldt værktøj, der kan hjælpe dig med at adskille forretningslogik fra præsentationslogik i en applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+Purpose: A service is a class that performs a specific task or function in an application. It is designed to encapsulate business logic and data access code, and it is typically used to separate concerns in an application.
+Functionality: Services are constructed to facilitate operations like data access, data manipulation, and business logic. They can include elements like data access methods, business rules, and data validation logic.
+Scope: Generally used within the business logic layer of an application and often includes data access code, business rules, and other logic that is not directly related to the presentation layer.
+
+\subsection{Repositories}
+Repositories er en designmønster, der bruges til at adskille dataadgangskode fra forretningslogik i en applikation. Repositories er en slags klasse, der er designet til at udføre dataadgangsoperationer i en applikation. Repositories indeholder kun dataadgangskode og indeholder ikke forretningslogik eller præsentationslogik.
+Repositories inkluderer følgende funktioner:
+•	Enkelhed: Repositories gør det nemt at adskille dataadgangskode fra forretningslogik ved at inkludere kun den logik, der er nødvendig for at udføre dataadgangsoperationer.
+•	Klarhed: Repositories gør det nemt at se, hvordan dataadgangskode er struktureret, da de indeholder kun den logik, der er nødvendig for at udføre dataadgangsoperationer.
+•	Sikkerhed: Repositories gør det nemt at validere data, da de indeholder kun den logik, der er nødvendig for at udføre dataadgangsoperationer.
+•	Ydelse: Repositories er designet til at være hurtige og effektive, da de eliminerer behovet for at udføre unødvendige dataadgangsoperationer.
+Repositories er et kraftfuldt værktøj, der kan hjælpe dig med at adskille dataadgangskode fra forretningslogik i en applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+Purpose: A repository is a class that performs data access operations in an application. It is designed to encapsulate data access code and separate it from business logic and presentation logic.
+Functionality: Repositories are constructed to facilitate operations like data retrieval, data storage, and data manipulation. They can include elements like data access methods, data validation logic, and data transformation logic.
+Scope: Generally used within the data access layer of an application and often includes data access code, data validation logic, and other logic that is not directly related to the business logic or presentation layer.
+
+
+
+\section{Funktionaliteter}
+\subsection{C\#}
+C\# er et programmeringssprog, der er udviklet af Microsoft. Det er et objektorienteret sprog, der er designet til at være enkelt, sikkert og effektivt. C\# er et af de mest populære programmeringssprog i verden og bruges bredt til at udvikle desktopapplikationer, webapplikationer, mobilapplikationer og spil.
+C\# er et kraftfuldt sprog, der giver dig mulighed for at opbygge komplekse og skalerbare applikationer. Det inkluderer funktioner som klasser, metoder, egenskaber, hændelser, delegater, generiske typer, LINQ og meget mere.
+C\# er et sikkert sprog, der inkluderer funktioner som typekontrol, undtagelseshåndtering, hukommelsesstyring og sikkerhedskontrol. Det er designet til at forhindre almindelige programmeringsfejl og sikkerhedstrusler.
+C\# er et effektivt sprog, der inkluderer funktioner som JIT-kompilering, garbage collection, asynkron programmering og parallel programmering. Det er designet til at være hurtigt og effektivt, selv når det kører på store og komplekse applikationer.
+C\# er et alsidigt sprog, der kan bruges til at udvikle en bred vifte af applikationer, herunder desktopapplikationer, webapplikationer, mobilapplikationer og spil. Det er et kraftfuldt værktøj, der kan hjælpe dig med at opbygge moderne og innovative applikationer.
+
+\subsection{.NET}
+.NET er et open-source framework til at bygge moderne, cloud-baserede, internetforbundne applikationer. .NET inkluderer følgende funktioner:
+•	Modulær: .NET er et modulært framework, der giver dig mulighed for at inkludere kun de komponenter, du har brug for i din applikation. Dette gør din applikation mindre og mere effektiv.
+•	Cross-platform: .NET kører på Windows, macOS og Linux. Du kan udvikle og distribuere .NET-applikationer på enhver platform.
+•	Høj ydeevne: .NET er designet til at være hurtig og effektiv. Det inkluderer funktioner som native understøttelse af asynkron programmering, afhængighedsinjektion og middleware for at forbedre ydeevnen.
+•	Open-source: .NET er et open-source framework, der udvikles og vedligeholdes af Microsoft. Du kan bidrage til udviklingen af .NET på GitHub.
+•	Cloud-klar: .NET er designet til at fungere godt i cloud-miljøer. Det inkluderer funktioner som konfigurationsudbydere, logningsudbydere og sundhedskontroller for at gøre det nemt at distribuere og administrere .NET-applikationer i skyen.
+•	Internetforbundet: .NET er designet til at fungere godt med moderne webteknologier som WebSockets, SignalR og gRPC. Du kan bygge realtids, interaktive webapplikationer med .NET.
+.NET inkluderer flere under-frameworks, der giver yderligere funktionalitet, såsom:
+•	ASP.NET Core: Et framework til at bygge webapplikationer ved hjælp af Model-View-Controller-mønsteret.
+•	Entity Framework Core: Et framework til at arbejde med databaser i .NET-applikationer.
+•	.NET Core Identity: Et framework til at tilføje loginfunktionalitet til .NET-applikationer.
+•	.NET Core MVC: Et framework til at bygge webapplikationer ved hjælp af Model-View-Controller-mønsteret.
+•	.NET Core Razor Pages: Et framework til at bygge sidefokuserede webapplikationer.
+•	.NET Core SignalR: Et framework til at bygge realtids, interaktive webapplikationer.
+•	.NET Core Web API: Et framework til at bygge RESTful webtjenester.
+
+\subsubsection{Primary Constructors}
+I dette projekt er der anvendt Primary Constructors, som er en ny funktion i C\# 10.0. Primary Constructors giver dig mulighed for at definere en primær konstruktør direkte i klassens definition, i stedet for at bruge en separat konstruktørmetode. Dette gør det nemmere at definere og initialisere objekter i C\#.
+Primary Constructors inkluderer følgende funktioner:
+•	Enkelhed: Primary Constructors gør det nemt at definere og initialisere objekter i C\# ved at inkludere konstruktørlogik direkte i klassens definition.
+•	Klarhed: Primary Constructors gør det nemt at se, hvordan objekter initialiseres, da konstruktørlogikken er synlig i klassens definition.
+•	Sikkerhed: Primary Constructors gør det nemt at validere objekter, da konstruktørlogikken kan inkludere valideringslogik.
+•	Ydelse: Primary Constructors er designet til at være hurtige og effektive, da de eliminerer behovet for at kalde en separat konstruktørmetode.
+Primary Constructors er et kraftfuldt værktøj, der kan hjælpe dig med at definere og initialisere objekter i C\# på en enkel, klar og sikker måde. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{Record Types}
+I dette projekt er der anvendt Record Types, som er en ny funktion i C\# 9.0. Record Types giver dig mulighed for at definere enklere og mere udtryksfulde datatyper i C\#. Record Types er en slags immutable klasse, der er designet til at repræsentere data, der ikke ændres over tid.
+Record Types inkluderer følgende funktioner:
+•	Enkelhed: Record Types gør det nemt at definere og initialisere datatyper i C\# ved at inkludere konstruktørlogik direkte i klassens definition.
+•	Klarhed: Record Types gør det nemt at se, hvordan datatyper initialiseres, da konstruktørlogikken er synlig i klassens definition.
+•	Sikkerhed: Record Types gør det nemt at validere datatyper, da konstruktørlogikken kan inkludere valideringslogik.
+•	Ydelse: Record Types er designet til at være hurtige og effektive, da de eliminerer behovet for at kalde en separat konstruktørmetode.
+Record Types er et kraftfuldt værktøj, der kan hjælpe dig med at definere og initialisere datatyper i C\# på en enkel, klar og sikker måde. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{Pattern Matching}
+I dette projekt er der anvendt Pattern Matching, som er en ny funktion i C\# 7.0. Pattern Matching giver dig mulighed for at matche værdier mod mønstre i C\#. Pattern Matching er en kraftfuld funktion, der kan hjælpe dig med at skrive mere udtryksfuld og effektiv kode.
+Pattern Matching inkluderer følgende funktioner:
+•	Enkelhed: Pattern Matching gør det nemt at matche værdier mod mønstre i C\# ved at inkludere matchingslogik direkte i koden.
+•	Klarhed: Pattern Matching gør det nemt at se, hvordan værdier matches mod mønstre, da matchingslogikken er synlig i koden.
+•	Sikkerhed: Pattern Matching gør det nemt at validere værdier, da matchingslogikken kan inkludere valideringslogik.
+•	Ydelse: Pattern Matching er designet til at være hurtigt og effektivt, da det eliminerer behovet for at skrive komplekse if-else-erklæringer.
+Pattern Matching er et kraftfuldt værktøj, der kan hjælpe dig med at skrive mere udtryksfuld og effektiv kode i C#. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{Nullable Reference Types}
+I dette projekt er der anvendt Nullable Reference Types, som er en ny funktion i C\# 8.0. Nullable Reference Types giver dig mulighed for at angive, om en reference kan være null i C#. Nullable Reference Types er en kraftfuld funktion, der kan hjælpe dig med at skrive mere sikker og robust kode.
+Nullable Reference Types inkluderer følgende funktioner:
+•	Enkelhed: Nullable Reference Types gør det nemt at angive, om en reference kan være null i C# ved at inkludere nullabilitylogik direkte i koden.
+•	Klarhed: Nullable Reference Types gør det nemt at se, om en reference kan være null, da nullabilitylogikken er synlig i koden.
+•	Sikkerhed: Nullable Reference Types gør det nemt at validere, om en reference kan være null, da nullabilitylogikken kan inkludere valideringslogik.
+•	Ydelse: Nullable Reference Types er designet til at være hurtigt og effektivt, da det eliminerer behovet for at skrive komplekse null-checks.
+Nullable Reference Types er et kraftfuldt værktøj, der kan hjælpe dig med at skrive mere sikker og robust kode i C#. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{Top-level Statements}
+I dette projekt er der anvendt Top-level Statements, som er en ny funktion i C\# 9.0. Top-level Statements giver dig mulighed for at skrive kode uden at skulle definere en klasse eller en metode. Top-level Statements er en kraftfuld funktion, der kan hjælpe dig med at skrive mere udtryksfuld og effektiv kode.
+Top-level Statements inkluderer følgende funktioner:
+•	Enkelhed: Top-level Statements gør det nemt at skrive kode uden at skulle definere en klasse eller en metode i C#.
+•	Klarhed: Top-level Statements gør det nemt at se, hvordan kode er struktureret, da det eliminerer behovet for at skrive unødvendig boilerplate-kode.
+•	Sikkerhed: Top-level Statements gør det nemt at validere kode, da det eliminerer behovet for at skrive komplekse strukturer.
+•	Ydelse: Top-level Statements er designet til at være hurtige og effektive, da de eliminerer behovet for at skrive unødvendig boilerplate-kode.
+Top-level Statements er et kraftfuldt værktøj, der kan hjælpe dig med at skrive mere udtryksfuld og effektiv kode i C#. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{Async/Await}
+I dette projekt er der anvendt Async/Await, som er en ny funktion i C\# 5.0. Async/Await giver dig mulighed for at skrive asynkron kode i C#. Async/Await er en kraftfuld funktion, der kan hjælpe dig med at skrive mere effektiv og responsiv kode.
+Async/Await inkluderer følgende funktioner:
+•	Enkelhed: Async/Await gør det nemt at skrive asynkron kode i C# ved at inkludere asynkron logik direkte i koden.
+•	Klarhed: Async/Await gør det nemt at se, hvordan asynkron kode er struktureret, da det eliminerer behovet for at skrive komplekse callback-funktioner.
+•	Sikkerhed: Async/Await gør det nemt at validere asynkron kode, da det eliminerer behovet for at skrive komplekse fejlhåndteringslogik.
+•	Ydelse: Async/Await er designet til at være hurtigt og effektivt, da det eliminerer behovet for at skrive komplekse callback-funktioner.
+Async/Await er et kraftfuldt værktøj, der kan hjælpe dig med at skrive mere effektiv og responsiv kode i C#. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{LINQ}
+I dette projekt er der anvendt LINQ, som er en ny funktion i C\# 3.0. LINQ giver dig mulighed for at skrive SQL-lignende forespørgsler i C#. LINQ er en kraftfuld funktion, der kan hjælpe dig med at skrive mere effektiv og udtryksfuld kode.
+LINQ inkluderer følgende funktioner:
+•	Enkelhed: LINQ gør det nemt at skrive SQL-lignende forespørgsler i C# ved at inkludere forespørgselslogik direkte i koden.
+•	Klarhed: LINQ gør det nemt at se, hvordan forespørgsler er struktureret, da det eliminerer behovet for at skrive komplekse SQL-forespørgsler.
+•	Sikkerhed: LINQ gør det nemt at validere forespørgsler, da det eliminerer behovet for at skrive komplekse valideringslogik.
+•	Ydelse: LINQ er designet til at være hurtigt og effektivt, da det eliminerer behovet for at skrive komplekse SQL-forespørgsler.
+LINQ er et kraftfuldt værktøj, der kan hjælpe dig med at skrive mere effektiv og udtryksfuld kode i C#. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{Delegates}
+I dette projekt er der anvendt Delegates, som er en ny funktion i C\# 1.0. Delegates giver dig mulighed for at oprette og bruge funktioner som objekter i C#. Delegates er en kraftfuld funktion, der kan hjælpe dig med at skrive mere fleksibel og genbrugelig kode.
+Delegates inkluderer følgende funktioner:
+•	Enkelhed: Delegates gør det nemt at oprette og bruge funktioner som objekter i C# ved at inkludere delegatlogik direkte i koden.
+•	Klarhed: Delegates gør det nemt at se, hvordan funktioner er struktureret, da det eliminerer behovet for at skrive komplekse callback-funktioner.
+•	Sikkerhed: Delegates gør det nemt at validere funktioner, da det eliminerer behovet for at skrive komplekse valideringslogik.
+•	Ydelse: Delegates er designet til at være hurtigt og effektivt, da det eliminerer behovet for at skrive komplekse callback-funktioner.
+Delegates er et kraftfuldt værktøj, der kan hjælpe dig med at skrive mere fleksibel og genbrugelig kode i C#. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{Generics}
+I dette projekt er der anvendt Generics, som er en ny funktion i C\# 2.0. Generics giver dig mulighed for at oprette generiske typer og metoder i C#. Generics er en kraftfuld funktion, der kan hjælpe dig med at skrive mere fleksibel og genbrugelig kode.
+Generics inkluderer følgende funktioner:
+•	Enkelhed: Generics gør det nemt at oprette generiske typer og metoder i C# ved at inkludere generisk logik direkte i koden.
+•	Klarhed: Generics gør det nemt at se, hvordan generiske typer og metoder er struktureret, da det eliminerer behovet for at skrive komplekse generiske klasser og metoder.
+•	Sikkerhed: Generics gør det nemt at validere generiske typer og metoder, da det eliminerer behovet for at skrive komplekse valideringslogik.
+•	Ydelse: Generics er designet til at være hurtigt og effektivt, da det eliminerer behovet for at skrive komplekse generiske klasser og metoder.
+Generics er et kraftfuldt værktøj, der kan hjælpe dig med at skrive mere fleksibel og genbrugelig kode i C#. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\section{Frameworks}
+
+\subsection{ASP.NET Core}
+ASP.NET Core er et open-source framework til at bygge moderne, cloud-baserede, internetforbundne applikationer.
+ASP.NET Core inkluderer følgende funktioner:
+•	Modulær: ASP.NET Core er et modulært framework, der giver dig mulighed for at inkludere kun de komponenter, du har brug for i din applikation. Dette gør din applikation mindre og mere effektiv.
+•	Cross-platform: ASP.NET Core kører på Windows, macOS og Linux. Du kan udvikle og distribuere ASP.NET Core-applikationer på enhver platform.
+•	Høj ydeevne: ASP.NET Core er designet til at være hurtig og effektiv. Det inkluderer funktioner som native understøttelse af asynkron programmering, afhængighedsinjektion og middleware for at forbedre ydeevnen.
+•	Open-source: ASP.NET Core er et open-source framework, der udvikles og vedligeholdes af Microsoft. Du kan bidrage til udviklingen af ASP.NET Core på GitHub.
+•	Cloud-klar: ASP.NET Core er designet til at fungere godt i cloud-miljøer. Det inkluderer funktioner som konfigurationsudbydere, logningsudbydere og sundhedskontroller for at gøre det nemt at distribuere og administrere ASP.NET Core-applikationer i skyen.
+•	Internetforbundet: ASP.NET Core er designet til at fungere godt med moderne webteknologier som WebSockets, SignalR og gRPC. Du kan bygge realtids, interaktive webapplikationer med ASP.NET Core.
+ASP.NET Core inkluderer flere under-frameworks, der giver yderligere funktionalitet, såsom:
+•	ASP.NET Core MVC: Et framework til at bygge webapplikationer ved hjælp af Model-View-Controller-mønsteret.
+•	ASP.NET Core Razor Pages: Et framework til at bygge sidefokuserede webapplikationer.
+•	ASP.NET Core SignalR: Et framework til at bygge realtids, interaktive webapplikationer.
+•	ASP.NET Core Web API: Et framework til at bygge RESTful webtjenester.
+
+\subsection{Razor pages}
+Razor Pages er en ny funktion i ASP.NET Core, der gør kodning af sidefokuserede scenarier lettere og mere produktivt.
+Razor Pages-frameworket giver dig mulighed for at bygge sidefokuserede webapplikationer ved hjælp af en sidebaseret programmeringsmodel.
+Razor Pages ligner ASP.NET Web Forms, idet hver side har en .cshtml-fil, der indeholder både HTML-markup og C\# -koden, der driver siden.
+Razor Pages ligner også ASP.NET MVC, idet de bruger Razor-visningsmotoren til at gengive HTML-markup.
+Razor Pages er designet til at være letvægt og nem at bruge, med fokus på enkelhed og produktivitet.
+Razor Pages er ideelle til at bygge små til mellemstore webapplikationer, der primært fokuserer på at vise og indsamle data.
+Razor Pages er et godt valg til scenarier, hvor du vil bygge en webapplikation hurtigt og nemt, uden overheadet af et fuldt MVC-framework.
+Razor Pages er også et godt valg til scenarier, hvor du vil bygge en webapplikation, der primært fokuserer på at vise og indsamle data, snarere end kompleks forretningslogik eller arbejdsgang.
+
+\subsection{Entity Framework Core}
+Entity Framework Core er en letvægts, udvidelig, open-source og cross-platform version af den populære Entity Framework dataadgangsteknologi.
+Det kan fungere som en objekt-relationsmæssig mapper (ORM), der gør det muligt for .NET-udviklere at arbejde med en database ved hjælp af .NET-objekter.
+Det eliminerer behovet for det meste af dataadgangskoden, som udviklere normalt skal skrive. Entity Framework Core understøtter mange database-motorer, herunder SQL Server, MySQL, SQLite, PostgreSQL og andre.
+Det kan generere database-tabeller fra din kode, og det kan generere kode fra dine database-tabeller.
+Entity Framework Core er designet til at fungere med .NET Core-applikationer, men det kan også fungere med .NET Framework-applikationer.
+Det er et kraftfuldt værktøj, der kan hjælpe dig med at opbygge datadrevne applikationer mere effektivt. Entity Framework Core inkluderer følgende funktioner:
+•	Databaseudbydere: Entity Framework Core understøtter mange database-motorer, herunder SQL Server, MySQL, SQLite, PostgreSQL og andre. Du kan bruge den samme kode til at arbejde med forskellige database-motorer.
+•	Modelering: Entity Framework Core giver dig mulighed for at definere din database-skema ved hjælp af C\# -klasser. Du kan definere enheder, relationer og begrænsninger ved hjælp af attributter eller Fluent API.
+•	Spørgsmål: Entity Framework Core giver dig mulighed for at forespørge din database ved hjælp af LINQ (Language Integrated Query). Du kan skrive LINQ-forespørgsler i C\# -kode, og Entity Framework Core vil oversætte dem til SQL-forespørgsler.
+•	Lagring af data: Entity Framework Core giver dig mulighed for at gemme data i din database ved hjælp af DbContext-klassen. Du kan tilføje, opdatere og slette enheder, og Entity Framework Core vil generere de nødvendige SQL-kommandoer.
+•	Ændringssporing: Entity Framework Core sporer ændringer i dine enheder og genererer de nødvendige SQL-kommandoer for at persistere disse ændringer i databasen.
+•	Migrationer: Entity Framework Core giver dig mulighed for at oprette og anvende database-migrationer. Migrationer bruges til at opdatere dit database-skema, når din applikation udvikler sig.
+•	Transaktioner: Entity Framework Core understøtter transaktioner, der giver dig mulighed for at gruppere flere databaseoperationer i en enkelt enhed af arbejde.
+•	Samtidighed: Entity Framework Core understøtter optimistisk samtidighed, der giver mulighed for, at flere brugere kan arbejde med de samme data uden konflikter.
+•	Ydelse: Entity Framework Core er designet til at være hurtig og effektiv. Det inkluderer funktioner som forespørgselscache, kompilerede forespørgsler og batchopdateringer for at forbedre ydeevnen.
+
+\subsection{ASP.NET Core Identity}
+ASP.NET Core Identity er et medlemssystem, der tilføjer loginfunktionalitet til ASP.NET Core-apps. Brugere kan oprette en konto, logge ind og logge ud. ASP.NET Core Identity inkluderer følgende funktioner:
+•	Lagrer brugeroplysninger i en SQL Server-database ved hjælp af Entity Framework Core.
+•	Tilbyder et standard-UI til login, registrering og håndtering af brugerprofil.
+•	Tilbyder funktionalitet til konto-bekræftelse og nulstilling af adgangskode.
+•	Aktiverer konto-låsning for at beskytte mod brute force-angreb.
+•	Aktiverer tofaktor-autentificering ved hjælp af SMS eller e-mail.
+•	Tilbyder cookie-autentificering som standardautentificeringsmetode.
+•	Tillader tilpasning af tokenudbyderen og e-mail-senderen.
+•	Tillader tilpasning af brugerprofilen ved at tilføje brugerdefinerede egenskaber.
+•	Tillader tilpasning af UI'en ved at ændre Razor-visningerne.
+•	Tilbyder en UserManager-klasse til at arbejde med brugere.
+ASP.NET Core IdentityUser er brugerklassen til ASP.NET Core Identity. Den indeholder egenskaber som Id, UserName, Email osv., der er fælles for de fleste brugerklasser. Du kan udvide IdentityUser for at tilføje brugerdefinerede egenskaber.
+Dette er gjort på følgende måde:
+1.	ApplicationUser.cs: Denne klasse arver fra IdentityUser-klassen, som leveres af ASP.NET Core Identity. Dette betyder, at ApplicationUser arver alle egenskaber fra IdentityUser (som Id, UserName, Email osv.) og kan også tilføje yderligere egenskaber. I dette tilfælde er FirstName, LastName og Address tilføjet.
+2.	Customer.cs og Employee.cs: Disse klasser arver fra ApplicationUser, hvilket betyder, at de arver alle egenskaber fra ApplicationUser og dermed IdentityUser. De tilføjer også deres egne specifikke egenskaber. Dette er en almindelig måde at udvide brugermodellen i ASP.NET Core Identity for at inkludere yderligere data, der er specifik for din applikation.
+3.	ApplicationDbContext.cs: Denne klasse arver fra IdentityDbContext, som er en DbContext, der er specifikt designet til at arbejde med ASP.NET Core Identity. Den inkluderer DbSet-egenskaber for Customer og Employee, hvilket betyder, at disse typer brugere vil blive inkluderet i databasekonteksten.
+4.	Program.cs: Den valgte kode i denne fil konfigurerer ASP.NET Core Identity-systemet. Den tilføjer det standardidentitetssystem med ApplicationUser som brugertype og ApplicationDbContext som kontekst. Den tilføjer også identitetskernen for Customer og Employee-typer, hvilket betyder, at disse typer brugere vil blive inkluderet i identitetssystemet.
+
+\section{Libraries}
+Et Library er en samling af kode, der giver dig mulighed for at udføre en bestemt opgave i din applikation. Libraries kan indeholde klasser, metoder, konstanter og andre typer kode, der kan genbruges i flere projekter.
+For at gøre det nemmere at udvikle software, har vi brugt en række libraries, der giver os mulighed for at udvikle software hurtigere og mere effektivt. Nogle af de libraries, vi har brugt, inkluderer:
+
+\subsection{Bootstrap}
+Bootstrap er et populært front-end framework til at bygge responsive webapplikationer. Det inkluderer en række CSS- og JavaScript-filer, der giver et ensartet udseende og følelse på tværs af forskellige browsere og enheder.
+Bootstrap inkluderer et grid-system til layout af indhold, samt en samling af komponenter som knapper, formularer og navigationsbjælker. Bootstrap inkluderer også en række hjælpeklasser til styling af tekst, billeder og andre elementer.
+Bootstrap er nemt at bruge og tilpasse, hvilket gør det til et populært valg for webudviklere. Det er godt dokumenteret og har en stor brugergruppe, der bidrager til dets udvikling.
+Bootstrap er et kraftfuldt værktøj, der kan hjælpe dig med at bygge moderne, responsive webapplikationer hurtigt og nemt.
+Razor Pages kommer som standard med Bootstrap, hvilket gør det nemt at bruge det i dine webapplikationer. Du kan tilpasse Bootstrap-temaet ved at redigere CSS-filerne eller bruge et tema fra en tredjepartsleverandør.
+
+\subsection{Fluent API}
+Fluent API er et kraftfuldt værktøj, der giver dig mulighed for at konfigurere Entity Framework Core til at arbejde med din database på en mere fleksibel og udtryksfuld måde.
+Fluent API giver dig mulighed for at definere dit database-skema ved hjælp af C\# -kode, i stedet for at stole på konventioner eller dataannotations. Dette giver dig mere kontrol over, hvordan din database er struktureret, og giver dig mulighed for at definere komplekse relationer og begrænsninger, der ikke er mulige med konventioner eller dataannotations.
+Fluent API er også mere fleksibel end konventioner eller dataannotations og giver dig mulighed for at definere dit database-skema på en mere udtryksfuld måde. Du kan bruge Fluent API til at definere indekser, unikke begrænsninger, fremmednøglebegrænsninger og andre databasefunktioner, der ikke er mulige med konventioner eller dataannotations.
+Fluent API er et kraftfuldt værktøj, der kan hjælpe dig med at opbygge mere komplekse og fleksible database-skemaer med Entity Framework Core. Det kan spare dig tid og kræfter og gøre din kode mere vedligeholdelig og læsbar.
+
+\subsection{Automapper}
+AutoMapper er et Library, der forenkler processen med at mappe mellem objekter i .NET. Det giver dig mulighed for at definere mappninger mellem objekter på en klar og præcis måde, uden at skulle skrive en masse boilerplate-kode.
+AutoMapper bruger en flydende grænseflade til at definere mappninger mellem objekter. Du kan definere mappninger mellem objekter med lignende egenskaber eller mellem objekter med forskellige egenskaber.
+AutoMapper kan også håndtere komplekse mappninger, såsom mappning mellem objekter med indlejrede egenskaber eller samlinger.
+AutoMapper er nemt at bruge og konfigurere. Du kan definere mappninger i en enkelt linje kode, eller du kan bruge profiler til at definere mappninger mellem flere objekter.
+AutoMapper er et kraftfuldt værktøj, der kan hjælpe dig med at reducere mængden af kode, du skal skrive, når du arbejder med objekter i .NET. Det kan spare dig tid og kræfter og gøre din kode mere vedligeholdelig og læsbar.
+
+\subsection{Newtonsoft.Json}
+Newtonsoft.Json er et populært high-performance JSON framework til .NET. Det bruges bredt i .NET-applikationer til at serialisere og deserialisere JSON-data.
+Newtonsoft.Json inkluderer følgende funktioner:
+•	Serialisering: Newtonsoft.Json kan serialisere .NET-objekter til JSON-strenge. Dette giver dig mulighed for at konvertere .NET-objekter til JSON-format til lagring eller transmission.
+•	Deserialisering: Newtonsoft.Json kan deserialisere JSON-strenge til .NET-objekter. Dette giver dig mulighed for at konvertere JSON-data til .NET-objekter til behandling i din applikation.
+•	Ydeevne: Newtonsoft.Json er designet til at være hurtig og effektiv. Det inkluderer funktioner som JSON.NET, der er en high-performance JSON-parser, der kan analysere JSON-data hurtigt.
+•	Fleksibilitet: Newtonsoft.Json er meget konfigurerbart og udvideligt. Du kan tilpasse serialiserings- og deserialiseringsprocessen ved hjælp af attributter, indstillinger og konvertere.
+•	Fejlhåndtering: Newtonsoft.Json inkluderer funktioner til håndtering af fejl under serialisering og deserialisering. Du kan konfigurere, hvordan fejl håndteres, og tilpasse fejlmeddelelser.
+•	Kompatibilitet: Newtonsoft.Json er kompatibelt med mange .NET-platforme, herunder .NET Framework, .NET Core og Xamarin. Du kan bruge Newtonsoft.Json i en bred vifte af .NET-applikationer.
+Newtonsoft.Json er et kraftfuldt værktøj, der kan hjælpe dig med at arbejde med JSON-data i .NET-applikationer. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Razor Class Library}
+Razor Class Library (RCL) er en ny funktion i ASP.NET Core 2.1, der giver dig mulighed for at bygge Razor-visninger og sider ind i et genanvendeligt klassebibliotek. Dette betyder, at du kan oprette et bibliotek med Razor-visninger og sider, der kan deles på tværs af flere projekter.
+RCL'er er nyttige til at oprette genanvendelige UI-komponenter, såsom navigationsbjælker, overskrifter, fodfælder og andre fælles elementer.
+De kan også bruges til at oprette genanvendelige sidetemplates, layout og partielle visninger. RCL'er kan offentliggøres som NuGet-pakker og distribueres til andre udviklere.
+De kan også bruges til at oprette et fælles udseende og følelse for flere projekter. RCL'er er et kraftfuldt værktøj, der kan hjælpe dig med at opbygge modulære, vedligeholdbare og skalerbare webapplikationer.
+De kan spare dig tid og kræfter ved at lade dig genbruge kode og undgå duplikation. RCL'er er nemme at oprette og bruge, og de kan være en værdifuld tilføjelse til dine ASP.NET Core-projekter.
+
+\subsection{HttpContextAccessor}
+HttpContextAccessor er en klasse i ASP.NET Core, der giver dig adgang til HTTP-anmodningsoplysninger i din applikation. Det giver dig mulighed for at få adgang til HTTP-anmodningsoplysninger, såsom URL, metode, hoveder og cookies, fra enhver del af din applikation.
+HttpContextAccessor er nyttig til at få adgang til HTTP-anmodningsoplysninger i services, repositories og andre dele af din applikation, der ikke har direkte adgang til HTTP-anmodningskonteksten.
+HttpContextAccessor er også nyttig til at få adgang til HTTP-anmodningsoplysninger i middleware, filtre og andre ASP.NET Core-komponenter, der har adgang til HTTP-anmodningskonteksten.
+HttpContextAccessor er en kraftfuld klasse, der kan hjælpe dig med at arbejde med HTTP-anmodningsoplysninger i ASP.NET Core-applikationer. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.Extensions.DependencyInjection}
+Microsoft.Extensions.DependencyInjection er en del af ASP.NET Core, der giver dig mulighed for at konfigurere og administrere afhængighedsinjektion i din applikation. Det giver dig mulighed for at registrere tjenester og konfigurere deres levetid og afhængigheder.
+Microsoft.Extensions.DependencyInjection er nyttig til at organisere og administrere tjenester i din applikation. Det giver dig mulighed for at opdele din applikation i mindre, genanvendelige komponenter, der kan konfigureres og udskiftes efter behov.
+Microsoft.Extensions.DependencyInjection er også nyttig til at oprette testbare applikationer. Det giver dig mulighed for at erstatte tjenester med stubs eller mockobjekter under testning, hvilket gør det lettere at teste din kode.
+Microsoft.Extensions.DependencyInjection er et kraftfuldt værktøj, der kan hjælpe dig med at opbygge modulære, vedligeholdbare og testbare applikationer. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.Extensions.Logging}
+Microsoft.Extensions.Logging er en del af ASP.NET Core, der giver dig mulighed for at logge meddelelser fra din applikation. Det giver dig mulighed for at logge meddelelser til forskellige destinationssteder, såsom konsollen, filer, databaser og andre logningsudbydere.
+Microsoft.Extensions.Logging er nyttig til at spore og diagnosticere problemer i din applikation. Det giver dig mulighed for at logge meddelelser fra forskellige dele af din applikation og analysere dem senere for at identificere problemer.
+Microsoft.Extensions.Logging er også nyttig til at overvåge og rapportere om applikationspræstationer. Det giver dig mulighed for at logge meddelelser om ydeevne og fejl, så du kan identificere flaskehalse og optimere din kode.
+Microsoft.Extensions.Logging er et kraftfuldt værktøj, der kan hjælpe dig med at spore, diagnosticere og optimere din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.EntityFrameworkCore.SqlServer}
+Microsoft.EntityFrameworkCore.SqlServer er en del af Entity Framework Core, der giver dig mulighed for at arbejde med SQL Server-databaser i din applikation. Det giver dig mulighed for at oprette, læse, opdatere og slette data i en SQL Server-database ved hjælp af Entity Framework Core.
+Microsoft.EntityFrameworkCore.SqlServer er nyttig til at oprette datadrevne applikationer, der bruger SQL Server som datalager. Det giver dig mulighed for at arbejde med SQL Server-databaser på en objektorienteret måde, ved hjælp af .NET-objekter i stedet for SQL-kode.
+Microsoft.EntityFrameworkCore.SqlServer er også nyttig til at oprette testbare applikationer. Det giver dig mulighed for at bruge in-memory-databaser til testning, så du kan teste din kode uden at skulle oprette en rigtig database.
+Microsoft.EntityFrameworkCore.SqlServer er et kraftfuldt værktøj, der kan hjælpe dig med at opbygge datadrevne applikationer, der bruger SQL Server som datalager. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.EntityFrameworkCore.Tools}
+Microsoft.EntityFrameworkCore.Tools er en del af Entity Framework Core, der giver dig mulighed for at udføre databaseoperationer fra kommandolinjen. Det giver dig mulighed for at oprette, migrere og slette databaser ved hjælp af Entity Framework Core-værktøjer.
+Microsoft.EntityFrameworkCore.Tools er nyttig til at administrere databaser i din applikation. Det giver dig mulighed for at oprette og migrere databaser, når du udvikler din applikation, og slette databaser, når du ikke længere har brug for dem.
+Microsoft.EntityFrameworkCore.Tools er også nyttig til at oprette testdatabaser til testning af din kode. Det giver dig mulighed for at oprette in-memory-databaser til testning, så du kan teste din kode uden at skulle oprette en rigtig database.
+Microsoft.EntityFrameworkCore.Tools er et kraftfuldt værktøj, der kan hjælpe dig med at administrere databaser i din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.VisualStudio.Web.CodeGeneration.Design}
+Microsoft.VisualStudio.Web.CodeGeneration.Design er en del af ASP.NET Core, der giver dig mulighed for at generere kode fra kommandolinjen. Det giver dig mulighed for at generere kode til Razor-visninger, kontrollere og andre ASP.NET Core-komponenter ved hjælp af Entity Framework Core.
+Microsoft.VisualStudio.Web.CodeGeneration.Design er nyttig til at generere kode fra kommandolinjen. Det giver dig mulighed for at generere kode til Razor-visninger, kontrollere og andre ASP.NET Core-komponenter, når du udvikler din applikation.
+Microsoft.VisualStudio.Web.CodeGeneration.Design er også nyttig til at generere kode til testning af din kode. Det giver dig mulighed for at generere stubs og mockobjekter til testning, så du kan teste din kode uden at skulle skrive alt fra bunden.
+Microsoft.VisualStudio.Web.CodeGeneration.Design er et kraftfuldt værktøj, der kan hjælpe dig med at generere kode fra kommandolinjen. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Authentication.JwtBearer}
+Microsoft.AspNetCore.Authentication.JwtBearer er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af JSON Web Tokens (JWT). Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af JWT, som er en sikker og effektiv autentificeringsmetode.
+Microsoft.AspNetCore.Authentication.JwtBearer er nyttig til at autentificere brugere i din applikation. Det giver dig mulighed for at autentificere brugere ved hjælp af JWT, som er en sikker og effektiv autentificeringsmetode, der bruges af mange webapplikationer.
+Microsoft.AspNetCore.Authentication.JwtBearer er også nyttig til at autentificere brugere i API'er. Det giver dig mulighed for at autentificere brugere i API'er ved hjælp af JWT, så du kan beskytte dine API'er mod uautoriseret adgang.
+Microsoft.AspNetCore.Authentication.JwtBearer er et kraftfuldt værktøj, der kan hjælpe dig med at autentificere brugere i din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Mvc.NewtonsoftJson}
+Microsoft.AspNetCore.Mvc.NewtonsoftJson er en del af ASP.NET Core, der giver dig mulighed for at bruge Newtonsoft.Json som JSON-formateringsbibliotek i din applikation. Det giver dig mulighed for at bruge Newtonsoft.Json til at serialisere og deserialisere JSON-data i stedet for standard JSON-formateringsbiblioteket i ASP.NET Core.
+Microsoft.AspNetCore.Mvc.NewtonsoftJson er nyttig til at bruge Newtonsoft.Json i din applikation. Det giver dig mulighed for at bruge Newtonsoft.Json til at serialisere og deserialisere JSON-data, hvilket kan være nyttigt, hvis du allerede bruger Newtonsoft.Json i din applikation.
+Microsoft.AspNetCore.Mvc.NewtonsoftJson er også nyttig til at bruge Newtonsoft.Json i API'er. Det giver dig mulighed for at bruge Newtonsoft.Json til at serialisere og deserialisere JSON-data i API'er, hvilket kan være nyttigt, hvis du allerede bruger Newtonsoft.Json i dine API'er.
+Microsoft.AspNetCore.Mvc.NewtonsoftJson er et kraftfuldt værktøj, der kan hjælpe dig med at bruge Newtonsoft.Json i din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsubsection{Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation}
+Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation er en del af ASP.NET Core, der giver dig mulighed for at kompilere Razor-visninger ved kørselstid. Det giver dig mulighed for at ændre Razor-visninger uden at skulle genstarte din applikation.
+Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation er nyttig til at udvikle og teste Razor-visninger. Det giver dig mulighed for at ændre Razor-visninger og se ændringerne med det samme, uden at skulle genstarte din applikation.
+Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation er også nyttig til at oprette genanvendelige Razor-visninger. Det giver dig mulighed for at oprette Razor-visninger, der kan genbruges på tværs af flere projekter, uden at skulle genstarte din applikation.
+Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation er et kraftfuldt værktøj, der kan hjælpe dig med at udvikle og teste Razor-visninger. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.StaticFiles}
+Microsoft.AspNetCore.StaticFiles er en del af ASP.NET Core, der giver dig mulighed for at servere statiske filer i din applikation. Det giver dig mulighed for at servere billeder, JavaScript-filer, CSS-filer og andre statiske filer fra dit websted.
+Microsoft.AspNetCore.StaticFiles er nyttig til at servere statiske filer i din applikation. Det giver dig mulighed for at servere billeder, JavaScript-filer, CSS-filer og andre statiske filer fra dit websted, hvilket kan forbedre ydeevnen og brugeroplevelsen.
+Microsoft.AspNetCore.StaticFiles er også nyttig til at servere statiske filer i API'er. Det giver dig mulighed for at servere billeder, JavaScript-filer, CSS-filer og andre statiske filer fra dine API'er, hvilket kan forbedre ydeevnen og brugeroplevelsen.
+Microsoft.AspNetCore.StaticFiles er et kraftfuldt værktøj, der kan hjælpe dig med at servere statiske filer i din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Authentication.Cookies}
+Microsoft.AspNetCore.Authentication.Cookies er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af cookies. Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af cookies, som er en sikker og effektiv autentificeringsmetode.
+Microsoft.AspNetCore.Authentication.Cookies er nyttig til at autentificere brugere i din applikation. Det giver dig mulighed for at autentificere brugere ved hjælp af cookies, som er en sikker og effektiv autentificeringsmetode, der bruges af mange webapplikationer.
+Microsoft.AspNetCore.Authentication.Cookies er også nyttig til at autentificere brugere i API'er. Det giver dig mulighed for at autentificere brugere i API'er ved hjælp af cookies, så du kan beskytte dine API'er mod uautoriseret adgang.
+Microsoft.AspNetCore.Authentication.Cookies er et kraftfuldt værktøj, der kan hjælpe dig med at autentificere brugere i din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore}
+Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore er en del af ASP.NET Core, der giver dig mulighed for at logge og håndtere databasefejl i din applikation. Det giver dig mulighed for at logge databasefejl og vise fejlmeddelelser til brugeren, når der opstår en databasefejl.
+Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore er nyttig til at logge og håndtere databasefejl i din applikation. Det giver dig mulighed for at logge databasefejl og vise fejlmeddelelser til brugeren, når der opstår en databasefejl, hvilket kan hjælpe med at identificere og løse problemer.
+Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore er også nyttig til at logge og håndtere databasefejl i API'er. Det giver dig mulighed for at logge databasefejl og vise fejlmeddelelser til brugeren, når der opstår en databasefejl, hvilket kan hjælpe med at identificere og løse problemer.
+Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore er et kraftfuldt værktøj, der kan hjælpe dig med at logge og håndtere databasefejl i din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Diagnostics}
+Microsoft.AspNetCore.Diagnostics er en del af ASP.NET Core, der giver dig mulighed for at logge og håndtere fejl i din applikation. Det giver dig mulighed for at logge fejl og vise fejlmeddelelser til brugeren, når der opstår en fejl.
+Microsoft.AspNetCore.Diagnostics er nyttig til at logge og håndtere fejl i din applikation. Det giver dig mulighed for at logge fejl og vise fejlmeddelelser til brugeren, når der opstår en fejl, hvilket kan hjælpe med at identificere og løse problemer.
+Microsoft.AspNetCore.Diagnostics er også nyttig til at logge og håndtere fejl i API'er. Det giver dig mulighed for at logge fejl og vise fejlmeddelelser til brugeren, når der opstår en fejl, hvilket kan hjælpe med at identificere og løse problemer.
+Microsoft.AspNetCore.Diagnostics er et kraftfuldt værktøj, der kan hjælpe dig med at logge og håndtere fejl i din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Mvc.RazorPages}
+Microsoft.AspNetCore.Mvc.RazorPages er en del af ASP.NET Core, der giver dig mulighed for at oprette sidefokuserede webapplikationer. Det giver dig mulighed for at oprette Razor-sider, der indeholder både HTML-markup og C\# -kode, der driver siden.
+Microsoft.AspNetCore.Mvc.RazorPages er nyttig til at oprette sidefokuserede webapplikationer. Det giver dig mulighed for at oprette Razor-sider, der indeholder både HTML-markup og C\# -kode, der driver siden, hvilket kan gøre det nemmere at opbygge webapplikationer.
+Microsoft.AspNetCore.Mvc.RazorPages er også nyttig til at oprette sidefokuserede webapplikationer i API'er. Det giver dig mulighed for at oprette Razor-sider, der indeholder både HTML-markup og C\# -kode, der driver siden, hvilket kan gøre det nemmere at opbygge webapplikationer.
+Microsoft.AspNetCore.Mvc.RazorPages er et kraftfuldt værktøj, der kan hjælpe dig med at oprette sidefokuserede webapplikationer. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Mvc}
+Microsoft.AspNetCore.Mvc er en del af ASP.NET Core, der giver dig mulighed for at oprette webapplikationer ved hjælp af Model-View-Controller (MVC) -mønsteret. Det giver dig mulighed for at oprette kontrollere, modeller og visninger, der arbejder sammen for at levere en webapplikation.
+Microsoft.AspNetCore.Mvc er nyttig til at oprette webapplikationer ved hjælp af MVC-mønsteret. Det giver dig mulighed for at oprette kontrollere, modeller og visninger, der arbejder sammen for at levere en webapplikation, hvilket kan gøre det nemmere at opbygge komplekse webapplikationer.
+Microsoft.AspNetCore.Mvc er også nyttig til at oprette webapplikationer i API'er. Det giver dig mulighed for at oprette API'er, der leverer data til klientapplikationer, hvilket kan gøre det nemmere at opbygge API'er.
+Microsoft.AspNetCore.Mvc er et kraftfuldt værktøj, der kan hjælpe dig med at oprette webapplikationer ved hjælp af MVC-mønsteret. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Identity.EntityFrameworkCore}
+Microsoft.AspNetCore.Identity.EntityFrameworkCore er en del af ASP.NET Core, der giver dig mulighed for at oprette bruger- og rollebaseret sikkerhed i din applikation. Det giver dig mulighed for at oprette brugere, roller og tilladelser, der kan bruges til at beskytte dine applikationer mod uautoriseret adgang.
+Microsoft.AspNetCore.Identity.EntityFrameworkCore er nyttig til at oprette bruger- og rollebaseret sikkerhed i din applikation. Det giver dig mulighed for at oprette brugere, roller og tilladelser, der kan bruges til at beskytte dine applikationer mod uautoriseret adgang, hvilket kan forbedre sikkerheden i din applikation.
+Microsoft.AspNetCore.Identity.EntityFrameworkCore er også nyttig til at oprette bruger- og rollebaseret sikkerhed i API'er. Det giver dig mulighed for at oprette brugere, roller og tilladelser, der kan bruges til at beskytte dine API'er mod uautoriseret adgang, hvilket kan forbedre sikkerheden i dine API'er.
+Microsoft.AspNetCore.Identity.EntityFrameworkCore er et kraftfuldt værktøj, der kan hjælpe dig med at oprette bruger- og rollebaseret sikkerhed i din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Identity.UI}
+Microsoft.AspNetCore.Identity.UI er en del af ASP.NET Core, der giver dig mulighed for at tilføje brugerregistrering, login og andre brugerstyringsfunktioner til din applikation. Det giver dig mulighed for at tilføje brugerstyringsfunktioner til din applikation uden at skulle skrive alt fra bunden.
+Microsoft.AspNetCore.Identity.UI er nyttig til at tilføje brugerstyringsfunktioner til din applikation. Det giver dig mulighed for at tilføje brugerregistrering, login og andre brugerstyringsfunktioner til din applikation, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+Microsoft.AspNetCore.Identity.UI er også nyttig til at tilføje brugerstyringsfunktioner til API'er. Det giver dig mulighed for at tilføje brugerregistrering, login og andre brugerstyringsfunktioner til dine API'er, hvilket kan forbedre brugeroplevelsen og sikkerheden i dine API'er.
+Microsoft.AspNetCore.Identity.UI er et kraftfuldt værktøj, der kan hjælpe dig med at tilføje brugerstyringsfunktioner til din applikation. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Authentication.Facebook}
+Microsoft.AspNetCore.Authentication.Facebook er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af Facebook. Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af Facebook-login, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+Microsoft.AspNetCore.Authentication.Facebook er nyttig til at autentificere brugere i din applikation. Det giver dig mulighed for at autentificere brugere ved hjælp af Facebook-login, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+Microsoft.AspNetCore.Authentication.Facebook er også nyttig til at autentificere brugere i API'er. Det giver dig mulighed for at autentificere brugere ved hjælp af Facebook-login i API'er, hvilket kan forbedre brugeroplevelsen og sikkerheden i dine API'er.
+Microsoft.AspNetCore.Authentication.Facebook er et kraftfuldt værktøj, der kan hjælpe dig med at autentificere brugere i din applikation ved hjælp af Facebook-login. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Authentication.Google}
+Microsoft.AspNetCore.Authentication.Google er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af Google. Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af Google-login, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+Microsoft.AspNetCore.Authentication.Google er nyttig til at autentificere brugere i din applikation. Det giver dig mulighed for at autentificere brugere ved hjælp af Google-login, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+Microsoft.AspNetCore.Authentication.Google er også nyttig til at autentificere brugere i API'er. Det giver dig mulighed for at autentificere brugere ved hjælp af Google-login i API'er, hvilket kan forbedre brugeroplevelsen og sikkerheden i dine API'er.
+Microsoft.AspNetCore.Authentication.Google er et kraftfuldt værktøj, der kan hjælpe dig med at autentificere brugere i din applikation ved hjælp af Google-login. Det er nemt at bruge og konfigurere, og det er godt dokumenteret med en stor brugergruppe, der bidrager til dets udvikling.
+
+\subsection{Microsoft.AspNetCore.Authentication.Twitter}
+Microsoft.AspNetCore.Authentication.Twitter er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af Twitter. Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af Twitter-login, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+
+\subsection{Microsoft.AspNetCore.Authentication.MicrosoftAccount}
+Microsoft.AspNetCore.Authentication.MicrosoftAccount er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af Microsoft-konto. Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af Microsoft-konto-login, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+
+\subsection{Microsoft.AspNetCore.Authentication.OAuth}
+Microsoft.AspNetCore.Authentication.OAuth er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af OAuth. Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af OAuth-login, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+
+\subsection{Microsoft.AspNetCore.Authentication.OpenIdConnect}
+Microsoft.AspNetCore.Authentication.OpenIdConnect er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af OpenID Connect. Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af OpenID Connect-login, hvilket kan forbedre brugeroplevelsen og sikkerheden i din applikation.
+
+\subsection{Microsoft.AspNetCore.Authentication.Cookies}
+Microsoft.AspNetCore.Authentication.Cookies er en del af ASP.NET Core, der giver dig mulighed for at autentificere brugere ved hjælp af cookies. Det giver dig mulighed for at autentificere brugere i din applikation ved hjælp af cookies, som er en sikker og effektiv autentificeringsmetode.
