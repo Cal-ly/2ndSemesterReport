@@ -1,0 +1,30 @@
+sequenceDiagram
+    participant User
+    participant SalesModel
+    participant ApplicationDbContext
+    participant Logger
+
+    User->>SalesModel: OnGetAsync(DateFrom, DateTo)
+    activate SalesModel
+    SalesModel->>SalesModel: FilterOrdersByDateRange(DateFrom, DateTo)
+    SalesModel->>ApplicationDbContext: Get orders within date range
+    ApplicationDbContext-->>SalesModel: Return filtered orders
+    alt Successful Data Fetch
+        SalesModel->>ApplicationDbContext: GetTotalSalesAsync(query)
+        ApplicationDbContext-->>SalesModel: Return total sales
+        SalesModel->>ApplicationDbContext: GetTotalOrdersAsync(query)
+        ApplicationDbContext-->>SalesModel: Return total orders
+        SalesModel->>ApplicationDbContext: GetAverageOrderValueAsync(query)
+        ApplicationDbContext-->>SalesModel: Return average order value
+        SalesModel->>ApplicationDbContext: GetSalesGrowthRateAsync(query)
+        ApplicationDbContext-->>SalesModel: Return sales growth rate
+        SalesModel->>ApplicationDbContext: GetAverageOrderProcessingTimeAsync(query)
+        ApplicationDbContext-->>SalesModel: Return average order processing time
+        SalesModel->>ApplicationDbContext: GetTopSellingProductsAsync()
+        ApplicationDbContext-->>SalesModel: Return top selling products
+    else Exception Occurred
+        SalesModel->>Logger: LogError(ex, "An error occurred while fetching sales data.")
+        SalesModel->>User: RedirectToPage("/Error")
+    end
+    SalesModel-->>User: Display sales data
+    deactivate SalesModel

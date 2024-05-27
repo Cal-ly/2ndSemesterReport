@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant User
+    participant IndexModel
+    participant ApplicationDbContext
+    participant BasketService
+
+    User->>IndexModel: OnGetAsync(occasion, searchTerm, pageIndex, pageSize, sortBy, sortOrder)
+    activate IndexModel
+    IndexModel->>IndexModel: BuildProductQuery()
+    alt Occasion Provided
+        IndexModel->>ApplicationDbContext: Filter products by occasion
+    else No Occasion
+        IndexModel->>ApplicationDbContext: Get products without occasion filter
+    end
+    IndexModel->>ApplicationDbContext: Apply search term filter
+    IndexModel->>IndexModel: SortProducts(query)
+    IndexModel->>ApplicationDbContext: Sort products based on criteria
+    IndexModel->>ApplicationDbContext: CalculateTotalPages(query)
+    ApplicationDbContext-->>IndexModel: Return total pages
+    IndexModel->>ApplicationDbContext: FetchProducts(query)
+    ApplicationDbContext-->>IndexModel: Return paginated product list
+    IndexModel->>BasketService: FetchProductQuantities()
+    BasketService-->>IndexModel: Return product quantities in basket
+    IndexModel-->>User: Display product list with quantities
+    deactivate IndexModel

@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant Admin
+    participant ProductService
+    participant ApplicationDbContext
+
+    Admin->>ProductService: UpdateProduct(product)
+    ProductService->>ApplicationDbContext: Find product by ID
+    ProductService->>ApplicationDbContext: Update product details
+    ApplicationDbContext-->>ProductService: Product updated
+    ProductService-->>Admin: Update successful

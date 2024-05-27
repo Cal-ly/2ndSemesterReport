@@ -1,0 +1,270 @@
+classDiagram
+    class Address {
+        +String Id
+        +String? Resident
+        +String Street
+        +String PostalCode
+        +String City
+        +String Country
+        +String FullAddress()
+    }
+
+    class ApplicationUser {
+        +String? FirstName
+        +String? LastName
+        +DateTime? EnrollmentDate
+        +DateTime? LastLogin
+        +String? AddressId
+        +virtual Address Address
+        +virtual ICollection~Order~ Orders
+    }
+
+    class Company {
+        +String Id
+        +String? CVR
+        +String? Name
+        +String? PhoneNumber
+        +String? AddressId
+        +virtual Address Address
+        +virtual ICollection~Customer~ Representatives
+    }
+
+    class Customer {
+        +String? Title
+        +DateTime? BirthDate
+        +String? CompanyId
+        +virtual Company Company
+    }
+
+    class Employee {
+        +String? JobTitle
+        +Decimal? Salary
+        +DateTime? TerminationDate
+    }
+
+    class Guest {
+        +String Id
+        +String? FirstName
+        +String? LastName
+        +String? Email
+        +String? PhoneNumber
+        +String? AddressId
+        +virtual Address Address
+        +virtual ICollection~Order~ Orders
+    }
+
+    class Basket {
+        +String Id
+        +ICollection~BasketItem~ Items
+        +Decimal TotalPrice()
+        +Int TotalItems()
+    }
+
+    class BasketActivity {
+        +String Id
+        +String? ActivityType
+        +Int? QuantityChanged
+        +String? UserId
+        +Boolean IsRegisteredUser
+        +String? SessionId
+        +String? BasketId
+        +virtual Basket Basket
+        +String? ProductId
+        +virtual Product Product
+        +DateTime? Timestamp
+    }
+
+    class BasketItem {
+        +String? BasketId
+        +virtual Basket Basket
+        +String? ProductId
+        +virtual Product ProductInBasket
+        +Int? Quantity
+        +Decimal LinePrice()
+    }
+
+    class Order {
+        +String Id
+        +DateTime OrderDate
+        +DateTime? CompletionDate
+        +OrderStatus Status
+        +String? CustomerId
+        +virtual Customer Customer
+        +String? GuestId
+        +virtual Guest Guest
+        +String? EmployeeId
+        +virtual Employee Employee
+        +ICollection~OrderItem~ OrderItems
+        +String? SpecialOrderInstructionsId
+        +virtual SpecialOrderInstruction SpecialOrderInstruction
+        +Decimal TotalPrice
+        +Decimal GetTotalPrice()
+    }
+
+    class OrderItem {
+        +String? OrderId
+        +virtual Order Order
+        +String? ProductId
+        +virtual Product ProductItem
+        +Int Quantity
+        +Decimal UnitPrice
+    }
+
+    class Product {
+        +String Id
+        +String? Name
+        +String? Description
+        +Decimal Price
+        +Boolean IsDeleted
+        +String? ImageUrl
+        +DateTime? UpdatedAt
+        +virtual ICollection~IXProductTag~ ProductTags
+        +String GetPriceString()
+    }
+
+    class SpecialOrderInstruction {
+        +String Id
+        +String? OrderId
+        +virtual Order Order
+        +String? SpecialInstructions
+        +Boolean Delivery
+        +Boolean Arrangement
+        +String? SpecialDeliveryAddressId
+        +virtual Address SpecialDeliveryAddress
+    }
+
+    class Tag {
+        +String Id
+        +String? Occasion
+        +String? Category
+        +String? SubCategory
+        +virtual ICollection~IXProductTag~ ProductTags
+    }
+
+    class IXProductTag {
+        +String ProductId
+        +virtual Product Product
+        +String TagId
+        +virtual Tag Tag
+    }
+
+    class BasketService {
+        -IHttpContextAccessor _httpContextAccessor
+        -ApplicationDbContext _context
+        -OrderService orderCreator
+        +Basket GetOrCreateBasket()
+        +Task AddToBasket(String productId)
+        +Task~bool~ IsInBasket(String productId)
+        +Task~int?~ GetQuantityInBasket(String productId)
+        +Task~Dictionary~String, int~~ GetAllQuantitiesInBasket()
+        +Task UpdateBasketItemQuantity(String productId, int newQuantity)
+        +Task RemoveFromBasket(String productId)
+        +Task ClearBasket()
+        +Task LogBasketActivity(String basketId, String? productId, String activityType, int? quantityChanged)
+        +Order PlaceOrder(UserWrapper userWrapper)
+    }
+
+    class OrderService {
+        +Order GetOrder(String orderId)
+        +OrderItemView[] GetOrderItems(Order order)
+        +String GetTotalPriceString(Order order)
+        +void UpdateOrderStatus(String orderId, OrderStatus newStatus)
+        +void UpdateOrder(Order order)
+        +void DeleteOrder(String orderId)
+        +List~UserWrapper~ GetOrderInvolved(Order order)
+        +Order CreateOrderFromBasket(Basket basket, UserWrapper userWrapper)
+    }
+
+    class EmailService {
+        -SmtpSettings _smtpSettings
+        +Task SendEmailAsync(String toEmail, String subject, String message)
+        +Task SendMimeMessageAsync(MimeMessage message)
+    }
+
+    class IdentityEmailSender {
+        -IEmailService _emailService
+        +Task SendEmailAsync(String email, String subject, String htmlMessage)
+    }
+
+    class PostalCodeService {
+        -String jsonFilePath
+        -Dictionary~String, String~ _postalCodeToCity
+        +String GetCityByPostalCode(String postalCode)
+    }
+
+    class ProductService {
+        -ApplicationDbContext _context
+        +List~Product~ GetProducts()
+        +Product GetProductById(String id)
+        +void AddProduct(Product product)
+        +void UpdateProduct(Product product)
+        +void DeleteProduct(String id)
+    }
+
+    class TagService {
+        +Task~List~Tag~~ GetTagsAsync()
+        +Task~Tag~ GetTagByIdAsync(String id)
+        +Task~Tag~ CreateTagAsync(Tag tag)
+        +Task~Tag~ UpdateTagAsync(Tag tag)
+        +Task~Tag~ DeleteTagAsync(String id)
+        +Task~List~String?~~ GetOccasionsAsync()
+        +Task~List~Tag~~ GetTagsOrderedByOccasionAsync()
+        +Task~(List~Tag~, int)~ GetTagsOrderedByOccasionAsync(int pageNumber, int pageSize)
+    }
+
+    class SmtpSettings {
+        +String? Server
+        +int Port
+        +String? SenderName
+        +String? SenderEmail
+        +String? Username
+        +String? Password
+    }
+
+    class UserWrapper {
+        +String Id
+        +String FirstName
+        +String LastName
+        +String Email
+        +String PhoneNumber
+        +Address Address
+        +String GetUserType()
+    }
+
+    class MimeMessage {}
+
+    class OrderItemView {
+        +String ProductName
+        +int Quantity
+        +Decimal Price
+    }
+
+    ApplicationUser <|-- Customer : inherits
+    ApplicationUser <|-- Employee : inherits
+    Company "1" --> "1" Address : has
+    Company "1" --> "*" Customer : represents
+    Customer "1" --> "*" Order : places
+    Customer "1" --> "1" Company : works for
+    Employee "1" --> "*" Order : manages
+    Guest "1" --> "*" Order : places
+    Guest "1" --> "1" Address : has
+    Basket "1" --> "*" BasketItem : contains
+    BasketActivity "1" --> "1" Basket : logs
+    BasketActivity "1" --> "1" Product : logs
+    BasketItem "1" --> "1" Basket : belongs to
+    BasketItem "1" --> "1" Product : contains
+    Order "1" --> "*" OrderItem : contains
+    Order "1" --> "1" SpecialOrderInstruction : includes
+    OrderItem "1" --> "1" Product : contains
+    Product "1" --> "*" IXProductTag : tags
+    Tag "1" --> "*" IXProductTag : tags
+    SpecialOrderInstruction "1" --> "1" Address : delivers to
+    BasketService "1" --> "1" OrderService : uses
+    BasketService "1" --> "1" ApplicationDbContext : uses
+    BasketService "1" --> "1" IHttpContextAccessor : uses
+    OrderService "1" --> "1" ApplicationDbContext : uses
+    EmailService "1" --> "1" SmtpSettings : uses
+    IdentityEmailSender "1" --> "1" IEmailService : uses
+    PostalCodeService "1" --> "1" PostalCodeEntry : uses
+    ProductService "1" --> "1" ApplicationDbContext : uses
+    TagService "1" --> "1" ApplicationDbContext : uses

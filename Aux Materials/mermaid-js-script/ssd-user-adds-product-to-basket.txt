@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant User
+    participant BasketService
+    participant ApplicationDbContext
+    participant ProductService
+
+    User->>BasketService: AddToBasket(productId)
+    BasketService->>ApplicationDbContext: GetOrCreateBasket()
+    alt Basket Exists
+        ApplicationDbContext-->>BasketService: Return existing basket
+    else Basket Does Not Exist
+        ApplicationDbContext->>BasketService: Create new basket
+        BasketService->>ApplicationDbContext: Save basket
+    end
+    BasketService->>ProductService: GetProductById(productId)
+    ProductService-->>BasketService: Return product
+    BasketService->>ApplicationDbContext: Add or update basket item
+    BasketService->>ApplicationDbContext: LogBasketActivity
+    BasketService-->>User: Product added to basket

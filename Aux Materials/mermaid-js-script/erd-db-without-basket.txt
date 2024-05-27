@@ -1,0 +1,124 @@
+erDiagram
+    ADDRESS {
+        String Id PK
+        String Resident
+        String Street
+        String PostalCode
+        String City
+        String Country
+    }
+
+    APPLICATIONUSER {
+        String Id PK
+        String FirstName
+        String LastName
+        DateTime EnrollmentDate
+        DateTime LastLogin
+        String AddressId FK
+    }
+
+    COMPANY {
+        String Id PK
+        String CVR
+        String Name
+        String PhoneNumber
+        String AddressId FK
+    }
+
+    CUSTOMER {
+        String Id PK
+        String Title
+        DateTime BirthDate
+        String CompanyId FK
+    }
+
+    EMPLOYEE {
+        String Id PK
+        String JobTitle
+        Decimal Salary
+        DateTime TerminationDate
+    }
+
+    GUEST {
+        String Id PK
+        String FirstName
+        String LastName
+        String Email
+        String PhoneNumber
+        String AddressId FK
+    }
+
+    ORDER {
+        String Id PK
+        DateTime OrderDate
+        DateTime CompletionDate
+        Enum Status
+        String CustomerId FK
+        String GuestId FK
+        String EmployeeId FK
+        String SpecialOrderInstructionsId FK
+    }
+
+    ORDERITEM {
+        String OrderId PK
+        String ProductId PK
+        Int Quantity
+        Decimal UnitPrice
+    }
+
+    PRODUCT {
+        String Id PK
+        String Name
+        String Description
+        Decimal Price
+        Boolean IsDeleted
+        String ImageUrl
+        DateTime UpdatedAt
+    }
+
+    SPECIALORDERINSTRUCTION {
+        String Id PK
+        String OrderId FK
+        String SpecialInstructions
+        Boolean Delivery
+        Boolean Arrangement
+        String SpecialDeliveryAddressId FK
+    }
+
+    TAG {
+        String Id PK
+        String Occasion
+        String Category
+        String SubCategory
+    }
+
+    IXPRODUCTTAG {
+        String ProductId PK
+        String TagId PK
+    }
+
+    ADDRESS ||--o{ APPLICATIONUSER: contains
+    ADDRESS ||--o{ COMPANY: contains
+    ADDRESS ||--o{ GUEST: contains
+    ADDRESS ||--o{ SPECIALORDERINSTRUCTION: contains
+
+    COMPANY ||--o{ CUSTOMER: represents
+
+    CUSTOMER ||--o{ ORDER: places
+    CUSTOMER }o--|| COMPANY: works_for
+
+    EMPLOYEE ||--o{ ORDER: manages
+
+    GUEST ||--o{ ORDER: places
+
+    ORDER ||--o{ ORDERITEM: contains
+    ORDER ||--o{ SPECIALORDERINSTRUCTION: includes
+
+    ORDERITEM }o--|| PRODUCT: contains
+
+    PRODUCT ||--o{ IXPRODUCTTAG: tags
+
+    TAG ||--o{ IXPRODUCTTAG: tags
+
+    APPLICATIONUSER ||--o{ CUSTOMER: inherits
+    APPLICATIONUSER ||--o{ EMPLOYEE: inherits

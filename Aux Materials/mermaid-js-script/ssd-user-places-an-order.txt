@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant User
+    participant BasketService
+    participant OrderService
+    participant ApplicationDbContext
+    participant EmailService
+
+    User->>BasketService: PlaceOrder(UserWrapper)
+    BasketService->>ApplicationDbContext: GetOrCreateBasket()
+    BasketService->>OrderService: CreateOrderFromBasket(basket, UserWrapper)
+    OrderService->>ApplicationDbContext: Save order
+    ApplicationDbContext-->>OrderService: Order saved
+    OrderService-->>BasketService: Order created
+    BasketService->>ApplicationDbContext: ClearBasket()
+    BasketService->>ApplicationDbContext: LogBasketActivity
+    BasketService->>EmailService: SendOrderConfirmationEmail(order)
+    EmailService-->>BasketService: Email sent
+    BasketService-->>User: Order placed
