@@ -1,0 +1,63 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{HttpWebshopCookie.Models}\PYG{p}{;}
+
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Order}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Id}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Guid}\PYG{p}{.}\PYG{n}{NewGuid}\PYG{p}{().}\PYG{n}{ToString}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{+w}{ }\PYG{n}{OrderDate}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{CompletionDate}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{OrderStatus}\PYG{+w}{ }\PYG{n}{Status}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{Customer}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Customer}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{CustomerId}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{Guest}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Guest}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{GuestId}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{Employee}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Employee}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{EmployeeId}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{ICollection}\PYG{o}{\PYGZlt{}}\PYG{n}{OrderItem}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{OrderItems}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{OrderItem}\PYG{o}{\PYGZgt{}}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{SpecialOrderInstructionsId}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{SpecialOrderInstruction}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{SpecialOrderInstruction}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{decimal}\PYG{+w}{ }\PYG{n}{TotalPrice}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{get}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{GetTotalPrice}\PYG{p}{();}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{private}\PYG{+w}{ }\PYG{k}{set}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{decimal}\PYG{+w}{ }\PYG{n+nf}{GetTotalPrice}\PYG{p}{()}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kt}{decimal}\PYG{+w}{ }\PYG{n}{totalPrice}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{OrderItems}\PYG{o}{?.}\PYG{n}{Sum}\PYG{p}{(}\PYG{n}{item}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{item}\PYG{p}{.}\PYG{n}{UnitPrice}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{item}\PYG{p}{.}\PYG{n}{Quantity}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{??}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{SpecialOrderInstruction}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{SpecialOrderInstruction}\PYG{p}{.}\PYG{n}{Delivery}\PYG{p}{)}
+\PYG{+w}{            }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{totalPrice}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+m}{500}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{SpecialOrderInstruction}\PYG{p}{.}\PYG{n}{Arrangement}\PYG{p}{)}
+\PYG{+w}{            }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{totalPrice}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+m}{500}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{totalPrice}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{enum}\PYG{+w}{ }\PYG{n}{OrderStatus}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+na}{[Display(Name = \PYGZdq{}Pending\PYGZdq{})]}
+\PYG{+w}{    }\PYG{n}{Pending}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+na}{[Display(Name = \PYGZdq{}Received\PYGZdq{})]}
+\PYG{+w}{    }\PYG{n}{Received}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+na}{[Display(Name = \PYGZdq{}Accepted\PYGZdq{})]}
+\PYG{+w}{    }\PYG{n}{Accepted}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{2}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+na}{[Display(Name = \PYGZdq{}Processing\PYGZdq{})]}
+\PYG{+w}{    }\PYG{n}{Processing}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{3}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+na}{[Display(Name = \PYGZdq{}Ready\PYGZdq{})]}
+\PYG{+w}{    }\PYG{n}{Ready}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{4}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+na}{[Display(Name = \PYGZdq{}Delivered\PYGZdq{})]}
+\PYG{+w}{    }\PYG{n}{Delivered}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{5}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+na}{[Display(Name = \PYGZdq{}Completed\PYGZdq{})]}
+\PYG{+w}{    }\PYG{n}{Completed}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{6}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+na}{[Display(Name = \PYGZdq{}Cancelled\PYGZdq{})]}
+\PYG{+w}{    }\PYG{n}{Cancelled}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{7}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

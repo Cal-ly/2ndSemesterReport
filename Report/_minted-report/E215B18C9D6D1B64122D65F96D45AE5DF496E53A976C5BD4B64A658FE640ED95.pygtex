@@ -1,0 +1,40 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{HttpWebshopCookie.Models.Users}\PYG{p}{;}
+
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{ApplicationUser}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{IdentityUser}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{FirstName}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{LastName}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{EnrollmentDate}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{LastLogin}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k}{virtual}\PYG{+w}{ }\PYG{n}{Address}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Address}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{AddressId}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{public}\PYG{+w}{ }\PYG{k}{virtual}\PYG{+w}{ }\PYG{n}{ICollection}\PYG{o}{\PYGZlt{}}\PYG{n}{Order}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Orders}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[];}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// IdentityUser is a class from the Microsoft.AspNetCore.Identity.EntityFrameworkCore namespace.}
+\PYG{c+c1}{// It is a class that represents a user in the identity system.}
+\PYG{c+c1}{// it has the following properties:}
+\PYG{c+c1}{// \PYGZhy{} Id: Gets or sets the primary key for this user.}
+\PYG{c+c1}{// \PYGZhy{} UserName: Gets or sets the user name for this user.}
+\PYG{c+c1}{// \PYGZhy{} NormalizedUserName: Gets or sets the normalized user name for this user.}
+\PYG{c+c1}{// \PYGZhy{} Email: Gets or sets the email address for this user.}
+\PYG{c+c1}{// \PYGZhy{} NormalizedEmail: Gets or sets the normalized email address for this user.}
+\PYG{c+c1}{// \PYGZhy{} EmailConfirmed: Gets or sets a flag indicating if the email address has been confirmed.}
+\PYG{c+c1}{// \PYGZhy{} PasswordHash: Gets or sets the password hash for this user.}
+\PYG{c+c1}{// \PYGZhy{} SecurityStamp: Gets or sets a random value that should change whenever a user\PYGZsq{}s credentials have changed (password changed, login removed).}
+\PYG{c+c1}{// \PYGZhy{} ConcurrencyStamp: A random value that should change whenever a user is persisted to the store.}
+\PYG{c+c1}{// \PYGZhy{} PhoneNumber: Gets or sets the telephone number for this user.}
+\PYG{c+c1}{// \PYGZhy{} PhoneNumberConfirmed: Gets or sets a flag indicating if the telephone number has been confirmed.}
+\PYG{c+c1}{// \PYGZhy{} TwoFactorEnabled: Gets or sets a flag indicating if two\PYGZhy{}factor authentication is enabled for this user.}
+\PYG{c+c1}{// \PYGZhy{} LockoutEnd: Gets or sets the DateTimeOffset for the end of a user\PYGZsq{}s lockout, any time in the past is considered not locked out.}
+\PYG{c+c1}{// \PYGZhy{} LockoutEnabled: Gets or sets a flag indicating if lockout is enabled for this user.}
+\PYG{c+c1}{// \PYGZhy{} AccessFailedCount: Gets or sets the number of failed login attempts for the current user.}
+\PYG{c+c1}{// \PYGZhy{} Claims: Gets the claims for this user.}
+\PYG{c+c1}{// \PYGZhy{} Logins: Gets the external logins for this user.}
+\PYG{c+c1}{// \PYGZhy{} Tokens: Gets the authentication tokens for this user.}
+\PYG{c+c1}{// \PYGZhy{} UserRoles: Gets the roles for this user.}
+\PYG{c+c1}{// \PYGZhy{} UserClaims: Gets the claims for this user.}
+\PYG{c+c1}{// \PYGZhy{} UserLogins: Gets the external logins for this user.}
+\PYG{c+c1}{// \PYGZhy{} UserTokens: Gets the authentication tokens for this user.}
+\end{Verbatim}

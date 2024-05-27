@@ -24,8 +24,8 @@ Det er vigtigt at definere ovenstående, da DMD er et godt værktøj men der er 
 \end{figure}
 
 \section{Software Arkitektur}
-Visse dele af denne section, er gennemgået i \Cref{sec:metode-teknologi}. 
-Min forståelse af software arkitektur er en højniveau beskrivelse af systemet, der beskriver dets komponenter, deres relationer og hvordan de interagerer. Derfor er den overordnede hensigt og struktur, som følger:
+Visse dele af denne section, er gennemgået i \Cref{sec:metode-teknologi} og yderligere beskrevet og argumenteret for i \Cref{chapter:anvendte-teknologier}. 
+For fælles forståelse, vil software arkitektur i denne rapport forståes som; En højniveau beskrivelse af systemet, der beskriver dets komponenter, deres relationer og hvordan de interagerer. Derfor er den overordnede hensigt og struktur, som følger:
 \begin{itemize}
     \item Abstraktioner af systemet, der fokuserer på dets struktur og adfærd
     \item En statisk model, der ikke tager højde for ændringer i systemet over tid
@@ -35,9 +35,39 @@ Min forståelse af software arkitektur er en højniveau beskrivelse af systemet,
 \end{itemize}
 
 \subsection{Klasse Diagram}
-Alle modeller er vedlagt i 
+Et \emph{Design Class Diagram} vil i denne sammenhæng være arbejdstegninger for kernen af systemet. Det vil illustrere relationerne mellem de klasser, som systemet vil instansiere objekter ud fra og deres underlæggende properties og methods. 
+Dette er for at skabe en forståelse for systemet. Dermed er det også et bevidst valg, ikke at meddrage PageModels og deres Views. Dette er grundet, at deres antal og relationer vil obfuskere overblikket, fremfor at fremme forståelse. 
+Dette ses som værende den dimentralt modsatte hensigt med et diagram. Ligeledes er diagrammerne delt op i fire kategorier, for netop at bevare overblikket over systemet.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/diagrams/dcd-modelclasses.png}
+    \caption{Design Class Diagram - Model Classes}
+    \label{fig:class-diagram-models}
+\end{figure}
 
-\section{Database Design}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/diagrams/dcd-user-userwrapper.png}
+    \caption{Design Class Diagram - UserWrapper}
+    \label{fig:class-diagram-userwrapper}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/diagrams/dcd-main-services.png}
+    \caption{Design Class Diagram - Main Services}
+    \label{fig:class-diagram-main-services}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/diagrams/dcd-aux-services.png}
+    \caption{Design Class Diagram - Auxilary Services}
+    \label{fig:class-diagram-aux-services}
+\end{figure}
+Alle modeller er vedlagt i \Cref{appendix:models} og vil ikke blive gennemgået her, grundet deres simplicitet.
+
+\subsection{Database Design}
 Viden fra \cite{connolly2023database} vil anvendes hele vejen igennem, men ikke blive citeret yderligere, da det anses for at være grundlæggende viden.
 
 \subsection{Sekvens Diagrammer}
