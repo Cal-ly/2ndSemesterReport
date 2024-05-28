@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespace_http_webshop_cookie_1_1_services" kind="namespace" language="C#">
+    <compoundname>HttpWebshopCookie::Services</compoundname>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_basket_service" prot="public">HttpWebshopCookie::Services::BasketService</innerclass>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_email_service" prot="public">HttpWebshopCookie::Services::EmailService</innerclass>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender" prot="public">HttpWebshopCookie::Services::IdentityEmailSender</innerclass>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_order_service" prot="public">HttpWebshopCookie::Services::OrderService</innerclass>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry" prot="public">HttpWebshopCookie::Services::PostalCodeEntry</innerclass>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_service" prot="public">HttpWebshopCookie::Services::PostalCodeService</innerclass>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_product_service" prot="public">HttpWebshopCookie::Services::ProductService</innerclass>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings" prot="public">HttpWebshopCookie::Services::SmtpSettings</innerclass>
+    <innerclass refid="class_http_webshop_cookie_1_1_services_1_1_tag_service" prot="public">HttpWebshopCookie::Services::TagService</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

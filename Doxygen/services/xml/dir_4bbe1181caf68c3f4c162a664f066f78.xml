@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="dir_4bbe1181caf68c3f4c162a664f066f78" kind="dir">
+    <compoundname>C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services</compoundname>
+    <innerfile refid="_basket_service_8cs">BasketService.cs</innerfile>
+    <innerfile refid="_email_service_8cs">EmailService.cs</innerfile>
+    <innerfile refid="_identity_email_sender_8cs">IdentityEmailSender.cs</innerfile>
+    <innerfile refid="_order_service_8cs">OrderService.cs</innerfile>
+    <innerfile refid="_postal_code_service_8cs">PostalCodeService.cs</innerfile>
+    <innerfile refid="_product_service_8cs">ProductService.cs</innerfile>
+    <innerfile refid="_tag_service_8cs">TagService.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,292 @@
+\doxysection{Http\+Webshop\+Cookie.\+Services.\+Basket\+Service Class Reference}
+\hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service}{}\label{class_http_webshop_cookie_1_1_services_1_1_basket_service}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+
+
+Service class for managing the shopping basket.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_a8c4cc5e05075aa8379dd218cc234c1aa}{Basket\+Service}} (IHttp\+Context\+Accessor http\+Context\+Accessor, Application\+Db\+Context context, \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service}{Order\+Service}} order\+Creator)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_http_webshop_cookie_1_1_services_1_1_basket_service}{Basket\+Service} class. \end{DoxyCompactList}\item 
+Basket \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_a34c9fdc85154accad8488bab36b4cb67}{Get\+Or\+Create\+Basket}} ()
+\begin{DoxyCompactList}\small\item\em Gets or creates the shopping basket for the current HTTP context. \end{DoxyCompactList}\item 
+Basket \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_ada1692562a6ae66ea35be86e0a7cff1c}{Get\+Or\+Create\+Basket}} (IHttp\+Context\+Accessor http\+Context\+Accessor, Application\+Db\+Context db\+Context)
+\begin{DoxyCompactList}\small\item\em Gets or creates the shopping basket for the specified HTTP context and database context. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_a4068af146c57969a7ba4b0d2255d7d80}{Add\+To\+Basket}} (string product\+Id)
+\begin{DoxyCompactList}\small\item\em Adds a product to the shopping basket. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_a6e8c6dd299714a3a9cef61521bf35f28}{Is\+In\+Basket}} (string product\+Id)
+\begin{DoxyCompactList}\small\item\em Checks if a product is in the shopping basket. \end{DoxyCompactList}\item 
+async Task$<$ int?$>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_a58499109b661c6d572c7f6db0ce84263}{Get\+Quantity\+In\+Basket}} (string product\+Id)
+\begin{DoxyCompactList}\small\item\em Gets the quantity of a product in the shopping basket. \end{DoxyCompactList}\item 
+async Task$<$ Dictionary$<$ string, int $>$ $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_a1480d2784b70dd2d1f98056b6ebfa473}{Get\+All\+Quantities\+In\+Basket}} ()
+\begin{DoxyCompactList}\small\item\em Gets the quantities of all products in the shopping basket. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_a1d0f38ad67362c1163e8dfc50d308ec7}{Update\+Basket\+Item\+Quantity}} (string product\+Id, int new\+Quantity)
+\begin{DoxyCompactList}\small\item\em Updates the quantity of a product in the shopping basket. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_adfba3c606d407dddd7acd8d2a27efa20}{Remove\+From\+Basket}} (string product\+Id)
+\begin{DoxyCompactList}\small\item\em Removes a product from the shopping basket. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_aaaeb064beebcb5b2c06e625f59689333}{Clear\+Basket}} ()
+\begin{DoxyCompactList}\small\item\em Clears the shopping basket. \end{DoxyCompactList}\item 
+Order \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_basket_service_a9eb7ba7f15a7570a349df4b34d6eb2f7}{Place\+Order}} (User\+Wrapper user\+Wrapper)
+\begin{DoxyCompactList}\small\item\em Places an order using the shopping basket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class for managing the shopping basket. 
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_a8c4cc5e05075aa8379dd218cc234c1aa}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!BasketService@{BasketService}}
+\index{BasketService@{BasketService}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{BasketService()}{BasketService()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_a8c4cc5e05075aa8379dd218cc234c1aa} 
+Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Basket\+Service (\begin{DoxyParamCaption}\item[{IHttp\+Context\+Accessor}]{http\+Context\+Accessor}{, }\item[{Application\+Db\+Context}]{context}{, }\item[{\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service}{Order\+Service}}}]{order\+Creator}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{class_http_webshop_cookie_1_1_services_1_1_basket_service}{Basket\+Service} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Context\+Accessor} & The HTTP context accessor.\\
+\hline
+{\em context} & The application database context.\\
+\hline
+{\em order\+Creator} & The order service for creating orders.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_a4068af146c57969a7ba4b0d2255d7d80}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!AddToBasket@{AddToBasket}}
+\index{AddToBasket@{AddToBasket}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{AddToBasket()}{AddToBasket()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_a4068af146c57969a7ba4b0d2255d7d80} 
+async Task Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Add\+To\+Basket (\begin{DoxyParamCaption}\item[{string}]{product\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Adds a product to the shopping basket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The ID of the product to add.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when the specified product is not found.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00103}{103}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_aaaeb064beebcb5b2c06e625f59689333}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!ClearBasket@{ClearBasket}}
+\index{ClearBasket@{ClearBasket}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{ClearBasket()}{ClearBasket()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_aaaeb064beebcb5b2c06e625f59689333} 
+async Task Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Clear\+Basket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the shopping basket. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00238}{238}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_a1480d2784b70dd2d1f98056b6ebfa473}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!GetAllQuantitiesInBasket@{GetAllQuantitiesInBasket}}
+\index{GetAllQuantitiesInBasket@{GetAllQuantitiesInBasket}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{GetAllQuantitiesInBasket()}{GetAllQuantitiesInBasket()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_a1480d2784b70dd2d1f98056b6ebfa473} 
+async Task$<$ Dictionary$<$ string, int $>$ $>$ Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Get\+All\+Quantities\+In\+Basket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the quantities of all products in the shopping basket. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains a dictionary with the product IDs as keys and the quantities as values.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00161}{161}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_a34c9fdc85154accad8488bab36b4cb67}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!GetOrCreateBasket@{GetOrCreateBasket}}
+\index{GetOrCreateBasket@{GetOrCreateBasket}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{GetOrCreateBasket()}{GetOrCreateBasket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_a34c9fdc85154accad8488bab36b4cb67} 
+Basket Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Get\+Or\+Create\+Basket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets or creates the shopping basket for the current HTTP context. 
+
+\begin{DoxyReturn}{Returns}
+The shopping basket.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_ada1692562a6ae66ea35be86e0a7cff1c}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!GetOrCreateBasket@{GetOrCreateBasket}}
+\index{GetOrCreateBasket@{GetOrCreateBasket}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{GetOrCreateBasket()}{GetOrCreateBasket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_ada1692562a6ae66ea35be86e0a7cff1c} 
+Basket Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Get\+Or\+Create\+Basket (\begin{DoxyParamCaption}\item[{IHttp\+Context\+Accessor}]{http\+Context\+Accessor}{, }\item[{Application\+Db\+Context}]{db\+Context}{}\end{DoxyParamCaption})}
+
+
+
+Gets or creates the shopping basket for the specified HTTP context and database context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\+Context\+Accessor} & The HTTP context accessor.\\
+\hline
+{\em db\+Context} & The application database context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The shopping basket.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_a58499109b661c6d572c7f6db0ce84263}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!GetQuantityInBasket@{GetQuantityInBasket}}
+\index{GetQuantityInBasket@{GetQuantityInBasket}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{GetQuantityInBasket()}{GetQuantityInBasket()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_a58499109b661c6d572c7f6db0ce84263} 
+async Task$<$ int?$>$ Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Get\+Quantity\+In\+Basket (\begin{DoxyParamCaption}\item[{string}]{product\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Gets the quantity of a product in the shopping basket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The ID of the product to get the quantity for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains the quantity of the product in the basket.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00144}{144}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_a6e8c6dd299714a3a9cef61521bf35f28}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!IsInBasket@{IsInBasket}}
+\index{IsInBasket@{IsInBasket}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{IsInBasket()}{IsInBasket()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_a6e8c6dd299714a3a9cef61521bf35f28} 
+async Task$<$ bool $>$ Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Is\+In\+Basket (\begin{DoxyParamCaption}\item[{string}]{product\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a product is in the shopping basket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The ID of the product to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains a boolean indicating if the product is in the basket.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00133}{133}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_a9eb7ba7f15a7570a349df4b34d6eb2f7}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!PlaceOrder@{PlaceOrder}}
+\index{PlaceOrder@{PlaceOrder}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{PlaceOrder()}{PlaceOrder()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_a9eb7ba7f15a7570a349df4b34d6eb2f7} 
+Order Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Place\+Order (\begin{DoxyParamCaption}\item[{User\+Wrapper}]{user\+Wrapper}{}\end{DoxyParamCaption})}
+
+
+
+Places an order using the shopping basket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Wrapper} & The user wrapper for the order.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The order placed.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00279}{279}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_adfba3c606d407dddd7acd8d2a27efa20}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!RemoveFromBasket@{RemoveFromBasket}}
+\index{RemoveFromBasket@{RemoveFromBasket}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{RemoveFromBasket()}{RemoveFromBasket()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_adfba3c606d407dddd7acd8d2a27efa20} 
+async Task Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Remove\+From\+Basket (\begin{DoxyParamCaption}\item[{string}]{product\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a product from the shopping basket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The ID of the product to remove.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00211}{211}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_basket_service_a1d0f38ad67362c1163e8dfc50d308ec7}\index{HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}!UpdateBasketItemQuantity@{UpdateBasketItemQuantity}}
+\index{UpdateBasketItemQuantity@{UpdateBasketItemQuantity}!HttpWebshopCookie.Services.BasketService@{HttpWebshopCookie.Services.BasketService}}
+\doxysubsubsection{\texorpdfstring{UpdateBasketItemQuantity()}{UpdateBasketItemQuantity()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_basket_service_a1d0f38ad67362c1163e8dfc50d308ec7} 
+async Task Http\+Webshop\+Cookie.\+Services.\+Basket\+Service.\+Update\+Basket\+Item\+Quantity (\begin{DoxyParamCaption}\item[{string}]{product\+Id}{, }\item[{int}]{new\+Quantity}{}\end{DoxyParamCaption})}
+
+
+
+Updates the quantity of a product in the shopping basket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product\+Id} & The ID of the product to update.\\
+\hline
+{\em new\+Quantity} & The new quantity of the product.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when the specified product is not found in the basket.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_basket_service_8cs_source_l00184}{184}} of file \mbox{\hyperlink{_basket_service_8cs_source}{Basket\+Service.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cal-\/l/\+Documents/\+Git\+Hub/\+Http\+Webshop\+Cookie/\+Http\+Webshop\+Cookie/\+Services/\mbox{\hyperlink{_basket_service_8cs}{Basket\+Service.\+cs}}\end{DoxyCompactItemize}

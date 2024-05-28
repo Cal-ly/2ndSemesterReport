@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_http_webshop_cookie_1_1_services_1_1_tag_service" kind="class" language="C#" prot="public">
+    <compoundname>HttpWebshopCookie::Services::TagService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a9cbda1fbd5fb0f64ef750ef88c7bdf6d" prot="private" static="no" mutable="no">
+        <type>readonly ApplicationDbContext</type>
+        <definition>readonly ApplicationDbContext HttpWebshopCookie.Services.TagService.context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="8" column="43" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a629ccd646ae6913c04c17382c83a50a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpWebshopCookie.Services.TagService.TagService</definition>
+        <argsstring>(ApplicationDbContext context)</argsstring>
+        <name>TagService</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.TagService</qualifiedname>
+        <param>
+          <type>ApplicationDbContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_http_webshop_cookie_1_1_services_1_1_tag_service" kindref="compound">TagService</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The application database context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the context is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="15" column="12" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1acad18ee2df1fa9940f1c66d07e53b8cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; List&lt; Tag &gt; &gt;</type>
+        <definition>async Task&lt; List&lt; Tag &gt; &gt; HttpWebshopCookie.Services.TagService.GetTagsAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetTagsAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.GetTagsAsync</qualifiedname>
+        <briefdescription>
+<para>Retrieves all tags asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains a list of tags.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to retrieve tags.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="25" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="25" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a8691711705b6a63494ebe630247ee55e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; Tag &gt;</type>
+        <definition>async Task&lt; Tag &gt; HttpWebshopCookie.Services.TagService.GetTagByIdAsync</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetTagByIdAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.GetTagByIdAsync</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves a tag by its ID asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the tag.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains the tag with the specified ID.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the ID is null or empty.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>KeyNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the tag with the specified ID is not found.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="44" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="44" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a22d1e027ce66387f432148c5bbff7175" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; Tag &gt;</type>
+        <definition>async Task&lt; Tag &gt; HttpWebshopCookie.Services.TagService.CreateTagAsync</definition>
+        <argsstring>(Tag tag)</argsstring>
+        <name>CreateTagAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.CreateTagAsync</qualifiedname>
+        <param>
+          <type>Tag</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new tag asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tag to create.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains the created tag.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the tag is null.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to create the tag.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="62" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="62" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a2f780260e08614e91daa08f1103ac44a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; Tag &gt;</type>
+        <definition>async Task&lt; Tag &gt; HttpWebshopCookie.Services.TagService.UpdateTagAsync</definition>
+        <argsstring>(Tag tag)</argsstring>
+        <name>UpdateTagAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.UpdateTagAsync</qualifiedname>
+        <param>
+          <type>Tag</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Updates an existing tag asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tag to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains the updated tag.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the tag is null.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to update the tag.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="88" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="88" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a705e5a6731249ab30c98a755a58675f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; Tag &gt;</type>
+        <definition>async Task&lt; Tag &gt; HttpWebshopCookie.Services.TagService.DeleteTagAsync</definition>
+        <argsstring>(string id)</argsstring>
+        <name>DeleteTagAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.DeleteTagAsync</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Deletes a tag by its ID asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the tag to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains the deleted tag.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the ID is null or empty.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>KeyNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the tag with the specified ID is not found.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to delete the tag.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="115" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="115" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a63346afea7c6ad9c7c43eb79edab8aab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; List&lt; string?&gt; &gt;</type>
+        <definition>async Task&lt; List&lt; string?&gt; &gt; HttpWebshopCookie.Services.TagService.GetOccasionsAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetOccasionsAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.GetOccasionsAsync</qualifiedname>
+        <briefdescription>
+<para>Retrieves all unique occasions asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains a list of unique occasions.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to retrieve occasions.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="145" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="145" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1ac02215ed5f71e0de3cdcbd98658b677d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; List&lt; Tag &gt; &gt;</type>
+        <definition>async Task&lt; List&lt; Tag &gt; &gt; HttpWebshopCookie.Services.TagService.GetTagsOrderedByOccasionAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetTagsOrderedByOccasionAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.GetTagsOrderedByOccasionAsync</qualifiedname>
+        <briefdescription>
+<para>Retrieves all tags ordered by occasion, category, and subcategory asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains a list of tags ordered by occasion, category, and subcategory.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to retrieve ordered tags.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="166" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="166" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_tag_service_1ad38cad6d3c551d8115ed22dedc354386" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt;(List&lt; Tag &gt;, int)&gt;</type>
+        <definition>async Task&lt;(List&lt; Tag &gt;, int)&gt; HttpWebshopCookie.Services.TagService.GetTagsOrderedByOccasionAsync</definition>
+        <argsstring>(int pageNumber, int pageSize)</argsstring>
+        <name>GetTagsOrderedByOccasionAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.TagService.GetTagsOrderedByOccasionAsync</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pageNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pageSize</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves a paged list of tags ordered by occasion, category, and subcategory asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pageNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The page number.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pageSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of items per page.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains a tuple with the paged list of tags and the total number of items.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to retrieve paged tags.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="189" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="189" bodyend="207"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Service class for managing tags. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" line="6" column="7" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs" bodystart="7" bodyend="208"/>
+    <listofallmembers>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a9cbda1fbd5fb0f64ef750ef88c7bdf6d" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>context</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a22d1e027ce66387f432148c5bbff7175" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>CreateTagAsync</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a705e5a6731249ab30c98a755a58675f4" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>DeleteTagAsync</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a63346afea7c6ad9c7c43eb79edab8aab" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>GetOccasionsAsync</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a8691711705b6a63494ebe630247ee55e" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>GetTagByIdAsync</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1acad18ee2df1fa9940f1c66d07e53b8cb" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>GetTagsAsync</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1ac02215ed5f71e0de3cdcbd98658b677d" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>GetTagsOrderedByOccasionAsync</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1ad38cad6d3c551d8115ed22dedc354386" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>GetTagsOrderedByOccasionAsync</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a629ccd646ae6913c04c17382c83a50a8" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>TagService</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a2f780260e08614e91daa08f1103ac44a" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::TagService</scope><name>UpdateTagAsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

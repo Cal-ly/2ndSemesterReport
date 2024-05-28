@@ -1,0 +1,109 @@
+\doxysection{Http\+Webshop\+Cookie.\+Services.\+Email\+Service Class Reference}
+\label{class_http_webshop_cookie_1_1_services_1_1_email_service}\index{HttpWebshopCookie.Services.EmailService@{HttpWebshopCookie.Services.EmailService}}
+
+
+Service class for sending emails.  
+
+
+Inheritance diagram for Http\+Webshop\+Cookie.\+Services.\+Email\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_http_webshop_cookie_1_1_services_1_1_email_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Email\+Service} (IOptions$<$ \textbf{ Smtp\+Settings} $>$ smtp\+Settings)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxyref{Email\+Service}{p.}{class_http_webshop_cookie_1_1_services_1_1_email_service} class. \end{DoxyCompactList}\item 
+async Task \textbf{ Send\+Email\+Async} (string to\+Email, string subject, string message)
+\begin{DoxyCompactList}\small\item\em Sends an email asynchronously. \end{DoxyCompactList}\item 
+async Task \textbf{ Send\+Mime\+Message\+Async} (Mime\+Message message)
+\begin{DoxyCompactList}\small\item\em Sends a MIME message asynchronously. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class for sending emails. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{HttpWebshopCookie.Services.EmailService@{HttpWebshopCookie.Services.EmailService}!EmailService@{EmailService}}
+\index{EmailService@{EmailService}!HttpWebshopCookie.Services.EmailService@{HttpWebshopCookie.Services.EmailService}}
+\doxysubsubsection{EmailService()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_email_service_a8fee3eb37273abef52f831154ae80b15} 
+Http\+Webshop\+Cookie.\+Services.\+Email\+Service.\+Email\+Service (\begin{DoxyParamCaption}\item[{IOptions$<$ \textbf{ Smtp\+Settings} $>$}]{smtp\+Settings}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxyref{Email\+Service}{p.}{class_http_webshop_cookie_1_1_services_1_1_email_service} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smtp\+Settings} & The SMTP settings.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\index{HttpWebshopCookie.Services.EmailService@{HttpWebshopCookie.Services.EmailService}!SendEmailAsync@{SendEmailAsync}}
+\index{SendEmailAsync@{SendEmailAsync}!HttpWebshopCookie.Services.EmailService@{HttpWebshopCookie.Services.EmailService}}
+\doxysubsubsection{SendEmailAsync()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_email_service_aacb507814ea659223d2831c87353880b} 
+async Task Http\+Webshop\+Cookie.\+Services.\+Email\+Service.\+Send\+Email\+Async (\begin{DoxyParamCaption}\item[{string}]{to\+Email}{, }\item[{string}]{subject}{, }\item[{string}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Sends an email asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Email} & The recipient email address.\\
+\hline
+{\em subject} & The email subject.\\
+\hline
+{\em message} & The email message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the recipient email address, subject, or message is null or empty.\\
+\hline
+{\em Smtp\+Command\+Exception} & Thrown when the SMTP server returns an error response to a command.\\
+\hline
+{\em Smtp\+Protocol\+Exception} & Thrown when an SMTP protocol error occurs.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.EmailService@{HttpWebshopCookie.Services.EmailService}!SendMimeMessageAsync@{SendMimeMessageAsync}}
+\index{SendMimeMessageAsync@{SendMimeMessageAsync}!HttpWebshopCookie.Services.EmailService@{HttpWebshopCookie.Services.EmailService}}
+\doxysubsubsection{SendMimeMessageAsync()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_email_service_ab0e763dcfa49c0872acf915211733ad3} 
+async Task Http\+Webshop\+Cookie.\+Services.\+Email\+Service.\+Send\+Mime\+Message\+Async (\begin{DoxyParamCaption}\item[{Mime\+Message}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Sends a MIME message asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The MIME message to send.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the MIME message is null.\\
+\hline
+{\em Smtp\+Command\+Exception} & Thrown when the SMTP server returns an error response to a command.\\
+\hline
+{\em Smtp\+Protocol\+Exception} & Thrown when an SMTP protocol error occurs.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cal-\/l/\+Documents/\+Git\+Hub/\+Http\+Webshop\+Cookie/\+Http\+Webshop\+Cookie/\+Services/Email\+Service.\+cs\end{DoxyCompactItemize}

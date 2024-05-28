@@ -1,0 +1,45 @@
+\doxysection{Postal\+Code\+Service.\+cs}
+\hypertarget{_postal_code_service_8cs_source}{}\label{_postal_code_service_8cs_source}\index{C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs@{C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs}}
+\mbox{\hyperlink{_postal_code_service_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_http_webshop_cookie_1_1_services}{HttpWebshopCookie.Services}};}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00005}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_service}{00005}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_service}{PostalCodeService}}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{string}\ jsonFilePath\ =\ Path.Combine(\textcolor{stringliteral}{"{}Data"{}},\ \textcolor{stringliteral}{"{}MockData"{}},\ \textcolor{stringliteral}{"{}postnummerfil.json"{}});}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ Dictionary<string,\ string>\ \_postalCodeToCity;}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00010}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_service_a3e28afce36723e6593a5d1fd6cf22d15}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_service_a3e28afce36723e6593a5d1fd6cf22d15}{PostalCodeService}}()}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ jsonData\ =\ File.ReadAllText(jsonFilePath);}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ var\ postalCodes\ =\ JsonConvert.DeserializeObject<List<PostalCodeEntry>>(jsonData)\ ??\ [];}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \_postalCodeToCity\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ entry\ \textcolor{keywordflow}{in}\ postalCodes)}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entry.PostalCode\ !=\ \textcolor{keyword}{null}\ \&\&\ !\_postalCodeToCity.ContainsKey(entry.PostalCode))}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_postalCodeToCity.Add(entry.PostalCode,\ entry.CityName\ ??\ \textcolor{keywordtype}{string}.Empty);}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00025}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_service_a62a965a5512cdc5f115ae991a30bb3a9}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_service_a62a965a5512cdc5f115ae991a30bb3a9}{GetCityByPostalCode}}(\textcolor{keywordtype}{string}\ postalCode)}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_postalCodeToCity.TryGetValue(postalCode,\ out\ var\ cityName))}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cityName;}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00035}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_entry}{00035}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_entry}{PostalCodeEntry}}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00037}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_abd859490badfad375623d03e9c1e2f82}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_abd859490badfad375623d03e9c1e2f82}{PostalCode}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00038}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_a95553d15373c3abe8c98596196c35618}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_a95553d15373c3abe8c98596196c35618}{CityName}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_postal_code_service_8cs_source_l00039}00039\ \}}
+
+\end{DoxyCode}

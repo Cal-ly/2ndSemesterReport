@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender" kind="class" language="C#" prot="public">
+    <compoundname>HttpWebshopCookie::Services::IdentityEmailSender</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IEmailSender</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1af70a1b2d00ee679a98095b5922d6f34b" prot="private" static="no" mutable="no">
+        <type>readonly IEmailService</type>
+        <definition>readonly IEmailService HttpWebshopCookie.Services.IdentityEmailSender._emailService</definition>
+        <argsstring></argsstring>
+        <name>_emailService</name>
+        <qualifiedname>HttpWebshopCookie.Services.IdentityEmailSender._emailService</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs" line="8" column="40" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1a001dce5dcf0a428968220cf2036be128" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpWebshopCookie.Services.IdentityEmailSender.IdentityEmailSender</definition>
+        <argsstring>(IEmailService emailService)</argsstring>
+        <name>IdentityEmailSender</name>
+        <qualifiedname>HttpWebshopCookie.Services.IdentityEmailSender.IdentityEmailSender</qualifiedname>
+        <param>
+          <type>IEmailService</type>
+          <declname>emailService</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender" kindref="compound">IdentityEmailSender</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>emailService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The email service to use for sending emails.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the <emphasis>emailService</emphasis>  is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs" line="15" column="16" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1a23fe54456b81c9160f0f40faa64e1cfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpWebshopCookie.Services.IdentityEmailSender.SendEmailAsync</definition>
+        <argsstring>(string email, string subject, string htmlMessage)</argsstring>
+        <name>SendEmailAsync</name>
+        <qualifiedname>HttpWebshopCookie.Services.IdentityEmailSender.SendEmailAsync</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>subject</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>htmlMessage</declname>
+        </param>
+        <briefdescription>
+<para>Sends an email asynchronously. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The recipient email address.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The email subject.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>htmlMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HTML content of the email.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the <emphasis>email</emphasis> , <emphasis>subject</emphasis> , or <emphasis>htmlMessage</emphasis>  is null or empty.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when there is an error sending the email.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs" line="29" column="27" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs" bodystart="29" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a class that sends emails using the identity service. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>HttpWebshopCookie.Services.IdentityEmailSender</label>
+        <link refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IEmailSender</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpWebshopCookie.Services.IdentityEmailSender</label>
+        <link refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IEmailSender</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs" line="6" column="11" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs" bodystart="7" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1af70a1b2d00ee679a98095b5922d6f34b" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::IdentityEmailSender</scope><name>_emailService</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1a001dce5dcf0a428968220cf2036be128" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::IdentityEmailSender</scope><name>IdentityEmailSender</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1a23fe54456b81c9160f0f40faa64e1cfa" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::IdentityEmailSender</scope><name>SendEmailAsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

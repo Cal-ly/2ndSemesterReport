@@ -1,0 +1,283 @@
+\doxysection{Http\+Webshop\+Cookie.\+Services.\+Tag\+Service Class Reference}
+\hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service}{}\label{class_http_webshop_cookie_1_1_services_1_1_tag_service}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+
+
+Service class for managing tags.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_a629ccd646ae6913c04c17382c83a50a8}{Tag\+Service}} (Application\+Db\+Context context)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{class_http_webshop_cookie_1_1_services_1_1_tag_service}{Tag\+Service} class. \end{DoxyCompactList}\item 
+async Task$<$ List$<$ Tag $>$ $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_acad18ee2df1fa9940f1c66d07e53b8cb}{Get\+Tags\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all tags asynchronously. \end{DoxyCompactList}\item 
+async Task$<$ Tag $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_a8691711705b6a63494ebe630247ee55e}{Get\+Tag\+By\+Id\+Async}} (string id)
+\begin{DoxyCompactList}\small\item\em Retrieves a tag by its ID asynchronously. \end{DoxyCompactList}\item 
+async Task$<$ Tag $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_a22d1e027ce66387f432148c5bbff7175}{Create\+Tag\+Async}} (Tag tag)
+\begin{DoxyCompactList}\small\item\em Creates a new tag asynchronously. \end{DoxyCompactList}\item 
+async Task$<$ Tag $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_a2f780260e08614e91daa08f1103ac44a}{Update\+Tag\+Async}} (Tag tag)
+\begin{DoxyCompactList}\small\item\em Updates an existing tag asynchronously. \end{DoxyCompactList}\item 
+async Task$<$ Tag $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_a705e5a6731249ab30c98a755a58675f4}{Delete\+Tag\+Async}} (string id)
+\begin{DoxyCompactList}\small\item\em Deletes a tag by its ID asynchronously. \end{DoxyCompactList}\item 
+async Task$<$ List$<$ string?$>$ $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_a63346afea7c6ad9c7c43eb79edab8aab}{Get\+Occasions\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all unique occasions asynchronously. \end{DoxyCompactList}\item 
+async Task$<$ List$<$ Tag $>$ $>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_ac02215ed5f71e0de3cdcbd98658b677d}{Get\+Tags\+Ordered\+By\+Occasion\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all tags ordered by occasion, category, and subcategory asynchronously. \end{DoxyCompactList}\item 
+async Task$<$(List$<$ Tag $>$, int)$>$ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_tag_service_ad38cad6d3c551d8115ed22dedc354386}{Get\+Tags\+Ordered\+By\+Occasion\+Async}} (int page\+Number, int page\+Size)
+\begin{DoxyCompactList}\small\item\em Retrieves a paged list of tags ordered by occasion, category, and subcategory asynchronously. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class for managing tags. 
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00006}{6}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_a629ccd646ae6913c04c17382c83a50a8}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!TagService@{TagService}}
+\index{TagService@{TagService}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{TagService()}{TagService()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_a629ccd646ae6913c04c17382c83a50a8} 
+Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Tag\+Service (\begin{DoxyParamCaption}\item[{Application\+Db\+Context}]{context}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxylink{class_http_webshop_cookie_1_1_services_1_1_tag_service}{Tag\+Service} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The application database context.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the context is null.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_a22d1e027ce66387f432148c5bbff7175}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!CreateTagAsync@{CreateTagAsync}}
+\index{CreateTagAsync@{CreateTagAsync}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{CreateTagAsync()}{CreateTagAsync()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_a22d1e027ce66387f432148c5bbff7175} 
+async Task$<$ Tag $>$ Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Create\+Tag\+Async (\begin{DoxyParamCaption}\item[{Tag}]{tag}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new tag asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & The tag to create.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains the created tag.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the tag is null.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when unable to create the tag.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_a705e5a6731249ab30c98a755a58675f4}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!DeleteTagAsync@{DeleteTagAsync}}
+\index{DeleteTagAsync@{DeleteTagAsync}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{DeleteTagAsync()}{DeleteTagAsync()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_a705e5a6731249ab30c98a755a58675f4} 
+async Task$<$ Tag $>$ Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Delete\+Tag\+Async (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a tag by its ID asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the tag to delete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains the deleted tag.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the ID is null or empty.\\
+\hline
+{\em Key\+Not\+Found\+Exception} & Thrown when the tag with the specified ID is not found.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when unable to delete the tag.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00115}{115}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_a63346afea7c6ad9c7c43eb79edab8aab}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!GetOccasionsAsync@{GetOccasionsAsync}}
+\index{GetOccasionsAsync@{GetOccasionsAsync}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{GetOccasionsAsync()}{GetOccasionsAsync()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_a63346afea7c6ad9c7c43eb79edab8aab} 
+async Task$<$ List$<$ string?$>$ $>$ Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Get\+Occasions\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all unique occasions asynchronously. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains a list of unique occasions.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when unable to retrieve occasions.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00145}{145}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_a8691711705b6a63494ebe630247ee55e}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!GetTagByIdAsync@{GetTagByIdAsync}}
+\index{GetTagByIdAsync@{GetTagByIdAsync}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{GetTagByIdAsync()}{GetTagByIdAsync()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_a8691711705b6a63494ebe630247ee55e} 
+async Task$<$ Tag $>$ Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Get\+Tag\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a tag by its ID asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the tag.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains the tag with the specified ID.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the ID is null or empty.\\
+\hline
+{\em Key\+Not\+Found\+Exception} & Thrown when the tag with the specified ID is not found.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_acad18ee2df1fa9940f1c66d07e53b8cb}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!GetTagsAsync@{GetTagsAsync}}
+\index{GetTagsAsync@{GetTagsAsync}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{GetTagsAsync()}{GetTagsAsync()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_acad18ee2df1fa9940f1c66d07e53b8cb} 
+async Task$<$ List$<$ Tag $>$ $>$ Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Get\+Tags\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all tags asynchronously. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains a list of tags.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when unable to retrieve tags.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_ac02215ed5f71e0de3cdcbd98658b677d}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!GetTagsOrderedByOccasionAsync@{GetTagsOrderedByOccasionAsync}}
+\index{GetTagsOrderedByOccasionAsync@{GetTagsOrderedByOccasionAsync}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{GetTagsOrderedByOccasionAsync()}{GetTagsOrderedByOccasionAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_ac02215ed5f71e0de3cdcbd98658b677d} 
+async Task$<$ List$<$ Tag $>$ $>$ Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Get\+Tags\+Ordered\+By\+Occasion\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all tags ordered by occasion, category, and subcategory asynchronously. 
+
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains a list of tags ordered by occasion, category, and subcategory.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when unable to retrieve ordered tags.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00166}{166}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_ad38cad6d3c551d8115ed22dedc354386}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!GetTagsOrderedByOccasionAsync@{GetTagsOrderedByOccasionAsync}}
+\index{GetTagsOrderedByOccasionAsync@{GetTagsOrderedByOccasionAsync}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{GetTagsOrderedByOccasionAsync()}{GetTagsOrderedByOccasionAsync()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_ad38cad6d3c551d8115ed22dedc354386} 
+async Task$<$(List$<$ Tag $>$, int)$>$ Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Get\+Tags\+Ordered\+By\+Occasion\+Async (\begin{DoxyParamCaption}\item[{int}]{page\+Number}{, }\item[{int}]{page\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a paged list of tags ordered by occasion, category, and subcategory asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+Number} & The page number.\\
+\hline
+{\em page\+Size} & The number of items per page.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains a tuple with the paged list of tags and the total number of items.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when unable to retrieve paged tags.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00189}{189}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+\Hypertarget{class_http_webshop_cookie_1_1_services_1_1_tag_service_a2f780260e08614e91daa08f1103ac44a}\index{HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}!UpdateTagAsync@{UpdateTagAsync}}
+\index{UpdateTagAsync@{UpdateTagAsync}!HttpWebshopCookie.Services.TagService@{HttpWebshopCookie.Services.TagService}}
+\doxysubsubsection{\texorpdfstring{UpdateTagAsync()}{UpdateTagAsync()}}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_tag_service_a2f780260e08614e91daa08f1103ac44a} 
+async Task$<$ Tag $>$ Http\+Webshop\+Cookie.\+Services.\+Tag\+Service.\+Update\+Tag\+Async (\begin{DoxyParamCaption}\item[{Tag}]{tag}{}\end{DoxyParamCaption})}
+
+
+
+Updates an existing tag asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & The tag to update.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation. The task result contains the updated tag.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the tag is null.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when unable to update the tag.\\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_tag_service_8cs_source_l00088}{88}} of file \mbox{\hyperlink{_tag_service_8cs_source}{Tag\+Service.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cal-\/l/\+Documents/\+Git\+Hub/\+Http\+Webshop\+Cookie/\+Http\+Webshop\+Cookie/\+Services/\mbox{\hyperlink{_tag_service_8cs}{Tag\+Service.\+cs}}\end{DoxyCompactItemize}

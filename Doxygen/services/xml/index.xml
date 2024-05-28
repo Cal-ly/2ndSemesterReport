@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.11.0" xml:lang="en-US">
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_basket_service" kind="class"><name>HttpWebshopCookie::Services::BasketService</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a9ed0ed7b0f69d17c30b1f215b1354586" kind="variable"><name>_httpContextAccessor</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a30cfafb2dbb06340adcf7ff37e10a493" kind="variable"><name>_context</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a57739a9251a1522a6d1f3608fd4b9f1c" kind="variable"><name>orderCreator</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a8c4cc5e05075aa8379dd218cc234c1aa" kind="function"><name>BasketService</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a34c9fdc85154accad8488bab36b4cb67" kind="function"><name>GetOrCreateBasket</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1ada1692562a6ae66ea35be86e0a7cff1c" kind="function"><name>GetOrCreateBasket</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a4068af146c57969a7ba4b0d2255d7d80" kind="function"><name>AddToBasket</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a6e8c6dd299714a3a9cef61521bf35f28" kind="function"><name>IsInBasket</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a58499109b661c6d572c7f6db0ce84263" kind="function"><name>GetQuantityInBasket</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a1480d2784b70dd2d1f98056b6ebfa473" kind="function"><name>GetAllQuantitiesInBasket</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a1d0f38ad67362c1163e8dfc50d308ec7" kind="function"><name>UpdateBasketItemQuantity</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1adfba3c606d407dddd7acd8d2a27efa20" kind="function"><name>RemoveFromBasket</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1aaaeb064beebcb5b2c06e625f59689333" kind="function"><name>ClearBasket</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a9eb7ba7f15a7570a349df4b34d6eb2f7" kind="function"><name>PlaceOrder</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1ab1e9795e52bce71354cbfcd1c326b76a" kind="function"><name>GetOrCreateBasketInternal</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a7986a0378009e3f677965d9b0ed9e8b6" kind="function"><name>StoreBasketIdInCookie</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a573280826f71f99a7415271a20853562" kind="function"><name>LogBasketActivity</name></member>
+  </compound>
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_email_service" kind="class"><name>HttpWebshopCookie::Services::EmailService</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_email_service_1a1513e8049607f43935234aa0a4e8e89c" kind="variable"><name>_smtpSettings</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_email_service_1a8fee3eb37273abef52f831154ae80b15" kind="function"><name>EmailService</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_email_service_1aacb507814ea659223d2831c87353880b" kind="function"><name>SendEmailAsync</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_email_service_1ab0e763dcfa49c0872acf915211733ad3" kind="function"><name>SendMimeMessageAsync</name></member>
+  </compound>
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender" kind="class"><name>HttpWebshopCookie::Services::IdentityEmailSender</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1af70a1b2d00ee679a98095b5922d6f34b" kind="variable"><name>_emailService</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1a001dce5dcf0a428968220cf2036be128" kind="function"><name>IdentityEmailSender</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_1a23fe54456b81c9160f0f40faa64e1cfa" kind="function"><name>SendEmailAsync</name></member>
+  </compound>
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_order_service" kind="class"><name>HttpWebshopCookie::Services::OrderService</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a8de0649b62fe60a76c38f3710c08b039" kind="variable"><name>context</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1aac5341a9b1ecaabb61b7322e97fef52c" kind="function"><name>OrderService</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1aade765f537878b510ea34eeda6197aaa" kind="function"><name>GetOrder</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a450d60bd84b8b3b64146340d8c082fd5" kind="function"><name>GetOrderItems</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1ab9fd1b5a306e8673234518a420d50891" kind="function"><name>GetTotalPriceString</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a736eb8a09184cfdc6d2215ccc3de3816" kind="function"><name>UpdateOrderStatus</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a044959984e996c5c3e87ff025a0900ad" kind="function"><name>UpdateOrder</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1ae49527bfd22f2073a155ee9355272cfa" kind="function"><name>DeleteOrder</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1ab7add5d9a42f3454dc503f4684f45b1f" kind="function"><name>GetOrderInvolved</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a496f3318008738892b5080c8af1cd05a" kind="function"><name>CreateOrderFromBasket</name></member>
+  </compound>
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry" kind="class"><name>HttpWebshopCookie::Services::PostalCodeEntry</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_1abd859490badfad375623d03e9c1e2f82" kind="property"><name>PostalCode</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_1a95553d15373c3abe8c98596196c35618" kind="property"><name>CityName</name></member>
+  </compound>
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_service" kind="class"><name>HttpWebshopCookie::Services::PostalCodeService</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_service_1a280f59f5ed636fb8fefeb77b585b9ba1" kind="variable"><name>jsonFilePath</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_service_1af84b2ba9ac688d91c410331cefda2f37" kind="variable"><name>_postalCodeToCity</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_service_1a3e28afce36723e6593a5d1fd6cf22d15" kind="function"><name>PostalCodeService</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_service_1a62a965a5512cdc5f115ae991a30bb3a9" kind="function"><name>GetCityByPostalCode</name></member>
+  </compound>
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_product_service" kind="class"><name>HttpWebshopCookie::Services::ProductService</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1a5833649d6b614461f2b810038896e48e" kind="variable"><name>_context</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae3440b9b0ec69f8b1f46a15f339cb915" kind="function"><name>ProductService</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae5e36a1d3015088201b7003ad9e46d0f" kind="function"><name>GetProducts</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1a9925ac9239f11005b9b1794fa500fe2f" kind="function"><name>GetProductById</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae86c62681f321ff11a9a3b788a8143a4" kind="function"><name>AddProduct</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1a35d99c08ab1a0cdd9abad155bb80acb2" kind="function"><name>UpdateProduct</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1afc4820e11019e95e3591844bdf4372ce" kind="function"><name>DeleteProduct</name></member>
+  </compound>
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings" kind="class"><name>HttpWebshopCookie::Services::SmtpSettings</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1ab4a8d7b6fad5845ce4e2ab4a5b8ad298" kind="property"><name>Server</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1aa6047cde597cb3ceb15e7adce7c4939b" kind="property"><name>Port</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1aaf10b28f86ae6334ad604cf0960ec250" kind="property"><name>SenderName</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a9e5f9f87be990546f94146e7ab9f63fe" kind="property"><name>SenderEmail</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a1de51a18cbc959574dd4f27fc553e14c" kind="property"><name>Username</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a8cc4b9cb8b5dd9176b01253dbaadc339" kind="property"><name>Password</name></member>
+  </compound>
+  <compound refid="class_http_webshop_cookie_1_1_services_1_1_tag_service" kind="class"><name>HttpWebshopCookie::Services::TagService</name>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a9cbda1fbd5fb0f64ef750ef88c7bdf6d" kind="variable"><name>context</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a629ccd646ae6913c04c17382c83a50a8" kind="function"><name>TagService</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1acad18ee2df1fa9940f1c66d07e53b8cb" kind="function"><name>GetTagsAsync</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a8691711705b6a63494ebe630247ee55e" kind="function"><name>GetTagByIdAsync</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a22d1e027ce66387f432148c5bbff7175" kind="function"><name>CreateTagAsync</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a2f780260e08614e91daa08f1103ac44a" kind="function"><name>UpdateTagAsync</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a705e5a6731249ab30c98a755a58675f4" kind="function"><name>DeleteTagAsync</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1a63346afea7c6ad9c7c43eb79edab8aab" kind="function"><name>GetOccasionsAsync</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1ac02215ed5f71e0de3cdcbd98658b677d" kind="function"><name>GetTagsOrderedByOccasionAsync</name></member>
+    <member refid="class_http_webshop_cookie_1_1_services_1_1_tag_service_1ad38cad6d3c551d8115ed22dedc354386" kind="function"><name>GetTagsOrderedByOccasionAsync</name></member>
+  </compound>
+  <compound refid="namespace_http_webshop_cookie" kind="namespace"><name>HttpWebshopCookie</name>
+  </compound>
+  <compound refid="namespace_http_webshop_cookie_1_1_services" kind="namespace"><name>HttpWebshopCookie::Services</name>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json" kind="namespace"><name>Newtonsoft::Json</name>
+  </compound>
+  <compound refid="_basket_service_8cs" kind="file"><name>BasketService.cs</name>
+  </compound>
+  <compound refid="_email_service_8cs" kind="file"><name>EmailService.cs</name>
+  </compound>
+  <compound refid="_identity_email_sender_8cs" kind="file"><name>IdentityEmailSender.cs</name>
+  </compound>
+  <compound refid="_order_service_8cs" kind="file"><name>OrderService.cs</name>
+  </compound>
+  <compound refid="_postal_code_service_8cs" kind="file"><name>PostalCodeService.cs</name>
+  </compound>
+  <compound refid="_product_service_8cs" kind="file"><name>ProductService.cs</name>
+  </compound>
+  <compound refid="_tag_service_8cs" kind="file"><name>TagService.cs</name>
+  </compound>
+  <compound refid="dir_c9b4dc3d0b5479c7e667a7cb528ef324" kind="dir"><name>C:/Users/Cal-l</name>
+  </compound>
+  <compound refid="dir_ccaffe259ae433795d50668f24b44ad3" kind="dir"><name>C:/Users/Cal-l/Documents</name>
+  </compound>
+  <compound refid="dir_34c6f3bd8925ced1ea2626b67ae6d85e" kind="dir"><name>C:/Users/Cal-l/Documents/GitHub</name>
+  </compound>
+  <compound refid="dir_d99bc0d950966627e333f653dcefa518" kind="dir"><name>C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie</name>
+  </compound>
+  <compound refid="dir_8a3b4581335a16d30a8d02a57bd2d136" kind="dir"><name>C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie</name>
+  </compound>
+  <compound refid="dir_4bbe1181caf68c3f4c162a664f066f78" kind="dir"><name>C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services</name>
+  </compound>
+  <compound refid="dir_d522931ffa1371640980b621734a4381" kind="dir"><name>C:/Users</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,165 @@
+\doxysection{Http\+Webshop\+Cookie.\+Services.\+Product\+Service Class Reference}
+\label{class_http_webshop_cookie_1_1_services_1_1_product_service}\index{HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}}
+
+
+Service class for managing products.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Product\+Service} (Application\+Db\+Context context)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxyref{Product\+Service}{p.}{class_http_webshop_cookie_1_1_services_1_1_product_service} class. \end{DoxyCompactList}\item 
+List$<$ Product $>$ \textbf{ Get\+Products} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of all products. \end{DoxyCompactList}\item 
+Product \textbf{ Get\+Product\+By\+Id} (string id)
+\begin{DoxyCompactList}\small\item\em Gets a product by its ID. \end{DoxyCompactList}\item 
+void \textbf{ Add\+Product} (Product product)
+\begin{DoxyCompactList}\small\item\em Adds a new product. \end{DoxyCompactList}\item 
+void \textbf{ Update\+Product} (Product product)
+\begin{DoxyCompactList}\small\item\em Updates an existing product. \end{DoxyCompactList}\item 
+void \textbf{ Delete\+Product} (string id)
+\begin{DoxyCompactList}\small\item\em Deletes a product by its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class for managing products. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}!ProductService@{ProductService}}
+\index{ProductService@{ProductService}!HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}}
+\doxysubsubsection{ProductService()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_product_service_ae3440b9b0ec69f8b1f46a15f339cb915} 
+Http\+Webshop\+Cookie.\+Services.\+Product\+Service.\+Product\+Service (\begin{DoxyParamCaption}\item[{Application\+Db\+Context}]{context}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxyref{Product\+Service}{p.}{class_http_webshop_cookie_1_1_services_1_1_product_service} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The application database context.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the context is null.\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\index{HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}!AddProduct@{AddProduct}}
+\index{AddProduct@{AddProduct}!HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}}
+\doxysubsubsection{AddProduct()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_product_service_ae86c62681f321ff11a9a3b788a8143a4} 
+void Http\+Webshop\+Cookie.\+Services.\+Product\+Service.\+Add\+Product (\begin{DoxyParamCaption}\item[{Product}]{product}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product} & The product to add.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the product is null.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when unable to add the product.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}!DeleteProduct@{DeleteProduct}}
+\index{DeleteProduct@{DeleteProduct}!HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}}
+\doxysubsubsection{DeleteProduct()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_product_service_afc4820e11019e95e3591844bdf4372ce} 
+void Http\+Webshop\+Cookie.\+Services.\+Product\+Service.\+Delete\+Product (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a product by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the product to delete.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the ID is null or empty.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when unable to delete the product or product not found.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}!GetProductById@{GetProductById}}
+\index{GetProductById@{GetProductById}!HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}}
+\doxysubsubsection{GetProductById()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_product_service_a9925ac9239f11005b9b1794fa500fe2f} 
+Product Http\+Webshop\+Cookie.\+Services.\+Product\+Service.\+Get\+Product\+By\+Id (\begin{DoxyParamCaption}\item[{string}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Gets a product by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the product.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The product with the specified ID.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the ID is null or empty.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when the product is not found.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}!GetProducts@{GetProducts}}
+\index{GetProducts@{GetProducts}!HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}}
+\doxysubsubsection{GetProducts()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_product_service_ae5e36a1d3015088201b7003ad9e46d0f} 
+List$<$ Product $>$ Http\+Webshop\+Cookie.\+Services.\+Product\+Service.\+Get\+Products (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the list of all products. 
+
+\begin{DoxyReturn}{Returns}
+The list of products.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when unable to retrieve products.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}!UpdateProduct@{UpdateProduct}}
+\index{UpdateProduct@{UpdateProduct}!HttpWebshopCookie.Services.ProductService@{HttpWebshopCookie.Services.ProductService}}
+\doxysubsubsection{UpdateProduct()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_product_service_a35d99c08ab1a0cdd9abad155bb80acb2} 
+void Http\+Webshop\+Cookie.\+Services.\+Product\+Service.\+Update\+Product (\begin{DoxyParamCaption}\item[{Product}]{product}{}\end{DoxyParamCaption})}
+
+
+
+Updates an existing product. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product} & The product to update.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the product is null.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when unable to update the product.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cal-\/l/\+Documents/\+Git\+Hub/\+Http\+Webshop\+Cookie/\+Http\+Webshop\+Cookie/\+Services/Product\+Service.\+cs\end{DoxyCompactItemize}

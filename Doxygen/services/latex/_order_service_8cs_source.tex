@@ -1,0 +1,159 @@
+\doxysection{Order\+Service.\+cs}
+\hypertarget{_order_service_8cs_source}{}\label{_order_service_8cs_source}\index{C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs@{C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs}}
+\mbox{\hyperlink{_order_service_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00001}00001\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_http_webshop_cookie_1_1_services}{HttpWebshopCookie.Services}}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00002}00002\ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00006}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service}{OrderService}}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00007}00007\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ ApplicationDbContext\ context;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00014}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_aac5341a9b1ecaabb61b7322e97fef52c}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_aac5341a9b1ecaabb61b7322e97fef52c}{OrderService}}(ApplicationDbContext\ context)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ this.context\ =\ context\ ??\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(context),\ \textcolor{stringliteral}{"{}Database\ context\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00025}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_aade765f537878b510ea34eeda6197aaa}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Order\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_aade765f537878b510ea34eeda6197aaa}{GetOrder}}(\textcolor{keywordtype}{string}\ orderId)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ context.Orders}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Include(o\ =>\ o.OrderItems)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ThenInclude(oi\ =>\ oi.ProductItem)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .SingleOrDefault(o\ =>\ o.Id\ ==\ orderId);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ order\ ??\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\textcolor{stringliteral}{"{}Order\ not\ found."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00041}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_a450d60bd84b8b3b64146340d8c082fd5}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ OrderItemView[]\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_a450d60bd84b8b3b64146340d8c082fd5}{GetOrderItems}}(Order\ order)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(order),\ \textcolor{stringliteral}{"{}Order\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ order.OrderItems.Select(oi\ =>\ \textcolor{keyword}{new}\ OrderItemView}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ProductName\ =\ oi.ProductItem?.Name,}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Quantity\ =\ oi.Quantity,}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Price\ =\ oi.ProductItem?.Price}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}).ToArray();}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00059}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_ab9fd1b5a306e8673234518a420d50891}{00059}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_ab9fd1b5a306e8673234518a420d50891}{GetTotalPriceString}}(Order\ order)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(order),\ \textcolor{stringliteral}{"{}Order\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ order.TotalPrice.ToString(\textcolor{stringliteral}{"{}C2"{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00072}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_a736eb8a09184cfdc6d2215ccc3de3816}{00072}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_a736eb8a09184cfdc6d2215ccc3de3816}{UpdateOrderStatus}}(\textcolor{keywordtype}{string}\ orderId,\ OrderStatus\ newStatus)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ context.Orders.Find(orderId);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\textcolor{stringliteral}{"{}Order\ not\ found."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ order.Status\ =\ newStatus;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ context.SaveChanges();}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00089}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_a044959984e996c5c3e87ff025a0900ad}{00089}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_a044959984e996c5c3e87ff025a0900ad}{UpdateOrder}}(Order\ order)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(order),\ \textcolor{stringliteral}{"{}Order\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ context.Orders.Update(order);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ context.SaveChanges();}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00102}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_ae49527bfd22f2073a155ee9355272cfa}{00102}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_ae49527bfd22f2073a155ee9355272cfa}{DeleteOrder}}(\textcolor{keywordtype}{string}\ orderId)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ context.Orders.Find(orderId);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\textcolor{stringliteral}{"{}Order\ not\ found."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ context.Orders.Remove(order);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ context.SaveChanges();}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00120}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_ab7add5d9a42f3454dc503f4684f45b1f}{00120}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<UserWrapper>\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_ab7add5d9a42f3454dc503f4684f45b1f}{GetOrderInvolved}}(Order\ order)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(order),\ \textcolor{stringliteral}{"{}Order\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ List<UserWrapper>\ involvedEntities\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order.Guest\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ guestWrapper\ =\ \textcolor{keyword}{new}\ UserWrapper(order.Guest);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ involvedEntities.Add(guestWrapper);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order.Customer\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ customerWrapper\ =\ \textcolor{keyword}{new}\ UserWrapper(order.Customer);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ involvedEntities.Add(customerWrapper);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (order.Employee\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ employeeWrapper\ =\ \textcolor{keyword}{new}\ UserWrapper(order.Employee);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ involvedEntities.Add(employeeWrapper);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ involvedEntities;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00155}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_a496f3318008738892b5080c8af1cd05a}{00155}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Order\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_order_service_a496f3318008738892b5080c8af1cd05a}{CreateOrderFromBasket}}(Basket\ basket,\ UserWrapper\ userWrapper)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (basket\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(basket),\ \textcolor{stringliteral}{"{}Basket\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (userWrapper\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(userWrapper),\ \textcolor{stringliteral}{"{}User\ wrapper\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ var\ order\ =\ \textcolor{keyword}{new}\ Order}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OrderDate\ =\ DateTime.Now,}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ OrderStatus.Pending,}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (userWrapper.GetUserType())}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}Guest"{}}:}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.Guest\ =\ userWrapper.Guest;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.GuestId\ =\ userWrapper.Id;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ context.Addresses.Add(userWrapper.Guest!.Address!);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ context.GuestUsers.Add(userWrapper.Guest!);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}Customer"{}}:}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.Customer\ =\ userWrapper.Customer;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.CustomerId\ =\ userWrapper.Id;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}ApplicationUser"{}}:}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.Customer\ =\ userWrapper.Customer;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.CustomerId\ =\ userWrapper.Id;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}Employee"{}}:}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.Employee\ =\ userWrapper.Employee;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.EmployeeId\ =\ userWrapper.Id;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentException(\textcolor{stringliteral}{"{}Valid\ user\ type\ must\ be\ provided"{}});}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ basketItem\ \textcolor{keywordflow}{in}\ basket.Items)}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ orderItem\ =\ \textcolor{keyword}{new}\ OrderItem}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ProductItem\ =\ basketItem.ProductInBasket,}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ProductId\ =\ basketItem.ProductId!,}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Quantity\ =\ basketItem.Quantity\ ??\ 0,}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnitPrice\ =\ basketItem.ProductInBasket?.Price\ ??\ 0}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ order.OrderItems.Add(orderItem);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ context.Orders.Add(order);}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ context.SaveChanges();}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ order;}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00207}00207\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_order_service_8cs_source_l00208}00208\ \}}
+
+\end{DoxyCode}

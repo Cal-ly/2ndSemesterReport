@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_http_webshop_cookie_1_1_services_1_1_order_service" kind="class" language="C#" prot="public">
+    <compoundname>HttpWebshopCookie::Services::OrderService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1a8de0649b62fe60a76c38f3710c08b039" prot="private" static="no" mutable="no">
+        <type>readonly ApplicationDbContext</type>
+        <definition>readonly ApplicationDbContext HttpWebshopCookie.Services.OrderService.context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="8" column="47" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1aac5341a9b1ecaabb61b7322e97fef52c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpWebshopCookie.Services.OrderService.OrderService</definition>
+        <argsstring>(ApplicationDbContext context)</argsstring>
+        <name>OrderService</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.OrderService</qualifiedname>
+        <param>
+          <type>ApplicationDbContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_http_webshop_cookie_1_1_services_1_1_order_service" kindref="compound">OrderService</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The application database context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="14" column="16" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1aade765f537878b510ea34eeda6197aaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Order</type>
+        <definition>Order HttpWebshopCookie.Services.OrderService.GetOrder</definition>
+        <argsstring>(string orderId)</argsstring>
+        <name>GetOrder</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.GetOrder</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>orderId</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves an order by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the order to retrieve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The order with the specified ID.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the order is not found.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="25" column="22" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1a450d60bd84b8b3b64146340d8c082fd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OrderItemView[]</type>
+        <definition>OrderItemView[] HttpWebshopCookie.Services.OrderService.GetOrderItems</definition>
+        <argsstring>(Order order)</argsstring>
+        <name>GetOrderItems</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.GetOrderItems</qualifiedname>
+        <param>
+          <type>Order</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the order items for a given order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order for which to retrieve the order items.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An array of order item views.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the order is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="41" column="30" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="41" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1ab9fd1b5a306e8673234518a420d50891" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HttpWebshopCookie.Services.OrderService.GetTotalPriceString</definition>
+        <argsstring>(Order order)</argsstring>
+        <name>GetTotalPriceString</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.GetTotalPriceString</qualifiedname>
+        <param>
+          <type>Order</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the total price of an order as a formatted string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order for which to retrieve the total price.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The total price of the order as a formatted string.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the order is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="59" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="59" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1a736eb8a09184cfdc6d2215ccc3de3816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpWebshopCookie.Services.OrderService.UpdateOrderStatus</definition>
+        <argsstring>(string orderId, OrderStatus newStatus)</argsstring>
+        <name>UpdateOrderStatus</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.UpdateOrderStatus</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>orderId</declname>
+        </param>
+        <param>
+          <type>OrderStatus</type>
+          <declname>newStatus</declname>
+        </param>
+        <briefdescription>
+<para>Updates the status of an order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the order to update.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new status of the order.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the order is not found.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="72" column="21" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="72" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1a044959984e996c5c3e87ff025a0900ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpWebshopCookie.Services.OrderService.UpdateOrder</definition>
+        <argsstring>(Order order)</argsstring>
+        <name>UpdateOrder</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.UpdateOrder</qualifiedname>
+        <param>
+          <type>Order</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Updates an order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the order is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="89" column="21" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="89" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1ae49527bfd22f2073a155ee9355272cfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpWebshopCookie.Services.OrderService.DeleteOrder</definition>
+        <argsstring>(string orderId)</argsstring>
+        <name>DeleteOrder</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.DeleteOrder</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>orderId</declname>
+        </param>
+        <briefdescription>
+<para>Deletes an order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>orderId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the order to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the order is not found.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="102" column="21" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="102" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1ab7add5d9a42f3454dc503f4684f45b1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; UserWrapper &gt;</type>
+        <definition>List&lt; UserWrapper &gt; HttpWebshopCookie.Services.OrderService.GetOrderInvolved</definition>
+        <argsstring>(Order order)</argsstring>
+        <name>GetOrderInvolved</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.GetOrderInvolved</qualifiedname>
+        <param>
+          <type>Order</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves the users involved in an order. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order for which to retrieve the involved users.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of user wrappers representing the involved users.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the order is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="120" column="21" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="120" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_order_service_1a496f3318008738892b5080c8af1cd05a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Order</type>
+        <definition>Order HttpWebshopCookie.Services.OrderService.CreateOrderFromBasket</definition>
+        <argsstring>(Basket basket, UserWrapper userWrapper)</argsstring>
+        <name>CreateOrderFromBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.OrderService.CreateOrderFromBasket</qualifiedname>
+        <param>
+          <type>Basket</type>
+          <declname>basket</declname>
+        </param>
+        <param>
+          <type>UserWrapper</type>
+          <declname>userWrapper</declname>
+        </param>
+        <briefdescription>
+<para>Creates an order from a basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The basket from which to create the order.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userWrapper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user wrapper associated with the order.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The created order.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the basket or userWrapper is null.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when an invalid user type is provided.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="155" column="22" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="155" bodyend="206"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Service class for managing orders. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" line="6" column="11" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs" bodystart="7" bodyend="207"/>
+    <listofallmembers>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a8de0649b62fe60a76c38f3710c08b039" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>context</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a496f3318008738892b5080c8af1cd05a" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>CreateOrderFromBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1ae49527bfd22f2073a155ee9355272cfa" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>DeleteOrder</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1aade765f537878b510ea34eeda6197aaa" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>GetOrder</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1ab7add5d9a42f3454dc503f4684f45b1f" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>GetOrderInvolved</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a450d60bd84b8b3b64146340d8c082fd5" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>GetOrderItems</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1ab9fd1b5a306e8673234518a420d50891" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>GetTotalPriceString</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1aac5341a9b1ecaabb61b7322e97fef52c" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>OrderService</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a044959984e996c5c3e87ff025a0900ad" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>UpdateOrder</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_order_service_1a736eb8a09184cfdc6d2215ccc3de3816" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::OrderService</scope><name>UpdateOrderStatus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

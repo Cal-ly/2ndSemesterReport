@@ -1,0 +1,238 @@
+\doxysection{Http\+Webshop\+Cookie.\+Services.\+Order\+Service Class Reference}
+\label{class_http_webshop_cookie_1_1_services_1_1_order_service}\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+
+
+Service class for managing orders.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Order\+Service} (Application\+Db\+Context context)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxyref{Order\+Service}{p.}{class_http_webshop_cookie_1_1_services_1_1_order_service} class. \end{DoxyCompactList}\item 
+Order \textbf{ Get\+Order} (string order\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves an order by its ID. \end{DoxyCompactList}\item 
+Order\+Item\+View[$\,$] \textbf{ Get\+Order\+Items} (Order order)
+\begin{DoxyCompactList}\small\item\em Retrieves the order items for a given order. \end{DoxyCompactList}\item 
+string \textbf{ Get\+Total\+Price\+String} (Order order)
+\begin{DoxyCompactList}\small\item\em Retrieves the total price of an order as a formatted string. \end{DoxyCompactList}\item 
+void \textbf{ Update\+Order\+Status} (string order\+Id, Order\+Status new\+Status)
+\begin{DoxyCompactList}\small\item\em Updates the status of an order. \end{DoxyCompactList}\item 
+void \textbf{ Update\+Order} (Order order)
+\begin{DoxyCompactList}\small\item\em Updates an order. \end{DoxyCompactList}\item 
+void \textbf{ Delete\+Order} (string order\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes an order. \end{DoxyCompactList}\item 
+List$<$ User\+Wrapper $>$ \textbf{ Get\+Order\+Involved} (Order order)
+\begin{DoxyCompactList}\small\item\em Retrieves the users involved in an order. \end{DoxyCompactList}\item 
+Order \textbf{ Create\+Order\+From\+Basket} (Basket basket, User\+Wrapper user\+Wrapper)
+\begin{DoxyCompactList}\small\item\em Creates an order from a basket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class for managing orders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!OrderService@{OrderService}}
+\index{OrderService@{OrderService}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{OrderService()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_aac5341a9b1ecaabb61b7322e97fef52c} 
+Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Order\+Service (\begin{DoxyParamCaption}\item[{Application\+Db\+Context}]{context}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxyref{Order\+Service}{p.}{class_http_webshop_cookie_1_1_services_1_1_order_service} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The application database context.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!CreateOrderFromBasket@{CreateOrderFromBasket}}
+\index{CreateOrderFromBasket@{CreateOrderFromBasket}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{CreateOrderFromBasket()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_a496f3318008738892b5080c8af1cd05a} 
+Order Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Create\+Order\+From\+Basket (\begin{DoxyParamCaption}\item[{Basket}]{basket}{, }\item[{User\+Wrapper}]{user\+Wrapper}{}\end{DoxyParamCaption})}
+
+
+
+Creates an order from a basket. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em basket} & The basket from which to create the order.\\
+\hline
+{\em user\+Wrapper} & The user wrapper associated with the order.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created order.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the basket or user\+Wrapper is null.\\
+\hline
+{\em Argument\+Exception} & Thrown when an invalid user type is provided.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!DeleteOrder@{DeleteOrder}}
+\index{DeleteOrder@{DeleteOrder}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{DeleteOrder()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_ae49527bfd22f2073a155ee9355272cfa} 
+void Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Delete\+Order (\begin{DoxyParamCaption}\item[{string}]{order\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes an order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Id} & The ID of the order to delete.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when the order is not found.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!GetOrder@{GetOrder}}
+\index{GetOrder@{GetOrder}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{GetOrder()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_aade765f537878b510ea34eeda6197aaa} 
+Order Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Get\+Order (\begin{DoxyParamCaption}\item[{string}]{order\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves an order by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Id} & The ID of the order to retrieve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The order with the specified ID.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when the order is not found.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!GetOrderInvolved@{GetOrderInvolved}}
+\index{GetOrderInvolved@{GetOrderInvolved}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{GetOrderInvolved()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_ab7add5d9a42f3454dc503f4684f45b1f} 
+List$<$ User\+Wrapper $>$ Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Get\+Order\+Involved (\begin{DoxyParamCaption}\item[{Order}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the users involved in an order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order for which to retrieve the involved users.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of user wrappers representing the involved users.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the order is null.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!GetOrderItems@{GetOrderItems}}
+\index{GetOrderItems@{GetOrderItems}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{GetOrderItems()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_a450d60bd84b8b3b64146340d8c082fd5} 
+Order\+Item\+View[$\,$] Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Get\+Order\+Items (\begin{DoxyParamCaption}\item[{Order}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the order items for a given order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order for which to retrieve the order items.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array of order item views.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the order is null.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!GetTotalPriceString@{GetTotalPriceString}}
+\index{GetTotalPriceString@{GetTotalPriceString}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{GetTotalPriceString()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_ab9fd1b5a306e8673234518a420d50891} 
+string Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Get\+Total\+Price\+String (\begin{DoxyParamCaption}\item[{Order}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the total price of an order as a formatted string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order for which to retrieve the total price.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total price of the order as a formatted string.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the order is null.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!UpdateOrder@{UpdateOrder}}
+\index{UpdateOrder@{UpdateOrder}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{UpdateOrder()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_a044959984e996c5c3e87ff025a0900ad} 
+void Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Update\+Order (\begin{DoxyParamCaption}\item[{Order}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Updates an order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The order to update.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the order is null.\\
+\hline
+\end{DoxyExceptions}
+\index{HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}!UpdateOrderStatus@{UpdateOrderStatus}}
+\index{UpdateOrderStatus@{UpdateOrderStatus}!HttpWebshopCookie.Services.OrderService@{HttpWebshopCookie.Services.OrderService}}
+\doxysubsubsection{UpdateOrderStatus()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_order_service_a736eb8a09184cfdc6d2215ccc3de3816} 
+void Http\+Webshop\+Cookie.\+Services.\+Order\+Service.\+Update\+Order\+Status (\begin{DoxyParamCaption}\item[{string}]{order\+Id}{, }\item[{Order\+Status}]{new\+Status}{}\end{DoxyParamCaption})}
+
+
+
+Updates the status of an order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Id} & The ID of the order to update.\\
+\hline
+{\em new\+Status} & The new status of the order.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown when the order is not found.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cal-\/l/\+Documents/\+Git\+Hub/\+Http\+Webshop\+Cookie/\+Http\+Webshop\+Cookie/\+Services/Order\+Service.\+cs\end{DoxyCompactItemize}

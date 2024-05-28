@@ -1,0 +1,596 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_http_webshop_cookie_1_1_services_1_1_basket_service" kind="class" language="C#" prot="public">
+    <compoundname>HttpWebshopCookie::Services::BasketService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a9ed0ed7b0f69d17c30b1f215b1354586" prot="private" static="no" mutable="no">
+        <type>readonly IHttpContextAccessor</type>
+        <definition>readonly IHttpContextAccessor HttpWebshopCookie.Services.BasketService._httpContextAccessor</definition>
+        <argsstring></argsstring>
+        <name>_httpContextAccessor</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService._httpContextAccessor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="8" column="43" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a30cfafb2dbb06340adcf7ff37e10a493" prot="private" static="no" mutable="no">
+        <type>readonly ApplicationDbContext</type>
+        <definition>readonly ApplicationDbContext HttpWebshopCookie.Services.BasketService._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService._context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="9" column="43" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a57739a9251a1522a6d1f3608fd4b9f1c" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_http_webshop_cookie_1_1_services_1_1_order_service" kindref="compound">OrderService</ref></type>
+        <definition>readonly OrderService HttpWebshopCookie.Services.BasketService.orderCreator</definition>
+        <argsstring></argsstring>
+        <name>orderCreator</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.orderCreator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="10" column="35" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a8c4cc5e05075aa8379dd218cc234c1aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpWebshopCookie.Services.BasketService.BasketService</definition>
+        <argsstring>(IHttpContextAccessor httpContextAccessor, ApplicationDbContext context, OrderService orderCreator)</argsstring>
+        <name>BasketService</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.BasketService</qualifiedname>
+        <param>
+          <type>IHttpContextAccessor</type>
+          <declname>httpContextAccessor</declname>
+        </param>
+        <param>
+          <type>ApplicationDbContext</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="class_http_webshop_cookie_1_1_services_1_1_order_service" kindref="compound">OrderService</ref></type>
+          <declname>orderCreator</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_http_webshop_cookie_1_1_services_1_1_basket_service" kindref="compound">BasketService</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>httpContextAccessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HTTP context accessor.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The application database context.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>orderCreator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The order service for creating orders.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="18" column="12" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a34c9fdc85154accad8488bab36b4cb67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Basket</type>
+        <definition>Basket HttpWebshopCookie.Services.BasketService.GetOrCreateBasket</definition>
+        <argsstring>()</argsstring>
+        <name>GetOrCreateBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.GetOrCreateBasket</qualifiedname>
+        <briefdescription>
+<para>Gets or creates the shopping basket for the current HTTP context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The shopping basket.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="29" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1ada1692562a6ae66ea35be86e0a7cff1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Basket</type>
+        <definition>Basket HttpWebshopCookie.Services.BasketService.GetOrCreateBasket</definition>
+        <argsstring>(IHttpContextAccessor httpContextAccessor, ApplicationDbContext dbContext)</argsstring>
+        <name>GetOrCreateBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.GetOrCreateBasket</qualifiedname>
+        <param>
+          <type>IHttpContextAccessor</type>
+          <declname>httpContextAccessor</declname>
+        </param>
+        <param>
+          <type>ApplicationDbContext</type>
+          <declname>dbContext</declname>
+        </param>
+        <briefdescription>
+<para>Gets or creates the shopping basket for the specified HTTP context and database context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>httpContextAccessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HTTP context accessor.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dbContext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The application database context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shopping basket.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="40" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a4068af146c57969a7ba4b0d2255d7d80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpWebshopCookie.Services.BasketService.AddToBasket</definition>
+        <argsstring>(string productId)</argsstring>
+        <name>AddToBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.AddToBasket</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Adds a product to the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the specified product is not found.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="103" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="103" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a6e8c6dd299714a3a9cef61521bf35f28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; bool &gt;</type>
+        <definition>async Task&lt; bool &gt; HttpWebshopCookie.Services.BasketService.IsInBasket</definition>
+        <argsstring>(string productId)</argsstring>
+        <name>IsInBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.IsInBasket</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a product is in the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains a boolean indicating if the product is in the basket.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="133" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="133" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a58499109b661c6d572c7f6db0ce84263" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; int?&gt;</type>
+        <definition>async Task&lt; int?&gt; HttpWebshopCookie.Services.BasketService.GetQuantityInBasket</definition>
+        <argsstring>(string productId)</argsstring>
+        <name>GetQuantityInBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.GetQuantityInBasket</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Gets the quantity of a product in the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product to get the quantity for.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains the quantity of the product in the basket.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="144" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="144" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a1480d2784b70dd2d1f98056b6ebfa473" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; Dictionary&lt; string, int &gt; &gt;</type>
+        <definition>async Task&lt; Dictionary&lt; string, int &gt; &gt; HttpWebshopCookie.Services.BasketService.GetAllQuantitiesInBasket</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllQuantitiesInBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.GetAllQuantitiesInBasket</qualifiedname>
+        <briefdescription>
+<para>Gets the quantities of all products in the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A task representing the asynchronous operation. The task result contains a dictionary with the product IDs as keys and the quantities as values.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="161" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="161" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a1d0f38ad67362c1163e8dfc50d308ec7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpWebshopCookie.Services.BasketService.UpdateBasketItemQuantity</definition>
+        <argsstring>(string productId, int newQuantity)</argsstring>
+        <name>UpdateBasketItemQuantity</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.UpdateBasketItemQuantity</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>productId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>newQuantity</declname>
+        </param>
+        <briefdescription>
+<para>Updates the quantity of a product in the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product to update.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newQuantity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new quantity of the product.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the specified product is not found in the basket.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="184" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="184" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1adfba3c606d407dddd7acd8d2a27efa20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpWebshopCookie.Services.BasketService.RemoveFromBasket</definition>
+        <argsstring>(string productId)</argsstring>
+        <name>RemoveFromBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.RemoveFromBasket</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>productId</declname>
+        </param>
+        <briefdescription>
+<para>Removes a product from the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product to remove.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="211" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="211" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1aaaeb064beebcb5b2c06e625f59689333" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpWebshopCookie.Services.BasketService.ClearBasket</definition>
+        <argsstring>()</argsstring>
+        <name>ClearBasket</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.ClearBasket</qualifiedname>
+        <briefdescription>
+<para>Clears the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A task representing the asynchronous operation.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="238" column="23" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="238" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a9eb7ba7f15a7570a349df4b34d6eb2f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Order</type>
+        <definition>Order HttpWebshopCookie.Services.BasketService.PlaceOrder</definition>
+        <argsstring>(UserWrapper userWrapper)</argsstring>
+        <name>PlaceOrder</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.PlaceOrder</qualifiedname>
+        <param>
+          <type>UserWrapper</type>
+          <declname>userWrapper</declname>
+        </param>
+        <briefdescription>
+<para>Places an order using the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>userWrapper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user wrapper for the order.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The order placed.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="279" column="18" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="279" bodyend="289"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1ab1e9795e52bce71354cbfcd1c326b76a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Basket</type>
+        <definition>Basket HttpWebshopCookie.Services.BasketService.GetOrCreateBasketInternal</definition>
+        <argsstring>(IHttpContextAccessor httpContextAccessor, ApplicationDbContext dbContext)</argsstring>
+        <name>GetOrCreateBasketInternal</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.GetOrCreateBasketInternal</qualifiedname>
+        <param>
+          <type>IHttpContextAccessor</type>
+          <declname>httpContextAccessor</declname>
+        </param>
+        <param>
+          <type>ApplicationDbContext</type>
+          <declname>dbContext</declname>
+        </param>
+        <briefdescription>
+<para>Internal method to get or create the shopping basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>httpContextAccessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HTTP context accessor.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dbContext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The application database context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shopping basket.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="51" column="20" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="51" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a7986a0378009e3f677965d9b0ed9e8b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpWebshopCookie.Services.BasketService.StoreBasketIdInCookie</definition>
+        <argsstring>(string basketId, IHttpContextAccessor httpContextAccessor)</argsstring>
+        <name>StoreBasketIdInCookie</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.StoreBasketIdInCookie</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>basketId</declname>
+        </param>
+        <param>
+          <type>IHttpContextAccessor</type>
+          <declname>httpContextAccessor</declname>
+        </param>
+        <briefdescription>
+<para>Stores the basket ID in a cookie for the current HTTP context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basketId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the basket.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>httpContextAccessor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HTTP context accessor.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="85" column="18" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="85" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a573280826f71f99a7415271a20853562" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpWebshopCookie.Services.BasketService.LogBasketActivity</definition>
+        <argsstring>(string basketId, string? productId, string activityType, int? quantityChanged)</argsstring>
+        <name>LogBasketActivity</name>
+        <qualifiedname>HttpWebshopCookie.Services.BasketService.LogBasketActivity</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>basketId</declname>
+        </param>
+        <param>
+          <type>string?</type>
+          <declname>productId</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>activityType</declname>
+        </param>
+        <param>
+          <type>int?</type>
+          <declname>quantityChanged</declname>
+        </param>
+        <briefdescription>
+<para>Logs an activity in the basket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>basketId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the basket.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>productId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product involved in the activity.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>activityType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of activity (Add, Update, Remove, etc.).</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>quantityChanged</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The quantity changed in the activity.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A task representing the asynchronous operation.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="254" column="24" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="254" bodyend="272"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Service class for managing the shopping basket. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" line="6" column="7" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs" bodystart="7" bodyend="290"/>
+    <listofallmembers>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a30cfafb2dbb06340adcf7ff37e10a493" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>_context</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a9ed0ed7b0f69d17c30b1f215b1354586" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>_httpContextAccessor</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a4068af146c57969a7ba4b0d2255d7d80" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>AddToBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a8c4cc5e05075aa8379dd218cc234c1aa" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>BasketService</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1aaaeb064beebcb5b2c06e625f59689333" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>ClearBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a1480d2784b70dd2d1f98056b6ebfa473" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>GetAllQuantitiesInBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a34c9fdc85154accad8488bab36b4cb67" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>GetOrCreateBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1ada1692562a6ae66ea35be86e0a7cff1c" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>GetOrCreateBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1ab1e9795e52bce71354cbfcd1c326b76a" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>GetOrCreateBasketInternal</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a58499109b661c6d572c7f6db0ce84263" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>GetQuantityInBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a6e8c6dd299714a3a9cef61521bf35f28" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>IsInBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a573280826f71f99a7415271a20853562" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>LogBasketActivity</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a57739a9251a1522a6d1f3608fd4b9f1c" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>orderCreator</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a9eb7ba7f15a7570a349df4b34d6eb2f7" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>PlaceOrder</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1adfba3c606d407dddd7acd8d2a27efa20" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>RemoveFromBasket</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a7986a0378009e3f677965d9b0ed9e8b6" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>StoreBasketIdInCookie</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_basket_service_1a1d0f38ad67362c1163e8dfc50d308ec7" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::BasketService</scope><name>UpdateBasketItemQuantity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

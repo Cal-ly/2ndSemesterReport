@@ -1,7 +1,24 @@
 \chapter{Software Design}
 \label{chapter:software-design}
+Dette kapitel vil beksrive software designet, der er blevet udarbejdet i forbindelse med projektet.
+I \ref{chapter:conclusion} forefindes afsnittet \ref{sec:conclusion_summary}, der opsummerer analysen vedrørende software arkitekturen og dens anvendelse i projektet.
+
+Alle diagrammer forefindes i \Cref{appendix:diagrams} og kildekoden til modellerne i \Cref{appendix:sourcecode}.
+Det skal bemærkes, at der er blevet brugt en række forskellige værktøjer til at lave diagrammerne, hvilket har resulteret i forskellige stilarter og formater. 
+Dette er gjort for at vise, at der er flere måder at lave diagrammer på, og at de enkelte designs og stilarter kan appellere til forskellige.
+Grundet projektets læringsorienterede karakter, ses det som en del af læringen at kreere diagrammerne i forskellige værktøjer, for at opnå en bredere forståelse af diagrammerne, værktøjerne og deres anvendelse.
+
+Der er dog også foretaget et klart valg i forhold til, fremstille klassediagrammern, så de udelukkende indeholder de klasser, der er essentielle for systemet.
+Dette er gjort for at bevare overblikket og for at undgå at overvælde læseren med irrelevante klasser og relationer.
+Dertil kommer både Database Schema og Entity Relationship Diagrammer, der beskriver relationerne mere i detaljer set ud fra databasens persepektiv.
+Hensigten med at PageModels og deres Views ikke er medtaget i klassediagrammerne, bliver fulgt op med de så i stedet bliver fremstillet i \emph{System Sequence Diagrams}, så deres funktionalitet bliver beskrevet.
+Dermed har en læser mulighed for at se, hvordan de enkelte sider interagerer med systemet, uden at blive overvældet af detaljer.
+Syntesen mellem de forskellige diagrammer, var med hensigt på at udfører en gennemgående refaktorering af systemet, for herefter at beskrive de \emph{Design Patterns}.
+Ud fra dette ville systemet være beskrevet i en sådan grad, at det kunne implementeres i software og med tilretningen i forhold til \emph{Design Patterns} give et fælles sprog.
+Det er dog vigtigt at bemærke, at der er blevet prioriteret i forhold til hvilke dele af systemet, der er blevet beskrevet i detaljer, grundet arbejdstiden og projektets omfang.
 
 \section{Domain Model Diagram}
+\label{sec:domain-model-diagram}
 Det første skridt i designprocessen er at lave et Domain Model Diagram (DMD). Det er vigtigt at bemærke følgende:
 \begin{itemize}
     \item DMD forholder sig til den virkelige verdens koncepter og relationer
@@ -16,15 +33,10 @@ Det første skridt i designprocessen er at lave et Domain Model Diagram (DMD). D
 Kontrast skal primært ses i forhold til et Domain Class Diagram, hvor hver klasse har attributter, metoder og er forbundet andre klasser gennem specificerede relationer (fx agrregation) og mulitplicitet. 
 Ligeledes ville man i et DCD se klasserne Basket, BasketItem og BasketSerice, muligvis med et IBasketService interface som implementeringen af konceptet "Kurv".
 Det er vigtigt at definere ovenstående, da DMD er et godt værktøj men der er for mange holdninger til hvad det egentlig er.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/diagrams/dmd-start.png}
-    \caption{Domain Model Diagram ved projektets start}
-    \label{fig:domain-model-diagram}
-\end{figure}
 
 \section{Software Arkitektur}
-Visse dele af denne section, er gennemgået i \Cref{sec:metode-teknologi} og yderligere beskrevet og argumenteret for i \Cref{chapter:anvendte-teknologier}. 
+\label{sec:software-arkitektur}
+Visse dele af denne section, er gennemgået i \Cref{sec:metode-teknologi} og yderligere beskrevet og argumenteret for i \Cref{appendix:anvendte-teknologier}. 
 For fælles forståelse, vil software arkitektur i denne rapport forståes som; En højniveau beskrivelse af systemet, der beskriver dets komponenter, deres relationer og hvordan de interagerer. Derfor er den overordnede hensigt og struktur, som følger:
 \begin{itemize}
     \item Abstraktioner af systemet, der fokuserer på dets struktur og adfærd
@@ -34,56 +46,88 @@ For fælles forståelse, vil software arkitektur i denne rapport forståes som; 
     \item Software arkitektur som koncept, kan bruges til at skabe en bedre forståelse og forudsigelse af problemeer for udviklerne og dermed en bedre løsning til tiden
 \end{itemize}
 
-\subsection{Klasse Diagram}
-Et \emph{Design Class Diagram} vil i denne sammenhæng være arbejdstegninger for kernen af systemet. Det vil illustrere relationerne mellem de klasser, som systemet vil instansiere objekter ud fra og deres underlæggende properties og methods. 
+\section{Klasse Diagram}
+\label{sec:class-diagram}
+Et \emph{Design Class Diagram} (DCD) vil i denne sammenhæng være arbejdstegninger for kernen af systemet. Det vil illustrere relationerne mellem de klasser, som systemet vil instansiere objekter ud fra og deres underlæggende properties og methods. 
 Dette er for at skabe en forståelse for systemet. Dermed er det også et bevidst valg, ikke at meddrage PageModels og deres Views. Dette er grundet, at deres antal og relationer vil obfuskere overblikket, fremfor at fremme forståelse. 
 Dette ses som værende den dimentralt modsatte hensigt med et diagram. Ligeledes er diagrammerne delt op i fire kategorier, for netop at bevare overblikket over systemet.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/diagrams/dcd-modelclasses.png}
-    \caption{Design Class Diagram - Model Classes}
-    \label{fig:class-diagram-models}
-\end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/diagrams/dcd-user-userwrapper.png}
-    \caption{Design Class Diagram - UserWrapper}
-    \label{fig:class-diagram-userwrapper}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/diagrams/dcd-main-services.png}
-    \caption{Design Class Diagram - Main Services}
-    \label{fig:class-diagram-main-services}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/diagrams/dcd-aux-services.png}
-    \caption{Design Class Diagram - Auxilary Services}
-    \label{fig:class-diagram-aux-services}
-\end{figure}
-Alle modeller er vedlagt i \Cref{appendix:models} og vil ikke blive gennemgået her, grundet deres simplicitet.
-
-\subsection{Database Design}
+\section{Database Design}
+\label{sec:database-design}
 Viden fra \cite{connolly2023database} vil anvendes hele vejen igennem, men ikke blive citeret yderligere, da det anses for at være grundlæggende viden.
 
-\subsection{Sekvens Diagrammer}
+\subsection{Entity Relationship Diagrammer}
+Et Entity Relationship Diagram (ERD) er en visuel repræsentation af data, der beskriver, hvordan data (\emph{entiteter}) er relateret til hinanden.
 
-\section{Teknologier}
+\subsection{Database Schema}
+Følgende er genereret i fra Microsoft SQL Server Management Studio (SSMS) og viser ligeledes hvordan databasen er struktureret.
 
-\section{Frameworks}
+\subsection{Normalisering}
+\label{sec:normalisering}
+Normalisering af en database er processen med at organisere data i en database for at reducere duplikation og afhængigheder mellem data. 
+Dette gøres for at sikre, at data er korrekte og konsistente, samt at de er nemme at opdatere og vedligeholde.
 
-\section{Frameworks, Libraries and Packages}
+\subsubsection{Første Normalform (1NF)}
+For at opnå første normalform (1NF) skal følgende kriterier være opfyldt:
+\begin{itemize}
+    \item Alle attributter i en tabel skal være atomare.
+    \item Der må ikke være flere værdier i en enkelt celle.
+\end{itemize}
+Alle tabeller i databasen er i første normalform (1NF), da alle attributter er atomare og der ikke er flere værdier i en enkelt celle.
 
+\subsubsection{Anden Normalform (2NF)}
+For at opnå anden normalform (2NF) skal følgende kriterier være opfyldt:
+\begin{itemize}
+    \item Tabellen skal være i første normalform (1NF).
+    \item Alle ikke-nøgleattributter skal afhænge af hele primærnøglen.
+    \item Hvis en tabel har en sammensat primærnøgle, skal alle attributter afhænge af hele primærnøglen.
+\end{itemize}
+Tabeller, der har en primærnøgle bestående af en enkelt kolonne, opfylder automatisk kravene til anden normalform (2NF), forudsat at den allerede er i første normalform (1NF).
+De eneste tabeller med sammensatte primærnøgler er BasketItem, OrderItem og IXProductTag (som er et index tabel).
+Disse tre tabeller er dog stadig i første normalform, da alle attributter er atomare og der ikke er flere værdier i en enkelt celle.
+Derfor er alle tabeller i databasen i anden normalform (2NF).
 
+\subsubsection{Tredje Normalform (3NF)}
+For at opnå tredje normalform (3NF) skal følgende kriterier være opfyldt:
+\begin{itemize}
+    \item Tabellen skal være i anden normalform (2NF).
+    \item Ingen ikke-nøgleattributter må afhænge af andre ikke-nøgleattributter.
+\end{itemize}
+Alle tabeller i databasen er i tredje normalform (3NF), da ingen ikke-nøgleattributter afhænger af andre ikke-nøgleattributter.
+Det er dog vigtigt at bemærke at der fx Order indeholder TotalPrice, som ikke er afhængig af men dog stadig udregnet ud fra OrderItems.
+Grunden til at medtage TotalPrice i Order, er for at kunne søge og sortere på dette felt, uden at skulle udregne det hver gang.
+Samtidig er den en sammenhæng i Address mellem PostalCode og City. Dette er dog en sammenhæng, der er nødvendig for at kunne identificere en adresse og derfor ikke en afhængighed.
+Grunden til at medtage dette, er for at kunne sortere og søge på dette felt, uden at skulle slå op i en anden tabel.
+Der er klargjort en logik i PostalCodeService, hvor man kan slå op i en tabel med alle danske, færøske og grønlandske postnumre og byer, for at sikre at en bruger har en dansk adresse.
+Tabellen er ikke implenteret men gemt i JSON format. At have en tabel med samtlige postnumre og byer, skal man enten implementere logik der sikre, at en bruger har en dansk adresse. 
+Alternativt skal samtlige postnumre og byer for hele verdenen være i tabellen, som så også skal sorteres på land eller landekode.
+
+\subsubsection{Denormalisering}
+Denormalisering er processen med at kombinere normaliserede tabeller for at forbedre ydeevnen og forenkle dataadgangen. 
+Dette kan gøres ved at tilføje redundante data til tabeller, så de er hurtigere at søge i og kræver færre joins.
+Dette er blevet gjort i Order tabellen, hvor TotalPrice er blevet tilføjet, for at gøre det hurtigere at søge, sortere og addere dette felt.
+Der er dog en logik i OrderService, der sikre at TotalPrice er korrekt, når en Order oprettes, opdateres eller slettes.
+
+\section{Sekvens Diagrammer}
+\label{sec:sekvens-diagrammer}
+Sekvensdiagrammer er en type interaktionsdiagram, der viser, hvordan objekter samarbejder i en sekvens af beskeder/kald og handlinger.
+Der er ikke lavet sekvensdiagrammer for alle metoder, der er i stedet forkuseret på enten nogle helt grundlæggende eller de mere komplekse metoder, der er essentielle for systemet.
 
 \section{Design Patterns}
+\label{sec:design-patterns}
+Der er blevet anvendt en række forskellige design patterns i projektet, for at opnå en højere grad af genbrugelighed, fleksibilitet og vedligeholdelse, samt at opnå et fælles sprog.
+Bl.a. inspirerede Adapter Pattern til at anvende UserWrapper, der kunne håndtere brugeren uanset type. Ligeledes blev Dependency Injection anvendt til at injecte services i PageModels.
+Selvom visse design patterns er anvendt fra start var det tanken at refaktorere systemet, for at opnå en højere grad af genbrugelighed og fleksibilitet.
+Det ville være gennem denne refaktorering, at optimeringerne ville blive identificeret eller inspireret vha. design patterns og derigennem blive implementeret og beskrevet.
 
 \section{Sikkerhed}
 
 \section{Test}
+Der er udarbejdet enkelte unit test, som et proof of concept men de ikke dækker hele systemet. Der er fokuseret på at teste services, da det er her størstedelen af logikken ligger.
+Dermed er det også, der er mest at vinde ved at teste disse. Det er også de mest komplicerede at teste, da de ofte har flere afhængigheder, der skal mockes. 
+Til dette er der bl.a. anvendt HttpContextMock og Moq, sammen med Microsoft.VisualStudio.TestTools.UnitTesting.
 
 \section{Dokumentation}
+Dokumentation for projektet er blevet udarbejdet i form af denne rapport, samt i form af kommentarer i koden.
+Disse kommentarer er blevet skrevet i XML format, så de kan blive brugt til at generere dokumentation bl.a. med Doxygen.
+Den pdf, der er genereret fra Doxygen, er vedlagt som bilag og kan findes i \Cref{appendix:doxygen}.

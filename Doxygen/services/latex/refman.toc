@@ -1,0 +1,107 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Package List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie Namespace Reference}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services Namespace Reference}{9}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Basket\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service Class Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{11}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{12}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}BasketService()}{12}{subsubsection.6.1.2.1}%
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{12}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}AddToBasket()}{12}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}ClearBasket()}{12}{subsubsection.6.1.3.2}%
+\contentsline {subsubsection}{\numberline {6.1.3.3}GetAllQuantitiesInBasket()}{13}{subsubsection.6.1.3.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.4}GetOrCreateBasket()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{13}{subsubsection.6.1.3.4}%
+\contentsline {subsubsection}{\numberline {6.1.3.5}GetOrCreateBasket()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{13}{subsubsection.6.1.3.5}%
+\contentsline {subsubsection}{\numberline {6.1.3.6}GetQuantityInBasket()}{13}{subsubsection.6.1.3.6}%
+\contentsline {subsubsection}{\numberline {6.1.3.7}IsInBasket()}{14}{subsubsection.6.1.3.7}%
+\contentsline {subsubsection}{\numberline {6.1.3.8}PlaceOrder()}{14}{subsubsection.6.1.3.8}%
+\contentsline {subsubsection}{\numberline {6.1.3.9}RemoveFromBasket()}{14}{subsubsection.6.1.3.9}%
+\contentsline {subsubsection}{\numberline {6.1.3.10}UpdateBasketItemQuantity()}{15}{subsubsection.6.1.3.10}%
+\contentsline {section}{\numberline {6.2}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Email\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service Class Reference}{15}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Identity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Email\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sender Class Reference}{16}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{16}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{16}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}IdentityEmailSender()}{16}{subsubsection.6.3.2.1}%
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{16}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}SendEmailAsync()}{16}{subsubsection.6.3.3.1}%
+\contentsline {section}{\numberline {6.4}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service Class Reference}{17}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{18}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Constructor \& Destructor Documentation}{18}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}OrderService()}{18}{subsubsection.6.4.2.1}%
+\contentsline {subsection}{\numberline {6.4.3}Member Function Documentation}{18}{subsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.1}CreateOrderFromBasket()}{18}{subsubsection.6.4.3.1}%
+\contentsline {subsubsection}{\numberline {6.4.3.2}DeleteOrder()}{18}{subsubsection.6.4.3.2}%
+\contentsline {subsubsection}{\numberline {6.4.3.3}GetOrder()}{19}{subsubsection.6.4.3.3}%
+\contentsline {subsubsection}{\numberline {6.4.3.4}GetOrderInvolved()}{19}{subsubsection.6.4.3.4}%
+\contentsline {subsubsection}{\numberline {6.4.3.5}GetOrderItems()}{20}{subsubsection.6.4.3.5}%
+\contentsline {subsubsection}{\numberline {6.4.3.6}GetTotalPriceString()}{20}{subsubsection.6.4.3.6}%
+\contentsline {subsubsection}{\numberline {6.4.3.7}UpdateOrder()}{20}{subsubsection.6.4.3.7}%
+\contentsline {subsubsection}{\numberline {6.4.3.8}UpdateOrderStatus()}{21}{subsubsection.6.4.3.8}%
+\contentsline {section}{\numberline {6.5}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Postal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Code\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entry Class Reference}{21}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{21}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Property Documentation}{22}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}CityName}{22}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}PostalCode}{22}{subsubsection.6.5.2.2}%
+\contentsline {section}{\numberline {6.6}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Postal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Code\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service Class Reference}{22}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{22}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Constructor \& Destructor Documentation}{22}{subsection.6.6.2}%
+\contentsline {subsubsection}{\numberline {6.6.2.1}PostalCodeService()}{22}{subsubsection.6.6.2.1}%
+\contentsline {subsection}{\numberline {6.6.3}Member Function Documentation}{22}{subsection.6.6.3}%
+\contentsline {subsubsection}{\numberline {6.6.3.1}GetCityByPostalCode()}{22}{subsubsection.6.6.3.1}%
+\contentsline {section}{\numberline {6.7}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service Class Reference}{23}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{23}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Constructor \& Destructor Documentation}{23}{subsection.6.7.2}%
+\contentsline {subsubsection}{\numberline {6.7.2.1}ProductService()}{23}{subsubsection.6.7.2.1}%
+\contentsline {subsection}{\numberline {6.7.3}Member Function Documentation}{23}{subsection.6.7.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.1}AddProduct()}{23}{subsubsection.6.7.3.1}%
+\contentsline {subsubsection}{\numberline {6.7.3.2}DeleteProduct()}{24}{subsubsection.6.7.3.2}%
+\contentsline {subsubsection}{\numberline {6.7.3.3}GetProductById()}{24}{subsubsection.6.7.3.3}%
+\contentsline {subsubsection}{\numberline {6.7.3.4}GetProducts()}{25}{subsubsection.6.7.3.4}%
+\contentsline {subsubsection}{\numberline {6.7.3.5}UpdateProduct()}{25}{subsubsection.6.7.3.5}%
+\contentsline {section}{\numberline {6.8}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Smtp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Settings Class Reference}{25}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{26}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Property Documentation}{26}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}Password}{26}{subsubsection.6.8.2.1}%
+\contentsline {subsubsection}{\numberline {6.8.2.2}Port}{26}{subsubsection.6.8.2.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.3}SenderEmail}{26}{subsubsection.6.8.2.3}%
+\contentsline {subsubsection}{\numberline {6.8.2.4}SenderName}{27}{subsubsection.6.8.2.4}%
+\contentsline {subsubsection}{\numberline {6.8.2.5}Server}{27}{subsubsection.6.8.2.5}%
+\contentsline {subsubsection}{\numberline {6.8.2.6}Username}{27}{subsubsection.6.8.2.6}%
+\contentsline {section}{\numberline {6.9}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tag\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service Class Reference}{27}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{28}{subsection.6.9.1}%
+\contentsline {subsection}{\numberline {6.9.2}Constructor \& Destructor Documentation}{28}{subsection.6.9.2}%
+\contentsline {subsubsection}{\numberline {6.9.2.1}TagService()}{28}{subsubsection.6.9.2.1}%
+\contentsline {subsection}{\numberline {6.9.3}Member Function Documentation}{28}{subsection.6.9.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.1}CreateTagAsync()}{28}{subsubsection.6.9.3.1}%
+\contentsline {subsubsection}{\numberline {6.9.3.2}DeleteTagAsync()}{28}{subsubsection.6.9.3.2}%
+\contentsline {subsubsection}{\numberline {6.9.3.3}GetOccasionsAsync()}{29}{subsubsection.6.9.3.3}%
+\contentsline {subsubsection}{\numberline {6.9.3.4}GetTagByIdAsync()}{29}{subsubsection.6.9.3.4}%
+\contentsline {subsubsection}{\numberline {6.9.3.5}GetTagsAsync()}{30}{subsubsection.6.9.3.5}%
+\contentsline {subsubsection}{\numberline {6.9.3.6}GetTagsOrderedByOccasionAsync()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{30}{subsubsection.6.9.3.6}%
+\contentsline {subsubsection}{\numberline {6.9.3.7}GetTagsOrderedByOccasionAsync()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{30}{subsubsection.6.9.3.7}%
+\contentsline {subsubsection}{\numberline {6.9.3.8}UpdateTagAsync()}{31}{subsubsection.6.9.3.8}%
+\contentsline {chapter}{\numberline {7}File Documentation}{33}{chapter.7}%
+\contentsline {section}{\numberline {7.1}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cal-\/l/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Basket\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.cs File Reference}{33}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Basket\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{33}{section.7.2}%
+\contentsline {section}{\numberline {7.3}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cal-\/l/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Email\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.cs File Reference}{36}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Email\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{36}{section.7.4}%
+\contentsline {section}{\numberline {7.5}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cal-\/l/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Identity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Email\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sender.cs File Reference}{37}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Identity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Email\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sender.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{38}{section.7.6}%
+\contentsline {section}{\numberline {7.7}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cal-\/l/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Order\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.cs File Reference}{38}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Order\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{39}{section.7.8}%
+\contentsline {section}{\numberline {7.9}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cal-\/l/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Postal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Code\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.cs File Reference}{41}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Postal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Code\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{41}{section.7.10}%
+\contentsline {section}{\numberline {7.11}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cal-\/l/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.cs File Reference}{41}{section.7.11}%
+\contentsline {section}{\numberline {7.12}Product\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{42}{section.7.12}%
+\contentsline {section}{\numberline {7.13}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cal-\/l/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Http\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Webshop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cookie/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Services/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tag\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.cs File Reference}{43}{section.7.13}%
+\contentsline {section}{\numberline {7.14}Tag\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Service.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cs}{43}{section.7.14}%
+\contentsline {chapter}{Index}{47}{section*.25}%

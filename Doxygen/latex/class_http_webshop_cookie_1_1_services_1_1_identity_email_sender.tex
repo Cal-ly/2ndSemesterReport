@@ -1,0 +1,83 @@
+\doxysection{Http\+Webshop\+Cookie.\+Services.\+Identity\+Email\+Sender Class Reference}
+\label{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender}\index{HttpWebshopCookie.Services.IdentityEmailSender@{HttpWebshopCookie.Services.IdentityEmailSender}}
+
+
+Represents a class that sends emails using the identity service.  
+
+
+Inheritance diagram for Http\+Webshop\+Cookie.\+Services.\+Identity\+Email\+Sender\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Identity\+Email\+Sender} (IEmail\+Service email\+Service)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxyref{Identity\+Email\+Sender}{p.}{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender} class. \end{DoxyCompactList}\item 
+async Task \textbf{ Send\+Email\+Async} (string email, string subject, string html\+Message)
+\begin{DoxyCompactList}\small\item\em Sends an email asynchronously. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a class that sends emails using the identity service. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{HttpWebshopCookie.Services.IdentityEmailSender@{HttpWebshopCookie.Services.IdentityEmailSender}!IdentityEmailSender@{IdentityEmailSender}}
+\index{IdentityEmailSender@{IdentityEmailSender}!HttpWebshopCookie.Services.IdentityEmailSender@{HttpWebshopCookie.Services.IdentityEmailSender}}
+\doxysubsubsection{IdentityEmailSender()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_a001dce5dcf0a428968220cf2036be128} 
+Http\+Webshop\+Cookie.\+Services.\+Identity\+Email\+Sender.\+Identity\+Email\+Sender (\begin{DoxyParamCaption}\item[{IEmail\+Service}]{email\+Service}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \doxyref{Identity\+Email\+Sender}{p.}{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email\+Service} & The email service to use for sending emails.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the {\itshape email\+Service}  is null.\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\index{HttpWebshopCookie.Services.IdentityEmailSender@{HttpWebshopCookie.Services.IdentityEmailSender}!SendEmailAsync@{SendEmailAsync}}
+\index{SendEmailAsync@{SendEmailAsync}!HttpWebshopCookie.Services.IdentityEmailSender@{HttpWebshopCookie.Services.IdentityEmailSender}}
+\doxysubsubsection{SendEmailAsync()}
+{\footnotesize\ttfamily \label{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_a23fe54456b81c9160f0f40faa64e1cfa} 
+async Task Http\+Webshop\+Cookie.\+Services.\+Identity\+Email\+Sender.\+Send\+Email\+Async (\begin{DoxyParamCaption}\item[{string}]{email}{, }\item[{string}]{subject}{, }\item[{string}]{html\+Message}{}\end{DoxyParamCaption})}
+
+
+
+Sends an email asynchronously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & The recipient email address.\\
+\hline
+{\em subject} & The email subject.\\
+\hline
+{\em html\+Message} & The HTML content of the email.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when the {\itshape email} , {\itshape subject} , or {\itshape html\+Message}  is null or empty.\\
+\hline
+{\em Invalid\+Operation\+Exception} & Thrown when there is an error sending the email.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Cal-\/l/\+Documents/\+Git\+Hub/\+Http\+Webshop\+Cookie/\+Http\+Webshop\+Cookie/\+Services/Identity\+Email\+Sender.\+cs\end{DoxyCompactItemize}

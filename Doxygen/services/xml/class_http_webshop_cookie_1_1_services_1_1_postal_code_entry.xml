@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry" kind="class" language="C#" prot="public">
+    <compoundname>HttpWebshopCookie::Services::PostalCodeEntry</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_1abd859490badfad375623d03e9c1e2f82" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? HttpWebshopCookie.Services.PostalCodeEntry.PostalCode</definition>
+        <argsstring></argsstring>
+        <name>PostalCode</name>
+        <qualifiedname>HttpWebshopCookie.Services.PostalCodeEntry.PostalCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs" line="37" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_1a95553d15373c3abe8c98596196c35618" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? HttpWebshopCookie.Services.PostalCodeEntry.CityName</definition>
+        <argsstring></argsstring>
+        <name>CityName</name>
+        <qualifiedname>HttpWebshopCookie.Services.PostalCodeEntry.CityName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs" line="38" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs" line="35" column="7" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs" bodystart="36" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_1a95553d15373c3abe8c98596196c35618" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::PostalCodeEntry</scope><name>CityName</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_postal_code_entry_1abd859490badfad375623d03e9c1e2f82" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::PostalCodeEntry</scope><name>PostalCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

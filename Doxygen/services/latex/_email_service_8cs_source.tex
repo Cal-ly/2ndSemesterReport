@@ -1,0 +1,104 @@
+\doxysection{Email\+Service.\+cs}
+\hypertarget{_email_service_8cs_source}{}\label{_email_service_8cs_source}\index{C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs@{C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs}}
+\mbox{\hyperlink{_email_service_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00001}00001\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_http_webshop_cookie_1_1_services}{HttpWebshopCookie.Services}};}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00006}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_email_service}{00006}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_email_service}{EmailService}}\ :\ IEmailService}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings}{SmtpSettings}}\ \_smtpSettings;}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00014}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_email_service_a8fee3eb37273abef52f831154ae80b15}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_email_service_a8fee3eb37273abef52f831154ae80b15}{EmailService}}(IOptions<SmtpSettings>\ smtpSettings)}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \_smtpSettings\ =\ smtpSettings.Value;}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00029}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_email_service_aacb507814ea659223d2831c87353880b}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_email_service_aacb507814ea659223d2831c87353880b}{SendEmailAsync}}(\textcolor{keywordtype}{string}\ toEmail,\ \textcolor{keywordtype}{string}\ subject,\ \textcolor{keywordtype}{string}\ message)}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(toEmail))}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(toEmail),\ \textcolor{stringliteral}{"{}Recipient\ email\ address\ cannot\ be\ null\ or\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(subject))}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(subject),\ \textcolor{stringliteral}{"{}Email\ subject\ cannot\ be\ null\ or\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(message))}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(message),\ \textcolor{stringliteral}{"{}Email\ message\ cannot\ be\ null\ or\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ var\ emailMessage\ =\ \textcolor{keyword}{new}\ MimeMessage();}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ emailMessage.From.Add(\textcolor{keyword}{new}\ MailboxAddress(\_smtpSettings.SenderName,\ \_smtpSettings.SenderEmail));}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ emailMessage.To.Add(\textcolor{keyword}{new}\ MailboxAddress(\textcolor{stringliteral}{"{}"{}},\ toEmail));}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ emailMessage.Subject\ =\ subject;}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ emailMessage.Body\ =\ \textcolor{keyword}{new}\ TextPart(MimeKit.Text.TextFormat.Html)\ \{\ Text\ =\ message\ \};}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (var\ client\ =\ \textcolor{keyword}{new}\ SmtpClient())}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ client.ConnectAsync(\_smtpSettings.Server,\ \_smtpSettings.Port,\ MailKit.Security.SecureSocketOptions.None);}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ client.SendAsync(emailMessage);}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ client.DisconnectAsync(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (SmtpCommandException\ ex)}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ command\ errors\ (e.g.,\ invalid\ recipient\ address)}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\$\textcolor{stringliteral}{"{}SMTP\ command\ error:\ \{ex.Message\}"{}},\ ex);}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (SmtpProtocolException\ ex)}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ protocol\ errors\ (e.g.,\ unexpected\ server\ response)}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\$\textcolor{stringliteral}{"{}SMTP\ protocol\ error:\ \{ex.Message\}"{}},\ ex);}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00081}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_email_service_ab0e763dcfa49c0872acf915211733ad3}{00081}}\ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_email_service_ab0e763dcfa49c0872acf915211733ad3}{SendMimeMessageAsync}}(MimeMessage\ message)}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (message\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(message),\ \textcolor{stringliteral}{"{}MIME\ message\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (var\ client\ =\ \textcolor{keyword}{new}\ SmtpClient())}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ client.ConnectAsync(\_smtpSettings.Server,\ \_smtpSettings.Port,\ MailKit.Security.SecureSocketOptions.None);}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ client.SendAsync(message);}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ client.DisconnectAsync(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (SmtpCommandException\ ex)}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ command\ errors\ (e.g.,\ invalid\ recipient\ address)}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\$\textcolor{stringliteral}{"{}SMTP\ command\ error:\ \{ex.Message\}"{}},\ ex);}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (SmtpProtocolException\ ex)}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ protocol\ errors\ (e.g.,\ unexpected\ server\ response)}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\$\textcolor{stringliteral}{"{}SMTP\ protocol\ error:\ \{ex.Message\}"{}},\ ex);}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00107}00107\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00108}00108\ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00113}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings}{00113}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings}{SmtpSettings}}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00114}00114\ \{}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00118}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_ab4a8d7b6fad5845ce4e2ab4a5b8ad298}{00118}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_ab4a8d7b6fad5845ce4e2ab4a5b8ad298}{Server}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00123}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_aa6047cde597cb3ceb15e7adce7c4939b}{00123}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_aa6047cde597cb3ceb15e7adce7c4939b}{Port}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00128}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_aaf10b28f86ae6334ad604cf0960ec250}{00128}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_aaf10b28f86ae6334ad604cf0960ec250}{SenderName}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00133}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_a9e5f9f87be990546f94146e7ab9f63fe}{00133}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_a9e5f9f87be990546f94146e7ab9f63fe}{SenderEmail}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00138}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_a1de51a18cbc959574dd4f27fc553e14c}{00138}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_a1de51a18cbc959574dd4f27fc553e14c}{Username}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00143}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_a8cc4b9cb8b5dd9176b01253dbaadc339}{00143}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_smtp_settings_a8cc4b9cb8b5dd9176b01253dbaadc339}{Password}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_email_service_8cs_source_l00144}00144\ \}}
+
+\end{DoxyCode}

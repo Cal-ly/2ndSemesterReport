@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_http_webshop_cookie_1_1_services_1_1_product_service" kind="class" language="C#" prot="public">
+    <compoundname>HttpWebshopCookie::Services::ProductService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_webshop_cookie_1_1_services_1_1_product_service_1a5833649d6b614461f2b810038896e48e" prot="private" static="no" mutable="no">
+        <type>readonly ApplicationDbContext</type>
+        <definition>readonly ApplicationDbContext HttpWebshopCookie.Services.ProductService._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <qualifiedname>HttpWebshopCookie.Services.ProductService._context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" line="8" column="47" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae3440b9b0ec69f8b1f46a15f339cb915" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpWebshopCookie.Services.ProductService.ProductService</definition>
+        <argsstring>(ApplicationDbContext context)</argsstring>
+        <name>ProductService</name>
+        <qualifiedname>HttpWebshopCookie.Services.ProductService.ProductService</qualifiedname>
+        <param>
+          <type>ApplicationDbContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_http_webshop_cookie_1_1_services_1_1_product_service" kindref="compound">ProductService</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The application database context.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the context is null.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" line="15" column="16" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae5e36a1d3015088201b7003ad9e46d0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Product &gt;</type>
+        <definition>List&lt; Product &gt; HttpWebshopCookie.Services.ProductService.GetProducts</definition>
+        <argsstring>()</argsstring>
+        <name>GetProducts</name>
+        <qualifiedname>HttpWebshopCookie.Services.ProductService.GetProducts</qualifiedname>
+        <briefdescription>
+<para>Gets the list of all products. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The list of products.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to retrieve products.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" line="25" column="21" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" bodystart="25" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_product_service_1a9925ac9239f11005b9b1794fa500fe2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Product</type>
+        <definition>Product HttpWebshopCookie.Services.ProductService.GetProductById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetProductById</name>
+        <qualifiedname>HttpWebshopCookie.Services.ProductService.GetProductById</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Gets a product by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The product with the specified ID.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the ID is null or empty.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the product is not found.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" line="44" column="24" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" bodystart="44" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae86c62681f321ff11a9a3b788a8143a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpWebshopCookie.Services.ProductService.AddProduct</definition>
+        <argsstring>(Product product)</argsstring>
+        <name>AddProduct</name>
+        <qualifiedname>HttpWebshopCookie.Services.ProductService.AddProduct</qualifiedname>
+        <param>
+          <type>Product</type>
+          <declname>product</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>product</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The product to add.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the product is null.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to add the product.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" line="61" column="21" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" bodystart="61" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_product_service_1a35d99c08ab1a0cdd9abad155bb80acb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpWebshopCookie.Services.ProductService.UpdateProduct</definition>
+        <argsstring>(Product product)</argsstring>
+        <name>UpdateProduct</name>
+        <qualifiedname>HttpWebshopCookie.Services.ProductService.UpdateProduct</qualifiedname>
+        <param>
+          <type>Product</type>
+          <declname>product</declname>
+        </param>
+        <briefdescription>
+<para>Updates an existing product. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>product</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The product to update.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the product is null.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to update the product.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" line="85" column="21" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" bodystart="85" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_webshop_cookie_1_1_services_1_1_product_service_1afc4820e11019e95e3591844bdf4372ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpWebshopCookie.Services.ProductService.DeleteProduct</definition>
+        <argsstring>(string id)</argsstring>
+        <name>DeleteProduct</name>
+        <qualifiedname>HttpWebshopCookie.Services.ProductService.DeleteProduct</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Deletes a product by its ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the product to delete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentNullException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the ID is null or empty.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when unable to delete the product or product not found.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" line="109" column="21" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" bodystart="109" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Service class for managing products. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" line="6" column="11" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs" bodystart="7" bodyend="132"/>
+    <listofallmembers>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1a5833649d6b614461f2b810038896e48e" prot="private" virt="non-virtual"><scope>HttpWebshopCookie::Services::ProductService</scope><name>_context</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae86c62681f321ff11a9a3b788a8143a4" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::ProductService</scope><name>AddProduct</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1afc4820e11019e95e3591844bdf4372ce" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::ProductService</scope><name>DeleteProduct</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1a9925ac9239f11005b9b1794fa500fe2f" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::ProductService</scope><name>GetProductById</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae5e36a1d3015088201b7003ad9e46d0f" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::ProductService</scope><name>GetProducts</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1ae3440b9b0ec69f8b1f46a15f339cb915" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::ProductService</scope><name>ProductService</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_product_service_1a35d99c08ab1a0cdd9abad155bb80acb2" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::ProductService</scope><name>UpdateProduct</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,46 @@
+\doxysection{Identity\+Email\+Sender.\+cs}
+\hypertarget{_identity_email_sender_8cs_source}{}\label{_identity_email_sender_8cs_source}\index{C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs@{C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs}}
+\mbox{\hyperlink{_identity_email_sender_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00001}00001\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_http_webshop_cookie_1_1_services}{HttpWebshopCookie.Services}}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00002}00002\ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00006}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender}{00006}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender}{IdentityEmailSender}}\ :\ IEmailSender}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00007}00007\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ IEmailService\ \_emailService;}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00015}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_a001dce5dcf0a428968220cf2036be128}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_a001dce5dcf0a428968220cf2036be128}{IdentityEmailSender}}(IEmailService\ emailService)}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \_emailService\ =\ emailService\ ??\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(emailService),\ \textcolor{stringliteral}{"{}Email\ service\ cannot\ be\ null."{}});}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00029}\mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_a23fe54456b81c9160f0f40faa64e1cfa}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ async\ Task\ \mbox{\hyperlink{class_http_webshop_cookie_1_1_services_1_1_identity_email_sender_a23fe54456b81c9160f0f40faa64e1cfa}{SendEmailAsync}}(\textcolor{keywordtype}{string}\ email,\ \textcolor{keywordtype}{string}\ subject,\ \textcolor{keywordtype}{string}\ htmlMessage)}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(email))}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(email),\ \textcolor{stringliteral}{"{}Recipient\ email\ address\ cannot\ be\ null\ or\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(subject))}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(subject),\ \textcolor{stringliteral}{"{}Email\ subject\ cannot\ be\ null\ or\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(htmlMessage))}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(htmlMessage),\ \textcolor{stringliteral}{"{}Email\ message\ cannot\ be\ null\ or\ empty."{}});}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_emailService.SendEmailAsync(email,\ subject,\ htmlMessage);}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\$\textcolor{stringliteral}{"{}An\ error\ occurred\ while\ sending\ the\ email:\ \{ex.Message\}"{}},\ ex);}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_identity_email_sender_8cs_source_l00057}00057\ \}}
+
+\end{DoxyCode}

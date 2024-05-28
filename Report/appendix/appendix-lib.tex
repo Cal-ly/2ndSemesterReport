@@ -1,0 +1,182 @@
+\chapter{Anvendte Teknologier}
+\label{appendix:anvendte-teknologier}
+Dette appendix beskriver de frameworks og libraries, der er blevet anvendt i projektet. Hver sektion beskriver kort, hvad hvert framework eller library er, og hvordan det er blevet brugt i projektet.
+
+\section{Overordnede Teknologier}
+\subsection{C\#}
+C\# (version 8.0.5) er et programmeringssprog udviklet af Microsoft. Sproget er bygget til at være objektorienteret og type-sikkert. C\# er gennemgående anvendt i projektet til håndtering af alt fra databasestyring til routing til \emph{business logic}. Sproget er designet til at være enkelt, sikkert og effektivt, med funktioner som typekontrol, undtagelseshåndtering, hukommelsesstyring og sikkerhedskontrol. Disse funktioner er med til at forhindre almindelige programmeringsfejl og sikkerhedstrusler.
+
+\subsection{.NET}
+.NET (version 12.0) er et open-source framework udviklet af Microsoft. Frameworket er modulært og letvægtigt. .NET, sammen med C\#, er gennemgående anvendt i projektet til håndtering af alt fra databasestyring til routing til \emph{business logic}.
+
+\subsection{ASP.NET Core}
+ASP.NET Core er et open-source framework, som inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Modulær}: ASP.NET Core er et modulært framework, der muliggør inkludering af kun nødvendige komponenter i applikationen, hvilket gør den mindre og mere effektiv.
+\item \textbf{Cross-platform}: ASP.NET Core kører på Windows, macOS og Linux, hvilket muliggør udvikling og distribution af applikationer på enhver platform.
+\item \textbf{Høj ydeevne}: ASP.NET Core er designet til høj ydeevne og effektivitet, og inkluderer funktioner som native understøttelse af asynkron programmering, \emph{Dependency Injection} og middleware for at forbedre ydeevnen.
+\item \textbf{Open-source}: ASP.NET Core udvikles og vedligeholdes primært af Microsoft.
+\item \textbf{Internetforbundet}: ASP.NET Core fungerer godt med moderne webteknologier som \emph{WebSockets}, \emph{SignalR} og \emph{gRPC}. Realtids og interaktive webapplikationer kan bygges med ASP.NET Core, selvom \emph{Blazor} ofte vil være mere egnet end \emph{Razor Pages}.
+\end{itemize}
+Store dele af projektet bygger på ASP.NET Core, herunder \emph{Razor Pages} og \emph{Entity Framework Core}.
+
+\subsection{Razor Pages}
+\emph{Razor Pages} (RP) er en funktion i ASP.NET Core, der gør kodning af sidefokuserede scenarier lettere og mere produktivt. Frameworket muliggør opbygning af sidefokuserede webapplikationer ved hjælp af en sidebaseret programmeringsmodel. Opsætningen ligner ASP.NET Web Forms, idet hver side har en .cshtml-fil, der indeholder både HTML-markup og C\#-koden, der driver siden. RP er også lig ASP.NET MVC, da de begge bruger Razor-visningsmotoren til at gengive HTML-markup. RP er ideel til små til mellemstore webapplikationer, der primært fokuserer på at vise og indsamle data. RP har derfor været et godt valg til dette projekt.
+
+\subsection{Entity Framework Core}
+\emph{Entity Framework Core} (EFC) er en letvægts, udvidelig, open-source og cross-platform version af Entity Framework dataadgangsteknologi. Det fungerer som en objekt-relationsmæssig mapper (\emph{ORM}), der gør det muligt for .NET-udviklere at arbejde med en database ved hjælp af .NET-objekter. EFC eliminerer behovet for det meste af dataadgangskoden, som udviklere normalt skal skrive. EFC understøtter mange database-motorer, herunder SQL Server, MySQL, SQLite, PostgreSQL og andre. EFC kan generere database-tabeller fra kode og generere kode fra database-tabeller. EFC er designet til at fungere med .NET Core-applikationer, men kan også fungere med .NET Framework-applikationer.
+EFC inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Databaseudbydere}: Understøtter mange database-motorer, herunder SQL Server, MySQL, SQLite, PostgreSQL og andre. Den samme kode kan anvendes til at arbejde med forskellige database-motorer.
+\item \textbf{Modellering}: Muliggør definition af database-skema ved hjælp af C\#-klasser. Enheder, relationer og begrænsninger kan defineres ved hjælp af attributter eller \emph{Fluent API}.
+\item \textbf{Forespørgsler}: Muliggør forespørgsler til databasen ved hjælp af \emph{LINQ} (\emph{Language Integrated Query}). LINQ-forespørgsler kan skrives i C\#-kode, og EFC oversætter dem til SQL-forespørgsler.
+\item \textbf{Lagring af data}: Muliggør datalagring i databasen ved hjælp af \emph{DbContext}-klassen. Enheder kan tilføjes, opdateres og slettes, og EFC genererer de nødvendige SQL-kommandoer.
+\item \textbf{Ændringssporing}: EFC sporer ændringer i enheder og genererer nødvendige SQL-kommandoer for at persistere ændringer i databasen.
+\item \textbf{Migrationer}: Muliggør oprettelse og anvendelse af database-migrationer, der bruges til at opdatere database-skemaet, når applikationen udvikler sig.
+\item \textbf{Transaktioner}: Understøtter transaktioner, der muliggør gruppering af flere databaseoperationer i en enkelt enhed af arbejde.
+\item \textbf{Samtidighed}: Understøtter \emph{optimistic concurrency}, der muliggør, at flere brugere kan arbejde med de samme data uden konflikter.
+\item \textbf{Ydelse}: EFC er designet til høj ydeevne og effektivitet. Inkluderer funktioner som forespørgselscache, kompilerede forespørgsler og batchopdateringer for at forbedre ydeevnen.
+\end{itemize}
+
+\subsubsection{Bootstrap}
+\emph{Bootstrap} (version 5.3.3) er et open-source CSS framework udviklet af Twitter. Frameworket er letvægtigt og nemt at anvende. Bootstrap er blevet brugt til frontend-udvikling i projektet og har håndteret alt fra styling til responsivt design.
+
+\subsection{JavaScript}
+\emph{JavaScript} (version ES6) er et programmeringssprog udviklet af Netscape. Sproget er letvægtigt og nemt at bruge. JavaScript er blevet anvendt til frontend-udvikling i projektet og har håndteret alt fra DOM-manipulation til event handling. Dette inkluderer brug af \emph{Chart.js}, som anvendes på forsiden med billedekarusellen.
+
+\subsection{Font Awesome}
+\emph{Font Awesome} er et open-source ikon library udviklet af Dave Gandy. Libraryet er letvægtigt og nemt at anvende. Font Awesome er blevet brugt til frontend-udvikling i projektet for at implementere ikoner til heuristisk UI/UX.
+
+\subsection{Chart.js}
+\emph{Chart.js} (version 4.4.1) er et open-source chart library udviklet af Nick Downie. Libraryet er letvægtigt og nemt at anvende. Chart.js er blevet anvendt til frontend-udvikling i projektet og har håndteret datavisualisering i Admin/Analytics.
+
+\subsection{SQL}
+\emph{SQL} (\emph{Structured Query Language}) er et programmeringssprog udviklet til håndtering af relationelle databaser. Selvom \emph{LINQ} har været den primære metode til interaktion med databasen, er SQL blevet brugt som udgangspunkt og senere oversat til LINQ. Microsofts udgave af SQL, kaldet \emph{T-SQL}, er blevet anvendt i projektet og delvist håndteret med \emph{MS SQL Server Management Studio} (v 19.3). SSMS har blandt andet været brugt til at oprette .bak-filer, der er blevet brugt til at oprette databasen på simply.com.
+
+\section{C\# Specifikke Teknologier}
+Denne sektion beskriver de frameworks og libraries, der er blevet anvendt i projektet, og som er specifikke for C\#. Informationen er primært fra Microsofts dokumentation og er blevet tilpasset projektet. 
+Hvor det har været muligt, er strukturen opsat efter \textbf{enkelthed}, \textbf{klarhed}, \textbf{sikkerhed} og \textbf{ydelse}. 
+
+\subsection{ASP.NET Core Identity}
+ASP.NET Core Identity er et medlemssystem, der tilføjer loginfunktionalitet til ASP.NET Core-applikationer. Brugere kan oprette en konto, logge ind og logge ud. ASP.NET Core Identity inkluderer følgende funktioner:
+\begin{itemize}
+\item Lagrer brugeroplysninger i en SQL Server-database ved hjælp af EFC.
+\item Tilbyder et standard-UI til login, registrering og håndtering af brugerprofil.
+\item Tilbyder funktionalitet til konto-bekræftelse og nulstilling af adgangskode.
+\item Aktiverer konto-låsning for at beskytte mod \emph{brute force}-angreb.
+\item Aktiverer tofaktor-autentificering ved hjælp af SMS eller e-mail.
+\item Tilbyder cookie-autentificering som standardautentificeringsmetode.
+\item Tillader tilpasning af tokenudbyderen og e-mail-senderen.
+\item Tillader tilpasning af brugerprofilen ved at tilføje brugerdefinerede egenskaber.
+\item Tillader tilpasning af UI'en ved at ændre Razor-visningerne.
+\item Tilbyder en \emph{UserManager}-klasse til at arbejde med brugere.
+\end{itemize}
+ASP.NET Core IdentityUser er brugerklassen til ASP.NET Core Identity. Den indeholder egenskaber som Id, UserName, Email osv., der er fælles for de fleste brugerklasser. IdentityUser kan udvides for at tilføje brugerdefinerede egenskaber. Dette er gjort på følgende måde:
+\begin{enumerate}
+\item \textbf{ApplicationUser.cs}: Denne klasse arver fra IdentityUser-klassen, som leveres af ASP.NET Core Identity. Dette betyder, at ApplicationUser arver alle egenskaber fra IdentityUser (som Id, UserName, Email osv.) og kan også tilføje yderligere egenskaber. I dette tilfælde er FirstName, LastName og Address tilføjet.
+\item \textbf{Customer.cs og Employee.cs}: Disse klasser arver fra ApplicationUser, hvilket betyder, at de arver alle egenskaber fra ApplicationUser og dermed IdentityUser. De tilføjer også deres egne specifikke egenskaber. Dette er en almindelig måde at udvide brugermodellen i ASP.NET Core Identity for at inkludere yderligere data, der er specifikke for applikationen.
+\item \textbf{ApplicationDbContext.cs}: Denne klasse arver fra IdentityDbContext, som er en DbContext, der er specifikt designet til at arbejde med ASP.NET Core Identity. Den inkluderer DbSet-egenskaber for Customer og Employee, hvilket betyder, at disse typer brugere vil blive inkluderet i databasekonteksten.
+\item \textbf{Program.cs}: Den valgte kode i denne fil konfigurerer ASP.NET Core Identity-systemet. Den tilføjer det standardidentitetssystem med ApplicationUser som brugertype og ApplicationDbContext som kontekst. Den tilføjer også identitetskernen for Customer og Employee-typer, hvilket betyder, at disse typer brugere vil blive inkluderet i identitetssystemet.
+\end{enumerate}
+
+\subsection{Fluent API}
+\emph{Fluent API} er et open-source framework udviklet af Microsoft, der bruges til databasestyring i projektet. Det håndterer alt fra oprettelse af databaser til CRUD-operationer.  \emph{Fluent API} inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: \emph{Fluent API} gør det nemt at definere og konfigurere database-skemaer ved hjælp af C\#-kode, hvilket eliminerer behovet for at bruge konventioner eller dataannotations.
+\item \textbf{Klarhed}: \emph{Fluent API} giver en tydelig og udtryksfuld måde at specificere databasens konfigurationer på, hvilket gør koden lettere at læse og vedligeholde.
+\item \textbf{Sikkerhed}: \emph{Fluent API} kan hjælpe med at sikre, at database-skemaet er korrekt konfigureret ved at centralisere konfigurationslogik og gøre det lettere at validere opsætningen.
+\item \textbf{Ydelse}: \emph{Fluent API} er designet til at være effektiv ved at give mulighed for præcis kontrol over databasekonfigurationer, hvilket kan forbedre databaseydelsen og reducere risikoen for fejl.
+\end{itemize}
+\emph{Fluent API} er blevet anvendt til at konfigurere database-skemaer i projektet. Dette kan ses i mappen \emph{/Config/.cs}, hvor der er konfigureret forhold mellem forskellige entiteter.
+
+\subsection{LINQ}
+\emph{LINQ} (\emph{Language Integrated Query}) er et open-source framework udviklet af Microsoft, som håndterer databasestyring i webapplikationer. LINQ er blevet anvendt til at håndtere databasestyring i projektet, herunder forespørgsler og CRUD-operationer. LINQ muliggør skrivning af SQL-lignende forespørgsler i C\#. Det er en kraftfuld funktion, der kan hjælpe med at skrive mere effektiv kode i projektet.
+LINQ inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: LINQ gør det nemt at skrive SQL-lignende forespørgsler i C\# ved at inkludere forespørgselslogik direkte i koden.
+\item \textbf{Klarhed}: LINQ gør det nemt at se, hvordan forespørgsler er struktureret, da det eliminerer behovet for at skrive komplekse SQL-forespørgsler.
+\item \textbf{Sikkerhed}: LINQ gør det nemt at validere forespørgsler, da det eliminerer behovet for at skrive kompleks valideringslogik.
+\item \textbf{Ydelse}: LINQ er designet til høj ydeevne og effektivitet, da det eliminerer behovet for at skrive, og derefter suboptimere, komplekse SQL-forespørgsler.
+\end{itemize}
+
+\subsection{HttpContextAccessor}
+\emph{HttpContextAccessor} er en klasse i ASP.NET Core, der giver adgang til HTTP anmodningsoplysninger i applikationen. Det muliggør adgang til HTTP anmodningsoplysninger, såsom URL, metode, hoveder og cookies, fra enhver del af applikationen.
+\begin{itemize}
+\item \textbf{Enkelhed}: \emph{HttpContextAccessor} gør det nemt at få adgang til HTTP anmodningsoplysninger i hele applikationen, uden at skulle videresende disse oplysninger gennem forskellige lag af applikationen.
+\item \textbf{Klarhed}: \emph{HttpContextAccessor} giver en klar og direkte måde at tilgå HTTP-anmodningsoplysninger på, hvilket gør koden lettere at læse og forstå.
+\item \textbf{Sikkerhed}: \emph{HttpContextAccessor} kan hjælpe med at validere og sikre HTTP-anmodningsoplysninger ved at centralisere adgangen til disse data, hvilket kan reducere risikoen for fejl og sikkerhedsproblemer.
+\item \textbf{Ydelse}: \emph{HttpContextAccessor} er designet til at være effektiv ved at give hurtig adgang til nødvendige HTTP-anmodningsoplysninger uden behov for kompleks kode til at hente disse data.
+\end{itemize}
+
+\subsubsection{Primary Constructors}
+I dette projekt er \emph{Primary Constructors} anvendt, som er en funktion i C\# 10.0. Primary Constructors giver mulighed for at definere en primær konstruktør direkte i klassens definition, i stedet for at bruge en separat konstruktørmetode. Dette gør det nemmere at definere og initialisere objekter i C\#. Primary Constructors inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: Primary Constructors gør det nemt at definere og initialisere objekter i C\# ved at inkludere konstruktørlogik direkte i klassens definition.
+\item \textbf{Klarhed}: Primary Constructors gør det nemt at se, hvordan objekter initialiseres, da konstruktørlogikken er synlig i klassens definition.
+\item \textbf{Sikkerhed}: Primary Constructors gør det nemt at validere objekter, da konstruktørlogikken kan inkludere valideringslogik.
+\item \textbf{Ydelse}: Primary Constructors er designet til høj ydeevne og effektivitet, da de eliminerer behovet for at kalde en separat konstruktørmetode.
+\end{itemize}
+Primary Constructors er oplagt til \emph{PageModels}, hvor der kan være behov for at lave \emph{Dependency Injection}. Dette er gjort i dette projekt, hvor Primary Constructors er blevet anvendt til at initialisere de fleste PageModels.
+
+\subsubsection{Nullable Reference Types}
+I dette projekt er \emph{Nullable Reference Types} anvendt, som er en funktion i C\# 8.0. Nullable Reference Types inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: Nullable Reference Types gør det nemt at angive, om en reference kan være null i C\# ved at inkludere nullabilitylogik direkte i koden.
+\item \textbf{Klarhed}: Nullable Reference Types gør det nemt at se, om en reference kan være null, da nullabilitylogikken er synlig i koden.
+\item \textbf{Sikkerhed}: Nullable Reference Types gør det nemt at validere, om en reference kan være null, da nullabilitylogikken kan inkludere valideringslogik.
+\item \textbf{Ydelse}: Nullable Reference Types er designet til høj ydeevne og effektivitet, da det eliminerer behovet for at skrive komplekse null-checks.
+\end{itemize}
+Nullable Reference Types giver mulighed for at angive, om en reference kan være null i C\#. Nullable Reference Types er en kraftfuld funktion, der kan give en mere sikker og robust kode. Dette er gjort i dette projekt, hvor Nullable Reference Types er blevet anvendt til at angive, om en reference kan være null.
+Dette ses især i modelklasser, hvor der er behov for at angive, om en reference kan være null. så fx. et objekt kan instansieres uden at have en værdi.
+
+\subsubsection{Top-level Statements}
+I dette projekt er \emph{Top-level Statements} anvendt, som er en funktion i C\# 9.0. Top-level Statements giver mulighed for at skrive kode uden at skulle definere en klasse eller en metode. Top-level Statements inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: Top-level Statements gør det nemt at skrive kode uden at skulle definere en klasse eller en metode i C\#.
+\item \textbf{Klarhed}: Top-level Statements gør det nemt at se, hvordan kode er struktureret, da det eliminerer behovet for at skrive unødvendig boilerplate-kode.
+\item \textbf{Sikkerhed}: Top-level Statements gør det nemt at validere kode, da det eliminerer behovet for at skrive komplekse strukturer.
+\item \textbf{Ydelse}: Top-level Statements er designet til høj ydeevne og effektivitet, da de eliminerer behovet for at skrive unødvendig boilerplate-kode.
+\end{itemize}
+
+\subsubsection{Async/Await}
+I dette projekt er \emph{Async/Await} anvendt, som er en funktion i C\# 5.0. Async/Await giver mulighed for at skrive asynkron kode i C\#. Async/Await inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: Async/Await gør det nemt at skrive asynkron kode i C\# ved at inkludere asynkron logik direkte i koden.
+\item \textbf{Klarhed}: Async/Await gør det nemt at se, hvordan asynkron kode er struktureret, da det eliminerer behovet for at skrive komplekse callback-funktioner.
+\item \textbf{Sikkerhed}: Async/Await gør det nemt at validere asynkron kode, da det eliminerer behovet for at skrive komplekse fejlhåndteringslogik.
+\item \textbf{Ydelse}: Async/Await er designet til høj ydeevne og effektivitet, da det eliminerer behovet for at skrive komplekse callback-funktioner.
+\end{itemize}
+
+\subsubsection{LINQ}
+I dette projekt er \emph{LINQ} anvendt, som er en funktion i C\# 3.0. LINQ muliggør skrivning af SQL-lignende forespørgsler i C\#. LINQ er en kraftfuld funktion, der kan hjælpe med at skrive mere effektiv og udtryksfuld kode. LINQ inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: LINQ gør det nemt at skrive SQL-lignende forespørgsler i C\# ved at inkludere forespørgselslogik direkte i koden.
+\item \textbf{Klarhed}: LINQ gør det nemt at se, hvordan forespørgsler er struktureret, da det eliminerer behovet for at skrive komplekse SQL-forespørgsler.
+\item \textbf{Sikkerhed}: LINQ gør det nemt at validere forespørgsler, da det eliminerer behovet for at skrive komplekse valideringslogik.
+\item \textbf{Ydelse}: LINQ er designet til høj ydeevne og effektivitet, da det eliminerer behovet for at skrive komplekse SQL-forespørgsler.
+\end{itemize}
+
+\subsubsection{Delegates}
+I dette projekt er \emph{Delegates} anvendt, som er en funktion i C\# 1.0. Delegates muliggør oprettelse og brug af funktioner som objekter i C\#. Delegates er en kraftfuld funktion, der kan hjælpe med at skrive mere fleksibel og genbrugelig kode. Delegates inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: Delegates gør det nemt at oprette og bruge funktioner som objekter i C\# ved at inkludere delegatlogik direkte i koden.
+\item \textbf{Klarhed}: Delegates gør det nemt at se, hvordan funktioner er struktureret, da det eliminerer behovet for at skrive komplekse callback-funktioner.
+\item \textbf{Sikkerhed}: Delegates gør det nemt at validere funktioner, da det eliminerer behovet for at skrive komplekse valideringslogik.
+\item \textbf{Ydelse}: Delegates er designet til høj ydeevne og effektivitet, da det eliminerer behovet for at skrive komplekse callback-funktioner.
+\end{itemize}
+
+\subsubsection{Generics}
+I dette projekt er \emph{Generics} anvendt, som er en funktion i C\# 2.0. Generics muliggør oprettelse af generiske typer og metoder i C\#. Generics er en kraftfuld funktion, der kan hjælpe med at skrive mere fleksibel og genbrugelig kode. Generics inkluderer følgende funktioner:
+\begin{itemize}
+\item \textbf{Enkelhed}: Generics gør det nemt at oprette generiske typer og metoder i C\# ved at inkludere generisk logik direkte i koden.
+\item \textbf{Klarhed}: Generics gør det nemt at se, hvordan generiske typer og metoder er struktureret, da det eliminerer behovet for at skrive komplekse generiske klasser og metoder.
+\item \textbf{Sikkerhed}: Generics gør det nemt at validere generiske typer og metoder, da det eliminerer behovet for at skrive komplekse valideringslogik.
+\item \textbf{Ydelse}: Generics er designet til høj ydeevne og effektivitet, da det eliminerer behovet for at skrive komplekse generiske klasser og metoder.
+\end{itemize}
+
+\section{Eksterne Teknologier}
+\subsection{Smtp4dev}
+\emph{Smtp4dev} er en open-source email service udviklet af Rnwood. Servicen håndterer emailafsendelse i webapplikationer. Smtp4dev er blevet brugt til håndtering af emailafsendelse og modtagelse i projektet under udvikling.
+
+\subsection{MimeKit og Mailkit}
+\emph{MimeKit} og \emph{MailKit} er open-source email libraries. MimeKit og MailKit er blevet brugt til håndtering af emailafsendelse og modtagelse i projektet, og har håndteret alt fra emailverifikation til emailnotifikationer.

@@ -1,0 +1,402 @@
+\begin{theindex}
+
+  \item {AddProduct}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 100
+  \item {AddToBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 36
+
+  \indexspace
+
+  \item {BasketService}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 35
+
+  \indexspace
+
+  \item {ClearBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 37
+  \item {CreateOrderFromBasket}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 93
+  \item {CreateTagAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, 115
+
+  \indexspace
+
+  \item {DeleteOrder}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 94
+  \item {DeleteProduct}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 100
+  \item {DeleteTagAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, 115
+
+  \indexspace
+
+  \item {EmailService}
+    \subitem {HttpWebshopCookie.Services.EmailService}, 62
+
+  \indexspace
+
+  \item {GetAllQuantitiesInBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 37
+  \item {GetOccasionsAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, 116
+  \item {GetOrCreateBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 37
+  \item {GetOrder}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 94
+  \item {GetOrderInvolved}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 95
+  \item {GetOrderItems}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 95
+  \item {GetProductById}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 101
+  \item {GetProducts}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 101
+  \item {GetQuantityInBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 38
+  \item {GetTagByIdAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, 116
+  \item {GetTagsAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, 116
+  \item {GetTagsOrderedByOccasionAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, 117
+  \item {GetTotalPriceString}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 95
+
+  \indexspace
+
+  \item {HttpWebshopCookie}, 21
+  \item {HttpWebshopCookie.Areas}, 21
+  \item {HttpWebshopCookie.Areas.Identity}, 21
+  \item {HttpWebshopCookie.Areas.Identity.Pages}, 21
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account}, 21
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.AccessDeniedModel}, 
+		29
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ConfirmEmailChangeModel}, 
+		42
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ConfirmEmailModel}, 
+		43
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ExternalLoginModel}, 
+		66
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel}, 
+		77
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ForgotPasswordConfirmation}, 
+		68
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ForgotPasswordModel}, 
+		69
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel}, 
+		78
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.LockoutModel}, 
+		85
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.LoginModel}, 86
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.LoginModel.InputModel}, 
+		78
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.LoginWith2faModel}, 
+		87
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel}, 
+		79
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel}, 
+		87
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel}, 
+		80
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.LogoutModel}, 
+		88
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage}, 22
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.ChangePasswordModel}, 
+		40
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel}, 
+		80
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel}, 
+		52
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.InputModel}, 
+		81
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.Disable2faModel}, 
+		55
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.DownloadPersonalDataModel}, 
+		56
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.EmailModel}, 
+		60
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.EmailModel.InputModel}, 
+		81
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel}, 
+		64
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.InputModel}, 
+		82
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel}, 
+		67
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel}, 
+		70
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.IndexModel}, 
+		73
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.IndexModel.AddressInputModel}, 
+		30
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel}, 
+		82
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.PersonalDataModel}, 
+		97
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel}, 
+		106
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.SetPasswordModel}, 
+		110
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel}, 
+		82
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.ShowRecoveryCodesModel}, 
+		110
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel}, 
+		121
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.RegisterConfirmationModel}, 
+		104
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.RegisterModel}, 
+		104
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.RegisterModel.InputModel}, 
+		83
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ResendEmailConfirmationModel}, 
+		106
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel}, 
+		83
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel}, 
+		107
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ResetPasswordModel}, 
+		108
+  \item {HttpWebshopCookie.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel}, 
+		84
+  \item {HttpWebshopCookie.Areas.Identity.Pages.ErrorModel}, 65
+  \item {HttpWebshopCookie.Config}, 22
+  \item {HttpWebshopCookie.Config.AddressConfiguration}, 30
+  \item {HttpWebshopCookie.Config.BasketActivityConfiguration}, 32
+  \item {HttpWebshopCookie.Config.BasketConfiguration}, 33
+  \item {HttpWebshopCookie.Config.BasketItemConfiguration}, 34
+  \item {HttpWebshopCookie.Config.CompanyConfiguration}, 41
+  \item {HttpWebshopCookie.Config.CustomerConfiguration}, 47
+  \item {HttpWebshopCookie.Config.EmployeeConfiguration}, 64
+  \item {HttpWebshopCookie.Config.GuestConfiguration}, 71
+  \item {HttpWebshopCookie.Config.OrderConfiguration}, 91
+  \item {HttpWebshopCookie.Config.OrderItemConfiguration}, 92
+  \item {HttpWebshopCookie.Config.ProductConfiguration}, 99
+  \item {HttpWebshopCookie.Config.ProductTagConfiguration}, 103
+  \item {HttpWebshopCookie.Config.SpecialOrderInstructionsConfiguration}, 
+		113
+  \item {HttpWebshopCookie.Config.TagConfiguration}, 114
+  \item {HttpWebshopCookie.Config.UserConfiguration$<$ T $>$}, 121
+  \item {HttpWebshopCookie.Data}, 23
+  \item {HttpWebshopCookie.Data.MockData}, 23
+  \item {HttpWebshopCookie.Interfaces}, 23
+  \item {HttpWebshopCookie.Interfaces.IEmailService}, 72
+  \item {HttpWebshopCookie.Interfaces.IOrderCreator}, 84
+  \item {HttpWebshopCookie.Models}, 23
+  \item {HttpWebshopCookie.Models.Basket}, 32
+  \item {HttpWebshopCookie.Models.BasketActivity}, 32
+  \item {HttpWebshopCookie.Models.BasketItem}, 33
+  \item {HttpWebshopCookie.Models.Order}, 90
+  \item {HttpWebshopCookie.Models.OrderItem}, 92
+  \item {HttpWebshopCookie.Models.Product}, 98
+  \item {HttpWebshopCookie.Models.SpecialOrderInstruction}, 112
+  \item {HttpWebshopCookie.Models.Tag}, 113
+  \item {HttpWebshopCookie.Models.Users}, 24
+  \item {HttpWebshopCookie.Models.Users.Address}, 29
+  \item {HttpWebshopCookie.Models.Users.ApplicationUser}, 31
+  \item {HttpWebshopCookie.Models.Users.Company}, 41
+  \item {HttpWebshopCookie.Models.Users.Customer}, 46
+  \item {HttpWebshopCookie.Models.Users.Employee}, 63
+  \item {HttpWebshopCookie.Models.Users.Guest}, 70
+  \item {HttpWebshopCookie.Pages}, 24
+  \item {HttpWebshopCookie.Pages.Admin}, 24
+  \item {HttpWebshopCookie.Pages.Admin.Analytics}, 24
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.CustomerInteractionModel}, 
+		48
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.CustomerInteractionModel.BasketActivitySummary}, 
+		33
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.CustomerInteractionModel.CustomerGrowth}, 
+		47
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.CustomerInteractionModel.CustomerInteractionData}, 
+		48
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.CustomerInteractionModel.ProductActivity}, 
+		99
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.IndexModel}, 73
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.ProductsOrdersModel}, 
+		102
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.ProductsOrdersModel.OrderStatusBreakdown}, 
+		97
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.ProductsOrdersModel.ProductsOrdersData}, 
+		102
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.ProductsOrdersModel.TopProduct}, 
+		120
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.SalesModel}, 109
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.SalesModel.SalesData}, 
+		109
+  \item {HttpWebshopCookie.Pages.Admin.Analytics.SalesModel.TopProduct}, 
+		120
+  \item {HttpWebshopCookie.Pages.Admin.Companies}, 25
+  \item {HttpWebshopCookie.Pages.Admin.Companies.CreateModel}, 44
+  \item {HttpWebshopCookie.Pages.Admin.Companies.CreateModel.CompanyInputModel}, 
+		42
+  \item {HttpWebshopCookie.Pages.Admin.Companies.DeleteModel}, 49
+  \item {HttpWebshopCookie.Pages.Admin.Companies.DetailsModel}, 53
+  \item {HttpWebshopCookie.Pages.Admin.Companies.EditModel}, 57
+  \item {HttpWebshopCookie.Pages.Admin.Companies.EditModel.CompanyInputModel}, 
+		42
+  \item {HttpWebshopCookie.Pages.Admin.Companies.IndexModel}, 74
+  \item {HttpWebshopCookie.Pages.Admin.Customers}, 25
+  \item {HttpWebshopCookie.Pages.Admin.Customers.CreateModel}, 44
+  \item {HttpWebshopCookie.Pages.Admin.Customers.CreateModel.RegisterModel}, 
+		105
+  \item {HttpWebshopCookie.Pages.Admin.Customers.DeleteModel}, 49
+  \item {HttpWebshopCookie.Pages.Admin.Customers.DetailsModel}, 53
+  \item {HttpWebshopCookie.Pages.Admin.Customers.EditModel}, 58
+  \item {HttpWebshopCookie.Pages.Admin.Customers.EditModel.EditInputModel}, 
+		56
+  \item {HttpWebshopCookie.Pages.Admin.Customers.IndexModel}, 74
+  \item {HttpWebshopCookie.Pages.Admin.Employees}, 25
+  \item {HttpWebshopCookie.Pages.Admin.Employees.CreateModel}, 45
+  \item {HttpWebshopCookie.Pages.Admin.Employees.CreateModel.RegisterModel}, 
+		105
+  \item {HttpWebshopCookie.Pages.Admin.Employees.DeleteModel}, 50
+  \item {HttpWebshopCookie.Pages.Admin.Employees.DetailsModel}, 54
+  \item {HttpWebshopCookie.Pages.Admin.Employees.EditModel}, 58
+  \item {HttpWebshopCookie.Pages.Admin.Employees.EditModel.EditInputModel}, 
+		57
+  \item {HttpWebshopCookie.Pages.Admin.Employees.IndexModel}, 75
+  \item {HttpWebshopCookie.Pages.Admin.IndexModel}, 75
+  \item {HttpWebshopCookie.Pages.Admin.Orders}, 25
+  \item {HttpWebshopCookie.Pages.Admin.Orders.OrderDetailsModel}, 91
+  \item {HttpWebshopCookie.Pages.Admin.ProductTags}, 25
+  \item {HttpWebshopCookie.Pages.Admin.ProductTags.EditModel}, 59
+  \item {HttpWebshopCookie.Pages.Admin.ProductTags.IndexModel}, 76
+  \item {HttpWebshopCookie.Pages.Admin.Tags}, 26
+  \item {HttpWebshopCookie.Pages.Admin.Tags.CreateModel}, 46
+  \item {HttpWebshopCookie.Pages.Admin.Tags.DeleteModel}, 51
+  \item {HttpWebshopCookie.Pages.Admin.Tags.DetailsModel}, 54
+  \item {HttpWebshopCookie.Pages.Admin.Tags.EditModel}, 60
+  \item {HttpWebshopCookie.Pages.Admin.Tags.IndexModel}, 76
+  \item {HttpWebshopCookie.Pages.Admin.TestEmail}, 26
+  \item {HttpWebshopCookie.Pages.Admin.TestEmail.TestEmailModel}, 119
+  \item {HttpWebshopCookie.Pages.Basket}, 26
+  \item {HttpWebshopCookie.Pages.CustomerProducts}, 26
+  \item {HttpWebshopCookie.Pages.CustomerProducts.DetailsModel}, 55
+  \item {HttpWebshopCookie.Pages.ErrorModel}, 66
+  \item {HttpWebshopCookie.Pages.IndexModel}, 77
+  \item {HttpWebshopCookie.Pages.MyOrder}, 26
+  \item {HttpWebshopCookie.Pages.MyOrder.AddressViewModel}, 31
+  \item {HttpWebshopCookie.Pages.MyOrder.MyOrderDetailsModel}, 89
+  \item {HttpWebshopCookie.Pages.MyOrder.MyOrderListingModel}, 89
+  \item {HttpWebshopCookie.Pages.MyOrder.SpecialInstructionsModel}, 112
+  \item {HttpWebshopCookie.Pages.MyOrder.SpecialOrderInstructionsViewModel}, 
+		113
+  \item {HttpWebshopCookie.Pages.PrivacyModel}, 98
+  \item {HttpWebshopCookie.Pages.Products}, 26
+  \item {HttpWebshopCookie.Pages.Products.DeleteModel}, 51
+  \item {HttpWebshopCookie.Pages.TestEmail}, 27
+  \item {HttpWebshopCookie.Pages.TestEmail.TestEmailModel}, 119
+  \item {HttpWebshopCookie.Services}, 27
+  \item {HttpWebshopCookie.Services.BasketService}, 34
+    \subitem {AddToBasket}, 36
+    \subitem {BasketService}, 35
+    \subitem {ClearBasket}, 37
+    \subitem {GetAllQuantitiesInBasket}, 37
+    \subitem {GetOrCreateBasket}, 37
+    \subitem {GetQuantityInBasket}, 38
+    \subitem {IsInBasket}, 38
+    \subitem {PlaceOrder}, 38
+    \subitem {RemoveFromBasket}, 39
+    \subitem {UpdateBasketItemQuantity}, 39
+  \item {HttpWebshopCookie.Services.EmailService}, 61
+    \subitem {EmailService}, 62
+    \subitem {SendEmailAsync}, 62
+    \subitem {SendMimeMessageAsync}, 62
+  \item {HttpWebshopCookie.Services.IdentityEmailSender}, 71
+    \subitem {IdentityEmailSender}, 71
+    \subitem {SendEmailAsync}, 72
+  \item {HttpWebshopCookie.Services.OrderService}, 93
+    \subitem {CreateOrderFromBasket}, 93
+    \subitem {DeleteOrder}, 94
+    \subitem {GetOrder}, 94
+    \subitem {GetOrderInvolved}, 95
+    \subitem {GetOrderItems}, 95
+    \subitem {GetTotalPriceString}, 95
+    \subitem {OrderService}, 93
+    \subitem {UpdateOrder}, 96
+    \subitem {UpdateOrderStatus}, 96
+  \item {HttpWebshopCookie.Services.PostalCodeEntry}, 97
+  \item {HttpWebshopCookie.Services.PostalCodeService}, 98
+  \item {HttpWebshopCookie.Services.ProductService}, 99
+    \subitem {AddProduct}, 100
+    \subitem {DeleteProduct}, 100
+    \subitem {GetProductById}, 101
+    \subitem {GetProducts}, 101
+    \subitem {ProductService}, 100
+    \subitem {UpdateProduct}, 101
+  \item {HttpWebshopCookie.Services.SmtpSettings}, 111
+  \item {HttpWebshopCookie.Services.TagService}, 114
+    \subitem {CreateTagAsync}, 115
+    \subitem {DeleteTagAsync}, 115
+    \subitem {GetOccasionsAsync}, 116
+    \subitem {GetTagByIdAsync}, 116
+    \subitem {GetTagsAsync}, 116
+    \subitem {GetTagsOrderedByOccasionAsync}, 117
+    \subitem {TagService}, 115
+    \subitem {UpdateTagAsync}, 118
+  \item {HttpWebshopCookie.TestStartup}, 27
+  \item {HttpWebshopCookie.TestStartup.TestStartup}, 120
+  \item {HttpWebshopCookie.Utilities}, 27
+  \item {HttpWebshopCookie.Utilities.IXProductTag}, 85
+  \item {HttpWebshopCookie.Utilities.UserWrapper}, 122
+  \item {HttpWebshopCookie.ViewComponents}, 27
+  \item {HttpWebshopCookie.ViewComponents.BasketViewComponent}, 40
+  \item {HttpWebshopCookie.ViewComponents.OccasionsViewComponent}, 90
+  \item {HttpWebshopCookie.ViewModels}, 28
+  \item {HttpWebshopCookie.ViewModels.OrderItemView}, 92
+  \item {HttpWebshopCookie.ViewModels.ProductViewModel}, 103
+  \item {HttpWebshopCookie.ViewModels.ReviewInfoViewModel}, 108
+  \item {HttpWebshopCookie.ViewModels.TagViewModel}, 118
+
+  \indexspace
+
+  \item {IdentityEmailSender}
+    \subitem {HttpWebshopCookie.Services.IdentityEmailSender}, 71
+  \item {IsInBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 38
+
+  \indexspace
+
+  \item {OrderService}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 93
+
+  \indexspace
+
+  \item {PlaceOrder}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 38
+  \item {ProductService}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 100
+
+  \indexspace
+
+  \item {RemoveFromBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 39
+
+  \indexspace
+
+  \item {SendEmailAsync}
+    \subitem {HttpWebshopCookie.Services.EmailService}, 62
+    \subitem {HttpWebshopCookie.Services.IdentityEmailSender}, 72
+  \item {SendMimeMessageAsync}
+    \subitem {HttpWebshopCookie.Services.EmailService}, 62
+
+  \indexspace
+
+  \item {TagService}
+    \subitem {HttpWebshopCookie.Services.TagService}, 115
+  \item {The MIT License (MIT)}, 1, 3, 5, 7, 9
+
+  \indexspace
+
+  \item {UpdateBasketItemQuantity}
+    \subitem {HttpWebshopCookie.Services.BasketService}, 39
+  \item {UpdateOrder}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 96
+  \item {UpdateOrderStatus}
+    \subitem {HttpWebshopCookie.Services.OrderService}, 96
+  \item {UpdateProduct}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 101
+  \item {UpdateTagAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, 118
+
+\end{theindex}

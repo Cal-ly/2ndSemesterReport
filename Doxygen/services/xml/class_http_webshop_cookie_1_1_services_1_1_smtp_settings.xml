@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_http_webshop_cookie_1_1_services_1_1_smtp_settings" kind="class" language="C#" prot="public">
+    <compoundname>HttpWebshopCookie::Services::SmtpSettings</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1ab4a8d7b6fad5845ce4e2ab4a5b8ad298" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? HttpWebshopCookie.Services.SmtpSettings.Server</definition>
+        <argsstring></argsstring>
+        <name>Server</name>
+        <qualifiedname>HttpWebshopCookie.Services.SmtpSettings.Server</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the SMTP server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" line="118" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1aa6047cde597cb3ceb15e7adce7c4939b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HttpWebshopCookie.Services.SmtpSettings.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <qualifiedname>HttpWebshopCookie.Services.SmtpSettings.Port</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the SMTP port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" line="123" column="16" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" bodystart="123" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1aaf10b28f86ae6334ad604cf0960ec250" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? HttpWebshopCookie.Services.SmtpSettings.SenderName</definition>
+        <argsstring></argsstring>
+        <name>SenderName</name>
+        <qualifiedname>HttpWebshopCookie.Services.SmtpSettings.SenderName</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the sender&apos;s name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" line="128" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a9e5f9f87be990546f94146e7ab9f63fe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? HttpWebshopCookie.Services.SmtpSettings.SenderEmail</definition>
+        <argsstring></argsstring>
+        <name>SenderEmail</name>
+        <qualifiedname>HttpWebshopCookie.Services.SmtpSettings.SenderEmail</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the sender&apos;s email address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" line="133" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" bodystart="133" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a1de51a18cbc959574dd4f27fc553e14c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? HttpWebshopCookie.Services.SmtpSettings.Username</definition>
+        <argsstring></argsstring>
+        <name>Username</name>
+        <qualifiedname>HttpWebshopCookie.Services.SmtpSettings.Username</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the username for SMTP authentication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" line="138" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" bodystart="138" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a8cc4b9cb8b5dd9176b01253dbaadc339" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string?</type>
+        <definition>string? HttpWebshopCookie.Services.SmtpSettings.Password</definition>
+        <argsstring></argsstring>
+        <name>Password</name>
+        <qualifiedname>HttpWebshopCookie.Services.SmtpSettings.Password</qualifiedname>
+        <briefdescription>
+<para>Gets or sets the password for SMTP authentication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" line="143" column="19" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" bodystart="143" bodyend="143"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Configuration settings for SMTP. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" line="113" column="7" bodyfile="C:/Users/Cal-l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs" bodystart="114" bodyend="144"/>
+    <listofallmembers>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a8cc4b9cb8b5dd9176b01253dbaadc339" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::SmtpSettings</scope><name>Password</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1aa6047cde597cb3ceb15e7adce7c4939b" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::SmtpSettings</scope><name>Port</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a9e5f9f87be990546f94146e7ab9f63fe" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::SmtpSettings</scope><name>SenderEmail</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1aaf10b28f86ae6334ad604cf0960ec250" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::SmtpSettings</scope><name>SenderName</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1ab4a8d7b6fad5845ce4e2ab4a5b8ad298" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::SmtpSettings</scope><name>Server</name></member>
+      <member refid="class_http_webshop_cookie_1_1_services_1_1_smtp_settings_1a1de51a18cbc959574dd4f27fc553e14c" prot="public" virt="non-virtual"><scope>HttpWebshopCookie::Services::SmtpSettings</scope><name>Username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

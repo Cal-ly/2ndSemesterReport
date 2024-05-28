@@ -1,0 +1,213 @@
+\begin{theindex}
+
+  \item {AddProduct}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 
+		\hyperpage{23}
+  \item {AddToBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{12}
+
+  \indexspace
+
+  \item {BasketService}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{12}
+
+  \indexspace
+
+  \item {C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/BasketService.cs}, 
+		\hyperpage{33}
+  \item {C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/EmailService.cs}, 
+		\hyperpage{36}
+  \item {C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/IdentityEmailSender.cs}, 
+		\hyperpage{37, 38}
+  \item {C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/OrderService.cs}, 
+		\hyperpage{38, 39}
+  \item {C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/PostalCodeService.cs}, 
+		\hyperpage{41}
+  \item {C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/ProductService.cs}, 
+		\hyperpage{41, 42}
+  \item {C:/Users/Cal-\/l/Documents/GitHub/HttpWebshopCookie/HttpWebshopCookie/Services/TagService.cs}, 
+		\hyperpage{43}
+  \item {CityName}
+    \subitem {HttpWebshopCookie.Services.PostalCodeEntry}, 
+		\hyperpage{22}
+  \item {ClearBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{12}
+  \item {CreateOrderFromBasket}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{18}
+  \item {CreateTagAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, \hyperpage{28}
+
+  \indexspace
+
+  \item {DeleteOrder}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{18}
+  \item {DeleteProduct}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 
+		\hyperpage{24}
+  \item {DeleteTagAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, \hyperpage{28}
+
+  \indexspace
+
+  \item {GetAllQuantitiesInBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{12}
+  \item {GetCityByPostalCode}
+    \subitem {HttpWebshopCookie.Services.PostalCodeService}, 
+		\hyperpage{22}
+  \item {GetOccasionsAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, \hyperpage{29}
+  \item {GetOrCreateBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{13}
+  \item {GetOrder}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{19}
+  \item {GetOrderInvolved}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{19}
+  \item {GetOrderItems}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{20}
+  \item {GetProductById}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 
+		\hyperpage{24}
+  \item {GetProducts}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 
+		\hyperpage{24}
+  \item {GetQuantityInBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{13}
+  \item {GetTagByIdAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, \hyperpage{29}
+  \item {GetTagsAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, \hyperpage{30}
+  \item {GetTagsOrderedByOccasionAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, \hyperpage{30}
+  \item {GetTotalPriceString}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{20}
+
+  \indexspace
+
+  \item {HttpWebshopCookie}, \hyperpage{9}
+  \item {HttpWebshopCookie.Services}, \hyperpage{9}
+  \item {HttpWebshopCookie.Services.BasketService}, \hyperpage{11}
+    \subitem {AddToBasket}, \hyperpage{12}
+    \subitem {BasketService}, \hyperpage{12}
+    \subitem {ClearBasket}, \hyperpage{12}
+    \subitem {GetAllQuantitiesInBasket}, \hyperpage{12}
+    \subitem {GetOrCreateBasket}, \hyperpage{13}
+    \subitem {GetQuantityInBasket}, \hyperpage{13}
+    \subitem {IsInBasket}, \hyperpage{14}
+    \subitem {PlaceOrder}, \hyperpage{14}
+    \subitem {RemoveFromBasket}, \hyperpage{14}
+    \subitem {UpdateBasketItemQuantity}, \hyperpage{15}
+  \item {HttpWebshopCookie.Services.EmailService}, \hyperpage{15}
+  \item {HttpWebshopCookie.Services.IdentityEmailSender}, 
+		\hyperpage{16}
+    \subitem {IdentityEmailSender}, \hyperpage{16}
+    \subitem {SendEmailAsync}, \hyperpage{16}
+  \item {HttpWebshopCookie.Services.OrderService}, \hyperpage{17}
+    \subitem {CreateOrderFromBasket}, \hyperpage{18}
+    \subitem {DeleteOrder}, \hyperpage{18}
+    \subitem {GetOrder}, \hyperpage{19}
+    \subitem {GetOrderInvolved}, \hyperpage{19}
+    \subitem {GetOrderItems}, \hyperpage{20}
+    \subitem {GetTotalPriceString}, \hyperpage{20}
+    \subitem {OrderService}, \hyperpage{18}
+    \subitem {UpdateOrder}, \hyperpage{20}
+    \subitem {UpdateOrderStatus}, \hyperpage{21}
+  \item {HttpWebshopCookie.Services.PostalCodeEntry}, \hyperpage{21}
+    \subitem {CityName}, \hyperpage{22}
+    \subitem {PostalCode}, \hyperpage{22}
+  \item {HttpWebshopCookie.Services.PostalCodeService}, \hyperpage{22}
+    \subitem {GetCityByPostalCode}, \hyperpage{22}
+    \subitem {PostalCodeService}, \hyperpage{22}
+  \item {HttpWebshopCookie.Services.ProductService}, \hyperpage{23}
+    \subitem {AddProduct}, \hyperpage{23}
+    \subitem {DeleteProduct}, \hyperpage{24}
+    \subitem {GetProductById}, \hyperpage{24}
+    \subitem {GetProducts}, \hyperpage{24}
+    \subitem {ProductService}, \hyperpage{23}
+    \subitem {UpdateProduct}, \hyperpage{25}
+  \item {HttpWebshopCookie.Services.SmtpSettings}, \hyperpage{25}
+    \subitem {Password}, \hyperpage{26}
+    \subitem {Port}, \hyperpage{26}
+    \subitem {SenderEmail}, \hyperpage{26}
+    \subitem {SenderName}, \hyperpage{26}
+    \subitem {Server}, \hyperpage{27}
+    \subitem {Username}, \hyperpage{27}
+  \item {HttpWebshopCookie.Services.TagService}, \hyperpage{27}
+    \subitem {CreateTagAsync}, \hyperpage{28}
+    \subitem {DeleteTagAsync}, \hyperpage{28}
+    \subitem {GetOccasionsAsync}, \hyperpage{29}
+    \subitem {GetTagByIdAsync}, \hyperpage{29}
+    \subitem {GetTagsAsync}, \hyperpage{30}
+    \subitem {GetTagsOrderedByOccasionAsync}, \hyperpage{30}
+    \subitem {TagService}, \hyperpage{28}
+    \subitem {UpdateTagAsync}, \hyperpage{31}
+
+  \indexspace
+
+  \item {IdentityEmailSender}
+    \subitem {HttpWebshopCookie.Services.IdentityEmailSender}, 
+		\hyperpage{16}
+  \item {IsInBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{14}
+
+  \indexspace
+
+  \item {OrderService}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{18}
+
+  \indexspace
+
+  \item {Password}
+    \subitem {HttpWebshopCookie.Services.SmtpSettings}, \hyperpage{26}
+  \item {PlaceOrder}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{14}
+  \item {Port}
+    \subitem {HttpWebshopCookie.Services.SmtpSettings}, \hyperpage{26}
+  \item {PostalCode}
+    \subitem {HttpWebshopCookie.Services.PostalCodeEntry}, 
+		\hyperpage{22}
+  \item {PostalCodeService}
+    \subitem {HttpWebshopCookie.Services.PostalCodeService}, 
+		\hyperpage{22}
+  \item {ProductService}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 
+		\hyperpage{23}
+
+  \indexspace
+
+  \item {RemoveFromBasket}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{14}
+
+  \indexspace
+
+  \item {SendEmailAsync}
+    \subitem {HttpWebshopCookie.Services.IdentityEmailSender}, 
+		\hyperpage{16}
+  \item {SenderEmail}
+    \subitem {HttpWebshopCookie.Services.SmtpSettings}, \hyperpage{26}
+  \item {SenderName}
+    \subitem {HttpWebshopCookie.Services.SmtpSettings}, \hyperpage{26}
+  \item {Server}
+    \subitem {HttpWebshopCookie.Services.SmtpSettings}, \hyperpage{27}
+
+  \indexspace
+
+  \item {TagService}
+    \subitem {HttpWebshopCookie.Services.TagService}, \hyperpage{28}
+
+  \indexspace
+
+  \item {UpdateBasketItemQuantity}
+    \subitem {HttpWebshopCookie.Services.BasketService}, \hyperpage{15}
+  \item {UpdateOrder}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{20}
+  \item {UpdateOrderStatus}
+    \subitem {HttpWebshopCookie.Services.OrderService}, \hyperpage{21}
+  \item {UpdateProduct}
+    \subitem {HttpWebshopCookie.Services.ProductService}, 
+		\hyperpage{25}
+  \item {UpdateTagAsync}
+    \subitem {HttpWebshopCookie.Services.TagService}, \hyperpage{31}
+  \item {Username}
+    \subitem {HttpWebshopCookie.Services.SmtpSettings}, \hyperpage{27}
+
+\end{theindex}
