@@ -1,2 +1,126 @@
 \chapter{SCRUM Dokumentation}
 \label{chapter:scrum-documentation}
+Grundet projektgruppens størrelse og sammensætning, er det valgt, at lave en meget tilpasset version af SCRUM. Dermed er bl.a. retrospective og review slået sammen under "Udførsel". Dette er også med tanke på. at der er ikke en decideret Product Owner.
+
+\section{Sprint 1}
+\label{sec:sprint-1}
+\subsection{Planlægning}
+\label{subsec:sprint-1-plan}
+\begin{itemize}
+    \item \textbf{Start:} 22-04-2024
+    \item \textbf{slutb:} 26-04-2024
+    \item \textbf{Mål:} Oprettelse af projektet, oprettelse af Razor Pages, oprettelse af EF, oprettelse af modeller, oprettelse af controllers, oprettelse af views, oprettelse af layout, oprettelse af CSS, oprettelse af database, oprettelse af testdata, oprettelse af testcases, oprettelse af dokumentation
+    \item \textbf{User Stories:} US-001, US-002, US-003, US-004, US-005, US-006, US-007, US-008, US-009
+    \item \textbf{Story points:} 27
+\end{itemize}
+
+\subsection{Udførelse}
+\label{subsec:sprint-1-udforelse}
+Sprintet var præget af, at der var mange forskellige opgaver, der skulle påbegyndes og mange ideer.
+Dertil kom at mange styringsværktøjer som Trello, GitHub, Visual Studio, SQL Server m.m. skulle sættes op og konfigureres.
+Særligt Trello var en udfordring, da der ikke var en god måde, at skabe et overblik eller udtrække data på.
+Dermed gik der tid med at lave en WinForm applikationen, der kunne trække data ud af Trello - som kun kunne udtrækkes i JSON format - og skrive det til markdown, latex og CSV, med henblik på at kunne importere det ind igen.
+Applikationen kan findes på GitHub \cite{trello-converter}.
+Alle Storypoints blev dog nået til tiden, omend en del af selve designet og bootstrap blev nedprioriteret, da det ikke var essentielt for at kunne komme i gang med projektet.
+
+\section{Sprint 2}
+\label{sec:sprint-2}
+\subsection{Planlægning}
+\label{subsec:sprint-2-plan}
+\begin{itemize}
+    \item \textbf{Start:} 29-04-2024
+    \item \textbf{slutb:} 03-05-2024
+    \item \textbf{Mål:} Oprettelse af produkter, oprettelse af kunder, oprettelse af ordrer, oprettelse af bestillinger, oprettelse af betalinger, oprettelse af statistikker, oprettelse af dokumentation
+    \item \textbf{User Stories:} US-010, US-011, US-012, US-013, US-014, US-015, US-016, US-017, US-018
+    \item \textbf{Story points:} 28
+\end{itemize}
+
+\subsection{Udførelse}
+\label{subsec:sprint-2-udforelse}
+Sprintet var meget snuden i sporet og tiden gik med implementation af modeller og controllers, samt at få EF konfigureret.
+Der blev brugt meget tid med at anvende HttpContextAccessor, da det var nødvendigt for at kunne gøre HTTP mere stateful og dermed kunne gemme oplysninger hos klienten.
+
+\section{Sprint 3}
+\label{sec:sprint-3}
+\subsection{Planlægning}
+\label{subsec:sprint-3-plan}
+\begin{itemize}
+    \item \textbf{Start:} 06-05-2024
+    \item \textbf{slutb:} 10-05-2024
+    \item \textbf{Mål:} Oprettelse af IdentityCore, oprettelse af brugere, oprettelse af roller, oprettelse af claims, oprettelse af dokumentation
+    \item \textbf{User Stories:} US-019, US-020, US-021, US-022, US-023, US-024, US-025, US-026, US-027
+    \item \textbf{Story points:} 28
+\end{itemize}
+
+\subsection{Udførelse}
+\label{subsec:sprint-3-udforelse}
+Meget af tiden gik med at få IdentityCore til at virke, da det var nødvendigt for at kunne lave en brugeroplevelse, der var tilpasset de forskellige roller.
+Det var især den bagvedliggende dokuemntation, der var udfordrende, da der var mange forskellige måder at gøre tingene på og mange forskellige måder at konfigurere det på.
+Der blev brugt meget tid på at overveje og afprøve forskellige løsninger, da det var nødvendigt at have en løsning, der kunne skaleres og vedligeholdes.
+
+\section{Sprint 4}
+\label{sec:sprint-4}
+\subsection{Planlægning}
+\label{subsec:sprint-4-plan}
+
+\begin{itemize}
+    \item \textbf{Start:} 13-05-2024
+    \item \textbf{slutb:} 17-05-2024
+    \item \textbf{Mål:} Oprettelse af brugergrænseflade, oprettelse af brugeroplevelse, oprettelse af dokumentation
+    \item \textbf{User Stories:} US-028, US-029, US-030, US-031, US-032
+    \item \textbf{Story points:} 28
+\end{itemize}
+
+\subsection{Udførelse}
+\label{subsec:sprint-4-udforelse}
+Meget af tiden gik med at få brugergrænsefladen til at virke, da det var nødvendigt for at kunne lave en brugeroplevelse, der var tilpasset de forskellige roller.
+Med dette tænkes især på kundes interaktion med systemet og hvordan data blev håndteret. Dette kan ses bl.a. på Index siden med billedekarusel og på Katalog (CustomerProducts/Index) hvor der er forskellige muligheder for at filtrere og sortere data.
+
+\section{Sprint 5}
+\label{sec:sprint-5}
+\subsection{Planlægning}
+\label{subsec:sprint-5-plan}
+\begin{itemize}
+    \item \textbf{Start:} 20-05-2024
+    \item \textbf{slutb:} 24-05-2024
+    \item \textbf{Mål:} Oprettelse af statistikker, oprettelse af dokumentation
+    \item \textbf{User Stories:} US-033, US-034, US-035, US-036, US-037
+    \item \textbf{Story points:} 28
+\end{itemize}
+
+\subsection{Udførelse}
+\label{subsec:sprint-5-udforelse}
+Meget af tiden gik med at få statistikkerne til at virke, da det var nødvendigt for at kunne give nogle solide data til butikken, så de kunne se, hvordan deres forretning gik.
+Det tog tid at generhverve de nødvendige kompetencer indefor JavaScript, da det var nødvendigt for at kunne anvende Chart.js og få det til at virke sammen med Razor Pages.
+Der blev også implementeret en Email service gennem MailKit, så butikken automatisk kunne sende en email til kunden, når de havde afgivet en ordre eller bekræfte oprettelse.
+
+\section{Sprint 6}
+\label{sec:sprint-6}
+\subsection{Planlægning}
+\label{subsec:sprint-6-plan}
+\begin{itemize}
+    \item \textbf{Start:} 27-05-2024
+    \item \textbf{slutb:} 30-05-2024
+    \item \textbf{Mål:} Oprettelse af dokumentation, oprettelse af test, oprettelse af testdata, oprettelse af testcases
+    \item \textbf{User Stories:} US-038, US-039, US-040, US-041, US-042
+    \item \textbf{Story points:} 8
+\end{itemize}
+
+\subsection{Udførelse}
+\label{subsec:sprint-6-udforelse}
+Der var nogle indsatsområder, der skulle færdiggøres, såsom dokumentation og test, samt der blev brugt tid på at få testdata til at virke, da det var nødvendigt for at kunne teste systemet.
+Der blev også brugt tid på at doployere systemet, så det kunne køre på et webhotel og dermed kunne ses i et realistisk miljø. Simply.com var valgt som webhotel, da det var billigt og nemt at konfigurere.
+I skrivende studie er projektet dog ikke deployeret, da der der problemer med at få .NET 8 til at køre på webhotellet. Projektet er dog testet lokalt og virker som forventet.
+
+\section{Brundown chart}
+\label{sec:brundown-chart}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/brundown-chart.png}
+    \caption{Brundown chart}
+    \label{fig:brundown-chart}
+\end{figure}
+
+Alle sprints blev gennemført til tiden og alle User Stories blev gennemført til tiden. Der var dog en del af designet og bootstrap, der blev nedprioriteret eller skubbet til senere sprints, 
+da det ikke var essentielt for den videre funktionalitet. Dette kan ses på Brundown chartet, hvor det er de sidste to "ide" User Stories, der ikke er blevet gennemført.
