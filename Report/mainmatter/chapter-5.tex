@@ -153,10 +153,4 @@ Den PDF, der er genereret fra \emph{Doxygen}, er vedlagt som bilag og kan findes
 \label{subsec:final-product-github}
 På \emph{GitHub} er der brugt \emph{Workflows} til at automatisere bygning og test af projektet, når der pushes til repository.
 Selve test-delen er blevet skrevet ud, da det gjorde automatiseringsprocessen meget langsom. I det omfang, som test var implementeret i, gav det ikke noget, som ikke kunne opnås ved at køre tests i \emph{Visual Studio}.
-Der er dog stadig en del af \emph{Workflows}, der er brugbare, bl.a. at projektet bliver bygget, når der pushes til \emph{repo}, så evt. fejl bliver nemmere at identificere \Cref{minted:build-yml}.  
-
-\begin{figure}
-    \inputminted{yaml}{codefiles/build.yml}
-    \caption{\emph{GitHub Workflows Build}}
-    \label{minted:build-yml}
-\end{figure}
+Der er dog stadig en del af \emph{Workflows}, der er brugbare, bl.a. at projektet bliver bygget, når der pushes til \emph{repo}, så evt. fejl bliver nemmere at identificere \Cref{minted:build-yml}.
