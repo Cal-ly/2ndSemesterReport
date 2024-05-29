@@ -10,8 +10,8 @@ Grundet projektets læringsorienterede karakter ses det som en del af læringen 
 
 Der er dog også foretaget et klart valg i forhold til at fremstille klassediagrammerne, så de udelukkende indeholder de klasser, der er essentielle for systemet.
 Dette er gjort for at bevare overblikket og for at undgå at overvælde læseren med irrelevante klasser og relationer.
-Dertil kommer både database schema og entity relationship diagrammer, der beskriver relationerne mere i detaljer set ud fra databasens perspektiv.
-Hensigten med, at PageModels og deres Views ikke er medtaget i klassediagrammerne, bliver fulgt op med, at de i stedet bliver fremstillet i \emph{System Sequence Diagrams}, så deres funktionalitet bliver beskrevet.
+Dertil kommer både database \emph{schema} og \emph{entity relationship} diagrammer, der beskriver relationerne mere i detaljer set ud fra databasens perspektiv.
+Hensigten med, at \emph{PageModels} og deres \emph{Views} ikke er medtaget i klassediagrammerne, bliver fulgt op med, at de i stedet bliver fremstillet i \emph{System Sequence Diagrams}, så deres funktionalitet bliver beskrevet.
 Dermed har en læser mulighed for at se, hvordan de enkelte sider interagerer med systemet uden at blive overvældet af detaljer.
 Syntesen mellem de forskellige diagrammer var med henblik på at udføre en gennemgående refaktorering af systemet for herefter at beskrive de \emph{Design Patterns}.
 Ud fra dette ville systemet være beskrevet i en sådan grad, at det kunne implementeres i software, og med tilretningen i forhold til \emph{Design Patterns} give et fælles sprog.
@@ -19,7 +19,7 @@ Det er dog vigtigt at bemærke, at der er blevet prioriteret i forhold til, hvil
 
 \section{Domain Model Diagram}
 \label{sec:domain-model-diagram}
-Det første skridt i designprocessen er at lave et Domain Model Diagram (DMD). Det er vigtigt at bemærke følgende:
+Det første skridt i designprocessen er at lave et \emph{Domain Model Diagram} (DMD). Det er vigtigt at bemærke følgende:
 \begin{itemize}
     \item DMD forholder sig til den virkelige verdens koncepter og relationer.
     \item DMD er en statisk model, der ikke tager højde for ændringer i systemet over tid.
@@ -30,8 +30,8 @@ Det første skridt i designprocessen er at lave et Domain Model Diagram (DMD). D
     \item DMD kan bruges til at identificere de vigtigste klasser og deres \emph{relations}.
     \item DMD er ikke en teknisk model og kan ikke direkte implementeres i software.
 \end{itemize}
-Kontrasten skal primært ses i forhold til et Domain Class Diagram (DCD), hvor hver klasse har attributter, metoder og er forbundet med andre klasser gennem specificerede relationer (fx aggregation) og multiplicitet.
-Ligeledes ville man i et DCD se klasserne Basket, BasketItem og BasketService, muligvis med et IBasketService interface som implementeringen af konceptet "Kurv".
+Kontrasten skal primært ses i forhold til et \emph{Domain Class Diagram} (DCD), hvor hver klasse har attributter, metoder og er forbundet med andre klasser gennem specificerede relationer (f.eks. \emph{aggregation}) og multiplicitet.
+Ligeledes ville man i et DCD se klasserne \emph{Basket}, \emph{BasketItem} og \emph{BasketService}, muligvis med et \emph{IBasketService} \emph{interface} som implementeringen af konceptet "Kurv".
 Det er vigtigt at definere ovenstående, da DMD er et godt værktøj, men der er for mange holdninger til, hvad det egentlig er.
 
 \section{Software Arkitektur}
@@ -49,8 +49,8 @@ Derfor er den overordnede hensigt og struktur som følger:
 
 \section{Klassediagram}
 \label{sec:class-diagram}
-Et \emph{Design Class Diagram} (DCD) vil i denne sammenhæng være arbejdstegninger for kernen af systemet. Det vil illustrere relationerne mellem de klasser, som systemet vil instantiere objekter ud fra og deres underlæggende properties og methods. 
-Dette er for at skabe en forståelse for systemet. Dermed er det også et bevidst valg ikke at medtage PageModels og deres Views. Dette er grundet, at deres antal og relationer vil obfuskere overblikket fremfor at fremme forståelsen. 
+Et \emph{Design Class Diagram} (DCD) vil i denne sammenhæng være arbejdstegninger for kernen af systemet. Det vil illustrere relationerne mellem de klasser, som systemet vil instantiere objekter ud fra og deres underliggende \emph{properties} og \emph{methods}. 
+Dette er for at skabe en forståelse for systemet. Dermed er det også et bevidst valg ikke at medtage \emph{PageModels} og deres \emph{Views}. Dette er grundet, at deres antal og relationer vil obfuskere overblikket fremfor at fremme forståelsen. 
 Dette ses som værende den diametralt modsatte hensigt med et diagram. Ligeledes er diagrammerne delt op i fire kategorier for netop at bevare overblikket over systemet.
 
 \section{Database Design}
@@ -58,17 +58,17 @@ Dette ses som værende den diametralt modsatte hensigt med et diagram. Ligeledes
 Viden fra \cite{connolly2023database} vil anvendes hele vejen igennem, men ikke blive citeret yderligere, da det anses for at være grundlæggende viden.
 
 \subsection{Entity Relationship Diagrammer}
-Et Entity Relationship Diagram (ERD) er en visuel repræsentation af data, der beskriver, hvordan data (\emph{entiteter}) er relateret til hinanden.
+Et \emph{Entity Relationship Diagram} (ERD) er en visuel repræsentation af data, der beskriver, hvordan data (\emph{entiteter}) er relateret til hinanden.
 
 \subsection{Database Schema}
-Følgende er genereret fra Microsoft SQL Server Management Studio (SSMS) og viser ligeledes, hvordan databasen er struktureret.
+Følgende er genereret fra \emph{Microsoft SQL Server Management Studio} (SSMS) og viser ligeledes, hvordan databasen er struktureret.
 
 \subsection{Normalisering}
 \label{sec:normalisering}
 Normalisering af en database er processen med at organisere data i en database for at reducere duplikation og afhængigheder mellem data. 
 Dette gøres for at sikre, at data er korrekte og konsistente, samt at de er nemme at opdatere og vedligeholde.
 
-\subsubsection{Første Normalform (1NF)}
+\subsection{Første Normalform (1NF)}
 For at opnå første normalform (1NF) skal følgende kriterier være opfyldt:
 \begin{itemize}
     \item Alle attributter i en tabel skal være atomare.
@@ -76,7 +76,7 @@ For at opnå første normalform (1NF) skal følgende kriterier være opfyldt:
 \end{itemize}
 Alle tabeller i databasen er i første normalform (1NF), da alle attributter er atomare, og der ikke er flere værdier i en enkelt celle.
 
-\subsubsection{Anden Normalform (2NF)}
+\subsection{Anden Normalform (2NF)}
 For at opnå anden normalform (2NF) skal følgende kriterier være opfyldt:
 \begin{itemize}
     \item Tabellen skal være i første normalform (1NF).
@@ -84,30 +84,30 @@ For at opnå anden normalform (2NF) skal følgende kriterier være opfyldt:
     \item Hvis en tabel har en sammensat primærnøgle, skal alle attributter afhænge af hele primærnøglen.
 \end{itemize}
 Tabeller, der har en primærnøgle bestående af en enkelt kolonne, opfylder automatisk kravene til anden normalform (2NF), forudsat at de allerede er i første normalform (1NF).
-De eneste tabeller med sammensatte primærnøgler er BasketItem, OrderItem og IXProductTag (som er en indextabel).
+De eneste tabeller med sammensatte primærnøgler er \emph{BasketItem}, \emph{OrderItem} og \emph{IXProductTag} (som er en indextabel).
 Disse tre tabeller er dog stadig i første normalform, da alle attributter er atomare, og der ikke er flere værdier i en enkelt celle.
 Derfor er alle tabeller i databasen i anden normalform (2NF).
 
-\subsubsection{Tredje Normalform (3NF)}
+\subsection{Tredje Normalform (3NF)}
 For at opnå tredje normalform (3NF) skal følgende kriterier være opfyldt:
 \begin{itemize}
     \item Tabellen skal være i anden normalform (2NF).
     \item Ingen ikke-nøgleattributter må afhænge af andre ikke-nøgleattributter.
 \end{itemize}
 Alle tabeller i databasen er i tredje normalform (3NF), da ingen ikke-nøgleattributter afhænger af andre ikke-nøgleattributter.
-Det er dog vigtigt at bemærke, at fx Order indeholder TotalPrice, som ikke er afhængig af, men dog stadig udregnet ud fra OrderItems.
-Grunden til at medtage TotalPrice i Order er for at kunne søge og sortere på dette felt uden at skulle udregne det hver gang.
-Samtidig er der en sammenhæng i Address mellem PostalCode og City. Dette er dog en sammenhæng, der er nødvendig for at kunne identificere en adresse og derfor ikke en afhængighed.
+Det er dog vigtigt at bemærke, at f.eks. \emph{Order} indeholder \emph{TotalPrice}, som ikke er afhængig af, men dog stadig udregnet ud fra \emph{OrderItems}.
+Grunden til at medtage \emph{TotalPrice} i \emph{Order} er for at kunne søge og sortere på dette felt uden at skulle udregne det hver gang.
+Samtidig er der en sammenhæng i \emph{Address} mellem \emph{PostalCode} og \emph{City}. Dette er dog en sammenhæng, der er nødvendig for at kunne identificere en adresse og derfor ikke en afhængighed.
 Grunden til at medtage dette er for at kunne sortere og søge på dette felt uden at skulle slå op i en anden tabel.
-Der er klargjort en logik i PostalCodeService, hvor man kan slå op i en tabel med alle danske, færøske og grønlandske postnumre og byer for at sikre, at en bruger har en dansk adresse.
-Tabellen er ikke implementeret men gemt i JSON-format. At have en tabel med samtlige postnumre og byer kræver enten, at man implementerer logik, der sikrer, at en bruger har en dansk adresse. 
+Der er klargjort en logik i \emph{PostalCodeService}, hvor man kan slå op i en tabel med alle danske, færøske og grønlandske postnumre og byer for at sikre, at en bruger har en dansk adresse.
+Tabellen er ikke implementeret, men gemt i \emph{JSON}-format. At have en tabel med samtlige postnumre og byer kræver enten, at man implementerer logik, der sikrer, at en bruger har en dansk adresse. 
 Alternativt skal samtlige postnumre og byer for hele verdenen være i tabellen, som så også skal sorteres på land eller landekode.
 
-\subsubsection{Denormalisering}
+\subsection{Denormalisering}
 Denormalisering er processen med at kombinere normaliserede tabeller for at forbedre ydeevnen og forenkle dataadgangen. 
-Dette kan gøres ved at tilføje redundante data til tabeller, så de er hurtigere at søge i og kræver færre joins.
-Dette er blevet gjort i Order-tabellen, hvor TotalPrice er blevet tilføjet for at gøre det hurtigere at søge, sortere og addere dette felt.
-Der er dog en logik i OrderService, der sikrer, at TotalPrice er korrekt, når en Order oprettes, opdateres eller slettes.
+Dette kan gøres ved at tilføje redundante data til tabeller, så de er hurtigere at søge i og kræver færre \emph{joins}.
+Dette er blevet gjort i \emph{Order}-tabellen, hvor \emph{TotalPrice} er blevet tilføjet for at gøre det hurtigere at søge, sortere og addere dette felt.
+Der er dog en logik i \emph{OrderService}, der sikrer, at \emph{TotalPrice} er korrekt, når en \emph{Order} oprettes, opdateres eller slettes.
 
 \section{Sekvensdiagrammer}
 \label{sec:sekvens-diagrammer}
@@ -116,35 +116,47 @@ Der er ikke lavet sekvensdiagrammer for alle metoder, der er i stedet fokuseret 
 
 \section{Design Patterns}
 \label{sec:design-patterns}
-Der er blevet anvendt en række forskellige design patterns i projektet for at opnå en højere grad af genbrugelighed, fleksibilitet og vedligeholdelse, samt at opnå et fælles sprog.
-Bl.a. inspirerede \emph{Adapter Pattern} til at anvende \emph{UserWrapper}, der kunne håndtere brugeren uanset type. Ligeledes blev \emph{Dependency Injection} anvendt til at injecte services i PageModels.
-Selvom visse design patterns er anvendt fra start, var det tanken at refaktorere systemet for at opnå en højere grad af genbrugelighed og fleksibilitet.
-Det ville være gennem denne refaktorering, at optimeringerne ville blive identificeret eller inspireret vha. design patterns og derigennem blive implementeret og beskrevet.
+Der er blevet anvendt en række forskellige \emph{design patterns} i projektet for at opnå en højere grad af genbrugelighed, fleksibilitet og vedligeholdelse, samt at opnå et fælles sprog.
+Bl.a. inspirerede \emph{Adapter Pattern} til at anvende \emph{UserWrapper}, der kunne håndtere brugeren uanset type. Ligeledes blev \emph{Dependency Injection} anvendt til at injecte services i \emph{PageModels}.
+Selvom visse \emph{design patterns} er anvendt fra start, var det tanken at refaktorere systemet for at opnå en højere grad af genbrugelighed og fleksibilitet.
+Det ville være gennem denne refaktorering, at optimeringerne ville blive identificeret eller inspireret vha. \emph{design patterns} og derigennem blive implementeret og beskrevet.
 
 \section{Valg ift. systemets struktur}
 \label{sec:valg-struktur}
 Selve strukturen af systemet blev opbygget med en række forskellige overvejelser i baghovedet. Jeg vil blot gennemgå dem, der afviger fra standarden, da det er disse, der er mest interessante.
-Models blev delt op i med en undermappe specifikt til \emph{Users}, for at skabe en bedre struktur og overblik over systemet.
-Det kunne argumenteres for, at \emph{Interfaces} kunne være underlagt \emph{Services} men for at fremtidssikre systemet og gøre det mere overskueligt, blev dette placeret i en separat mappe.
-Mappen \emph{Utilities} blev oprettet for at indeholde hjælpeklasser, der ikke passede ind i nogen af de andre mapper. Fx \emph{IXProductTag}, der er en IndexTabel.
-Der blev lavet en seperat \emph{Config} mappe, der inholdte database konfigurationer, så de var nemmere at finde og ændre.
-Systemspecifikke konfigurtationer blev skrevet direkte i \emph{Program.cs}
-Der blev anvendt ViewModels, der skulle håndtere data, der skulle vises på siden. Tanken var at lette byrden på PageModels, så de ikke skulle håndtere alt og der ikke skulle være en masse logik i Views.
-ViewModels der blev brugt flere steder blev lagt i mappen \emph{ViewModels}, mens ViewModels, der kun blev brugt i en enkelt View, blev lagt sammen med tilhørende PageModel.
-Der blev lavet nogle fravalg i forbindelse med designet af systemet. Oprindeligt var Repository Pattern tænkt som en del af system, men dette virkede redundant, da EF Core allerede er et slags repository pattern.
-Derfor var service-laget tænkt som en slags facade, der skulle håndtere alt logikken og i kombination med EF Core, skulle dette håndtere alt dataadgang.
-Derudover var det tænkt, at der skulle være en række interfaces, der skulle implementeres af services. Dette blev dog fravalgt, da det virkede overflødigt, da der ikke var nogen grund til at have flere forskellige implementeringer af samme service.
-Der var kun en BasketService, en ProductService, en OrderService osv. Derfor blev interfaces fravalgt, da de ikke tilføjede nogen værdi til systemet.
-IEmailService blev dog implementeret som et interface, da der var forskellige implementeringer af denne service, navnligt mellem EmailService og EmailSender, som var en del af ASP.NET Core Identity.
+\emph{Models} blev delt op i med en undermappe specifikt til \emph{Users}, for at skabe en bedre struktur og overblik over systemet.
+Det kunne argumenteres for, at \emph{Interfaces} kunne være underlagt \emph{Services}, men for at fremtidssikre systemet og gøre det mere overskueligt, blev disse placeret i en separat mappe.
+Mappen \emph{Utilities} blev oprettet for at indeholde hjælpeklasser, der ikke passede ind i nogen af de andre mapper. F.eks. \emph{IXProductTag}, der er en indextabel.
+Der blev lavet en separat \emph{Config} mappe, der indeholdte databasekonfigurationer, så de var nemmere at finde og ændre.
+Systemspecifikke konfigurationer blev skrevet direkte i \emph{Program.cs}.
+Der blev anvendt \emph{ViewModels}, der skulle håndtere data, der skulle vises på siden. Tanken var at lette byrden på \emph{PageModels}, så de ikke skulle håndtere alt, og der ikke skulle være en masse logik i \emph{Views}.
+\emph{ViewModels} der blev brugt flere steder, blev lagt i mappen \emph{ViewModels}, mens \emph{ViewModels}, der kun blev brugt i en enkelt \emph{View}, blev lagt sammen med tilhørende \emph{PageModel}.
+Der blev lavet nogle fravalg i forbindelse med designet af systemet. Oprindeligt var \emph{Repository Pattern} tænkt som en del af systemet, men dette virkede redundant, da \emph{EF Core} allerede er et slags \emph{repository pattern}.
+Derfor var service-laget tænkt som en slags facade, der skulle håndtere al logikken, og i kombination med \emph{EF Core} skulle dette håndtere al dataadgang.
+Derudover var det tænkt, at der skulle være en række \emph{interfaces}, der skulle implementeres af services. Dette blev dog fravalgt, da det virkede overflødigt, da der ikke var nogen grund til at have flere forskellige implementeringer af samme service.
+Der var kun en \emph{BasketService}, en \emph{ProductService}, en \emph{OrderService} osv. Derfor blev \emph{interfaces} fravalgt, da de ikke tilføjede nogen værdi til systemet.
+\emph{IEmailService} blev dog implementeret som et \emph{interface}, da der var forskellige implementeringer af denne service, navnligt mellem \emph{EmailService} og \emph{EmailSender}, som var en del af \emph{ASP.NET Core Identity}.
 
 \section{Test}
 \label{sec:test}
-Der er udarbejdet enkelte unit tests som et proof of concept, men de dækker ikke hele systemet. Der er fokuseret på at teste services, da det er her størstedelen af logikken ligger.
+Der er udarbejdet enkelte \emph{unit tests} som et \emph{proof of concept}, men de dækker ikke hele systemet. Der er fokuseret på at teste services, da det er her størstedelen af logikken ligger.
 Dermed er det også her, der er mest at vinde ved at teste disse. Det er også de mest komplicerede at teste, da de ofte har flere afhængigheder, der skal mockes. 
 Til dette er der bl.a. anvendt \emph{HttpContextMock} og \emph{Moq}, sammen med \emph{Microsoft.VisualStudio.TestTools.UnitTesting}.
 
 \section{Dokumentation}
 \label{sec:dokumentation}
 Dokumentation for projektet er blevet udarbejdet i form af denne rapport samt i form af kommentarer i koden.
-Disse kommentarer er blevet skrevet i XML-format, så de kan blive brugt til at generere dokumentation bl.a. med \emph{Doxygen}.
+Disse kommentarer er blevet skrevet i \emph{XML}-format, så de kan blive brugt til at generere dokumentation bl.a. med \emph{Doxygen}.
 Den PDF, der er genereret fra \emph{Doxygen}, er vedlagt som bilag og kan findes i \Cref{appendix:doxygen}.
+
+\section{GitHub}
+\label{subsec:final-product-github}
+På \emph{GitHub} er der brugt \emph{Workflows} til at automatisere bygning og test af projektet, når der pushes til repository.
+Selve test-delen er blevet skrevet ud, da det gjorde automatiseringsprocessen meget langsom. I det omfang, som test var implementeret i, gav det ikke noget, som ikke kunne opnås ved at køre tests i \emph{Visual Studio}.
+Der er dog stadig en del af \emph{Workflows}, der er brugbare, bl.a. at projektet bliver bygget, når der pushes til \emph{repo}, så evt. fejl bliver nemmere at identificere \Cref{minted:build-yml}.  
+
+\begin{figure}
+    \inputminted{yaml}{codefiles/build.yml}
+    \caption{\emph{GitHub Workflows Build}}
+    \label{minted:build-yml}
+\end{figure}

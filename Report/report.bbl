@@ -111,6 +111,122 @@
       \verb https://hr.mit.edu/learning-topics/teams/articles/new-team
       \endverb
     \endentry
+    \entry{the-auxiliary}{online}{}
+      \name{author}{1}{}{%
+        {{hash=81ea0013a759869e3cdcd80d0c20acbe}{%
+           family={{The auxiliary materials on Google Drive}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{81ea0013a759869e3cdcd80d0c20acbe}
+      \strng{fullhash}{81ea0013a759869e3cdcd80d0c20acbe}
+      \strng{bibnamehash}{81ea0013a759869e3cdcd80d0c20acbe}
+      \strng{authorbibnamehash}{81ea0013a759869e3cdcd80d0c20acbe}
+      \strng{authornamehash}{81ea0013a759869e3cdcd80d0c20acbe}
+      \strng{authorfullhash}{81ea0013a759869e3cdcd80d0c20acbe}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Drive}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://drive.google.com/drive/folders/1C1t9Ko89EYDb0QYtjE90pnergE4a13bT?usp=sharing
+      \endverb
+      \verb{url}
+      \verb https://drive.google.com/drive/folders/1C1t9Ko89EYDb0QYtjE90pnergE4a13bT?usp=sharing
+      \endverb
+    \endentry
+    \entry{the-project}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cf96e6e621be57814edbba6e87fb3e2c}{%
+           family={{The project on Github}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf96e6e621be57814edbba6e87fb3e2c}
+      \strng{fullhash}{cf96e6e621be57814edbba6e87fb3e2c}
+      \strng{bibnamehash}{cf96e6e621be57814edbba6e87fb3e2c}
+      \strng{authorbibnamehash}{cf96e6e621be57814edbba6e87fb3e2c}
+      \strng{authornamehash}{cf96e6e621be57814edbba6e87fb3e2c}
+      \strng{authorfullhash}{cf96e6e621be57814edbba6e87fb3e2c}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GitHub}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/Cal-ly/HttpWebshopCookie
+      \endverb
+      \verb{url}
+      \verb https://github.com/Cal-ly/HttpWebshopCookie
+      \endverb
+    \endentry
+    \entry{the-report}{online}{}
+      \name{author}{1}{}{%
+        {{hash=428ec4da30fb69675ad4b72925b11585}{%
+           family={{The report on Github}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{428ec4da30fb69675ad4b72925b11585}
+      \strng{fullhash}{428ec4da30fb69675ad4b72925b11585}
+      \strng{bibnamehash}{428ec4da30fb69675ad4b72925b11585}
+      \strng{authorbibnamehash}{428ec4da30fb69675ad4b72925b11585}
+      \strng{authornamehash}{428ec4da30fb69675ad4b72925b11585}
+      \strng{authorfullhash}{428ec4da30fb69675ad4b72925b11585}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GitHub}
+      \field{urlday}{29}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/Cal-ly/2ndSemesterReport
+      \endverb
+      \verb{url}
+      \verb https://github.com/Cal-ly/2ndSemesterReport
+      \endverb
+    \endentry
+    \entry{trello-converter}{online}{}
+      \name{author}{1}{}{%
+        {{hash=22631976d1da8d2c39fb7c14f98c08cc}{%
+           family={{Trello Converter on Github}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{22631976d1da8d2c39fb7c14f98c08cc}
+      \strng{fullhash}{22631976d1da8d2c39fb7c14f98c08cc}
+      \strng{bibnamehash}{22631976d1da8d2c39fb7c14f98c08cc}
+      \strng{authorbibnamehash}{22631976d1da8d2c39fb7c14f98c08cc}
+      \strng{authornamehash}{22631976d1da8d2c39fb7c14f98c08cc}
+      \strng{authorfullhash}{22631976d1da8d2c39fb7c14f98c08cc}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GitHub}
+      \field{urlday}{24}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/Cal-ly/TrelloConverter
+      \endverb
+      \verb{url}
+      \verb https://github.com/Cal-ly/TrelloConverter
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
