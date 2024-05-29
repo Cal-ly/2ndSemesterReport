@@ -1,8 +1,8 @@
 \chapter{SCRUM Dokumentation}
 \label{chapter:scrum-documentation}
-Grundet projektgruppens størrelse og sammensætning er det valgt at lave en meget tilpasset version af SCRUM. Dermed er bl.a. retrospective og review slået sammen under "Udførelse". 
-Dette er også gjort, fordi der ikke er en decideret Product Owner. 
-I \Cref{chapter:conclusion} forefindes afsnittet \Cref{sec:conclusion_summary}, der opsummerer analyse og delkonklusioner vedrørende sleve SCRUM processen i projektet.
+Grundet projektgruppens størrelse og sammensætning er det valgt at lave en meget tilpasset version af \emph{SCRUM}. Dermed er bl.a. \emph{retrospective} og \emph{review} slået sammen under "Udførelse". 
+Dette er også gjort, fordi der ikke er en decideret \emph{Product Owner}. 
+I \Cref{chapter:conclusion} forefindes afsnittet \Cref{sec:conclusion_summary}, der opsummerer analyse og delkonklusioner vedrørende selve \emph{SCRUM}-processen i projektet.
 
 \section{Sprint 1}
 \label{sec:sprint-1}
@@ -11,7 +11,7 @@ I \Cref{chapter:conclusion} forefindes afsnittet \Cref{sec:conclusion_summary}, 
 \begin{itemize}
     \item \textbf{Start:} 22-04-2024
     \item \textbf{Slut:} 26-04-2024
-    \item \textbf{Mål:} Oprettelse af projektet, yderligere design, konfiguration af Razor Pages og EF, oprettelse af modeller, oprettelse af dokumentation.
+    \item \textbf{Mål:} Oprettelse af projektet, yderligere design, konfiguration af \emph{Razor Pages} og \emph{EF}, oprettelse af modeller, oprettelse af dokumentation.
     \item \textbf{User Stories:} US-001, US-002, US-003, US-004, US-005, US-006, US-007, US-008, US-009
     \item \textbf{Story Points:} 27
 \end{itemize}
@@ -19,11 +19,11 @@ I \Cref{chapter:conclusion} forefindes afsnittet \Cref{sec:conclusion_summary}, 
 \subsection{Udførelse}
 \label{subsec:sprint-1-udforelse}
 Sprintet var præget af, at der var mange forskellige opgaver, der skulle påbegyndes, og mange ideer. 
-Derudover skulle mange styringsværktøjer som Trello, GitHub, Visual Studio og SQL Server sættes op og konfigureres. 
-Særligt Trello var en udfordring, da der ikke var en god måde at skabe et overblik eller udtrække data på. 
-Derfor blev der brugt tid på at lave en WinForm-applikation, der kunne trække data ud af Trello - som kun kunne udtrækkes i JSON-format - og skrive det til Markdown, LaTeX og CSV med henblik på at kunne importere det igen. 
-TrelloConverter kan findes på GitHub \cite{trello-converter}. 
-Alle story points blev dog nået til tiden, omend en del af selve designet og bootstrap blev nedprioriteret, da det ikke var essentielt for at kunne komme i gang med projektet.
+Derudover skulle mange styringsværktøjer som \emph{Trello}, \emph{GitHub}, \emph{Visual Studio} og \emph{SQL Server} sættes op og konfigureres. 
+Særligt \emph{Trello} var en udfordring, da der ikke var en god måde at skabe et detaljeret overblik over fx \emph{Tasks} eller udtrække data på. 
+Derfor blev der brugt tid på at lave en \emph{WinForm}-applikation, der kunne trække data ud af \emph{Trello} - som kun kunne udtrækkes i \emph{JSON}-format - og skrive det til \emph{Markdown}, \emph{LaTeX} og \emph{CSV} med henblik på at kunne importere det igen. 
+\emph{TrelloConverter} kan findes på \emph{GitHub} \cite{trello-converter}. 
+Alle \emph{story points} blev dog nået til tiden, omend en del af selve designet og \emph{bootstrap} blev nedprioriteret, da det ikke var essentielt for at kunne komme i gang med projektet.
 
 \section{Sprint 2}
 \label{sec:sprint-2}
@@ -39,8 +39,8 @@ Alle story points blev dog nået til tiden, omend en del af selve designet og bo
 
 \subsection{Udførelse}
 \label{subsec:sprint-2-udforelse}
-Sprintet var meget fokuseret på implementering af modeller og controllers samt at få EF konfigureret. 
-Der blev brugt meget tid på at anvende \emph{HttpContextAccessor}, da det var nødvendigt for at kunne gøre HTTP mere stateful og dermed kunne gemme oplysninger hos klienten.
+Sprintet var meget fokuseret på implementering af modeller og \emph{controllers} samt at få \emph{EF} konfigureret. 
+Der blev brugt meget tid på at anvende \emph{HttpContextAccessor}, da det var nødvendigt for at kunne gøre \emph{HTTP} mere \emph{stateful} og dermed kunne gemme oplysninger hos klienten.
 
 \section{Sprint 3}
 \label{sec:sprint-3}
@@ -49,14 +49,14 @@ Der blev brugt meget tid på at anvende \emph{HttpContextAccessor}, da det var n
 \begin{itemize}
     \item \textbf{Start:} 06-05-2024
     \item \textbf{Slut:} 10-05-2024
-    \item \textbf{Mål:} Oprettelse af IdentityCore, oprettelse af brugere, oprettelse af roller, oprettelse af claims, oprettelse af dokumentation.
+    \item \textbf{Mål:} Oprettelse af \emph{IdentityCore}, oprettelse af brugere, oprettelse af roller, oprettelse af \emph{claims}, oprettelse af dokumentation.
     \item \textbf{User Stories:} US-019, US-020, US-021, US-022, US-023, US-024, US-025, US-026, US-027
     \item \textbf{Story Points:} 28
 \end{itemize}
 
 \subsection{Udførelse}
 \label{subsec:sprint-3-udforelse}
-Meget af tiden gik med at få IdentityCore til at fungere, da det var nødvendigt for at kunne lave en brugeroplevelse, der var tilpasset de forskellige roller.
+Meget af tiden gik med at få \emph{IdentityCore} til at fungere, da det var nødvendigt for at kunne lave en brugeroplevelse, der var tilpasset de forskellige roller.
 Det var især den bagvedliggende dokumentation, der var udfordrende, da der var mange forskellige måder at gøre tingene på og mange forskellige måder at konfigurere det på.
 Der blev brugt meget tid på at overveje og afprøve forskellige løsninger, da det var nødvendigt at have en løsning, der kunne skaleres og vedligeholdes.
 
@@ -76,7 +76,7 @@ Der blev brugt meget tid på at overveje og afprøve forskellige løsninger, da 
 \label{subsec:sprint-4-udforelse}
 Meget af tiden gik med at få brugergrænsefladen til at fungere, da det var nødvendigt for at kunne lave en brugeroplevelse, der var tilpasset de forskellige roller.
 Med dette tænkes især på kunders interaktion med systemet og hvordan data blev håndteret. 
-Dette kan ses bl.a. på Index-siden med billedekarusel og på Katalog (CustomerProducts/Index), hvor der er forskellige muligheder for at filtrere og sortere data.
+Dette kan ses bl.a. på \emph{Index}-siden med billedekarusel og på \emph{Katalog} (\emph{CustomerProducts/Index}), hvor der er forskellige muligheder for at filtrere og sortere data.
 
 \section{Sprint 5}
 \label{sec:sprint-5}
@@ -93,8 +93,8 @@ Dette kan ses bl.a. på Index-siden med billedekarusel og på Katalog (CustomerP
 \subsection{Udførelse}
 \label{subsec:sprint-5-udforelse}
 Meget af tiden gik med at få analyse og dataudtræk til at fungere, da det var nødvendigt for at kunne give nogle solide data til butikken, så de kunne se, hvordan deres forretning gik.
-Det tog tid at genopfriske de nødvendige kompetencer indenfor JavaScript, da det var nødvendigt for at kunne anvende Chart.js og få det til at fungere sammen med Razor Pages.
-Der blev også implementeret en email-service gennem MailKit, så butikken automatisk kunne sende en email til kunden, når de havde afgivet en ordre eller bekræftet oprettelse.
+Det tog tid at genopfriske de nødvendige kompetencer indenfor \emph{JavaScript}, da det var nødvendigt for at kunne anvende \emph{Chart.js} og få det til at fungere sammen med \emph{Razor Pages}.
+Der blev også implementeret en email-service gennem \emph{MailKit}, så butikken automatisk kunne sende en email til kunden, når de havde afgivet en ordre eller bekræftet oprettelse.
 
 \section{Sprint 6}
 \label{sec:sprint-6}
@@ -112,8 +112,8 @@ Der blev også implementeret en email-service gennem MailKit, så butikken autom
 \label{subsec:sprint-6-udforelse}
 Der var nogle indsatsområder, der skulle færdiggøres, såsom dokumentation og test, samt tid brugt på at få testdata til at fungere, da det var nødvendigt for at kunne teste systemet.
 Der blev også brugt tid på at deployere systemet, så det kunne køre på et webhotel og dermed kunne ses i et realistisk miljø. 
-Simply.com blev valgt som webhotel, da det var billigt og nemt at konfigurere. 
-I skrivende stund er projektet dog ikke deployeret, da der er problemer med at få .NET 8 til at køre på webhotellet. Projektet er dog testet lokalt og fungerer som forventet.
+\emph{Simply.com} blev valgt som webhotel, da det var billigt og nemt at konfigurere. 
+I skrivende stund er projektet dog ikke deployeret, da der er problemer med at få \emph{.NET 8} til at køre på webhotellet. Projektet er dog testet lokalt og fungerer som forventet.
 
 \section{Burndown Chart}
 \label{sec:burndown-chart}
@@ -124,7 +124,7 @@ I skrivende stund er projektet dog ikke deployeret, da der er problemer med at f
     \label{fig:burndown-chart}
 \end{figure}
 
-Alle sprints blev gennemført til tiden, og alle user stories blev gennemført til tiden. 
-Der var dog en del af designet og bootstrap, der blev nedprioriteret eller skubbet til senere sprints, da det ikke var essentielt for den videre funktionalitet. 
-Dette kan ses på Burndown Chartet \cref{fig:burndown-chart}, hvor det er de sidste to "idé" user stories, der ikke er blevet gennemført.
-Burndown Chartet giver en hældningskoefficient på -27,8, hvilket svarer til de ca. 28 story points, som hvert sprint i gennemsnit var estimeret til.
+Alle \emph{sprints} blev gennemført til tiden, og alle \emph{user stories} blev gennemført til tiden. 
+Der var dog en del af designet og \emph{bootstrap}, der blev nedprioriteret eller skubbet til senere \emph{sprints}, da det ikke var essentielt for den videre funktionalitet. 
+Dette kan ses på \emph{Burndown Chartet} \cref{fig:burndown-chart}, hvor det er de sidste to "idé" \emph{user stories}, der ikke er blevet gennemført.
+\emph{Burndown Chartet} giver en hældningskoefficient på -27,8, hvilket svarer til de ca. 28 \emph{story points}, som hvert \emph{sprint} i gennemsnit var estimeret til.
